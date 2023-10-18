@@ -1,0 +1,102 @@
+.iqeaFooter{
+    height: 450px;
+    padding: 0 var(--paddingDesktop);
+
+    background-color: var(--footerBgColor);
+    color:var(--footerTextColor);
+    // .footerSeparator{
+    //     width: 70%;
+    //     margin: 0 auto;
+    // }
+    .footerHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 20%;
+        
+
+
+        .logoIqea{
+            width: 120px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: var(--border-radius);
+        }
+
+        .redesSociales{
+            ul{
+                display: flex;
+
+                li{
+                    list-style: none;
+
+                    .socialLinks{
+                         margin: 0 20px;
+                        .socialMediaIcon{
+                            width: 32px;
+                            height: 32px;
+                            fill: var(--footerTextColor);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBody{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60%;
+
+        .contact{
+            h4{font-size: 24px; margin: 20px 0;}
+            .direccion, .telefono, .email{
+                display: flex;
+                margin: 10px 0;
+            }
+            .contactRow{
+                display: flex;
+                flex-direction: column;
+            }
+            .footerIcon{
+                width: 24px;
+                height: 24px;
+                margin: 0 10px 0 0;
+                fill:var(--footerTextColor);
+            }
+        }
+
+        .navbar{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 80%;
+            .footerNav{
+                margin: 8px 20px;
+            }
+        }
+    }
+
+    .footerFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+
+        .develop{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                font-size: 12px;
+            }
+            .jsdevLogo{margin: 0 0 0 5px;
+                width: 70px;
+                height: auto;
+            }
+        }
+    }
+}
