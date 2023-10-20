@@ -1,0 +1,51 @@
+.cardProduct{
+    width: 640px;
+    height: 500px;
+    border-radius: var(--border-radius);
+    background-color: var(--cardBgColor);
+    color: var(--cardTextColor);
+    fill: var(--cardTextColor);
+    // font-size: var();
+    // border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset, -2px -2px 4px 0px rgba(0, 0, 0, 0.25) inset, 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+     
+    
+    .cardImage{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 50%;
+        margin: 0 20px;
+        overflow: hidden;
+        .productImage{
+            width: 100%;
+            height: auto;
+            transform: scale(1.2);
+
+        }
+    }
+
+    .cardBody{
+        width: 50%;
+        margin: 0 20px;
+        h4{
+            font-size: var(--cardTitleSize);
+        }
+        li{
+            margin: 0 20px;
+            font-size: var(--cardBodySize);
+        }
+        p{
+            margin: 20px 0;
+            font-size: var(--cardBodySize);
+
+        }
+    }
+}

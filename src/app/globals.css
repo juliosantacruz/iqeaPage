@@ -1,26 +1,39 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+  --font-mono: Roboto, ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
 
-  /* VARIABLES DE NAVBAR */
-  --navbarBgColor:#FCFCFC;
-  --navbarTextColor:#3B54BB;
+  /* VARIABLES DE GENERALES */
+  --PrimaryBgColor: #f8f8f8;
+  --PrimaryTextColor: #2d2d2d;
+  --SecondaryBgColor: #004581;
+  --SecondaryTextColor: #f8f8f8;
+  --TitleTextSize: 48px;
+  --SubtitleTextSize: 28px;
+  --ContentTextSize: 18px;
+  --CardTextSize: 18px;
 
+
+
+  /* VARIABLES DE CARDS */
+  --cardBgColor: #dde8f0;
+  --cardTextColor: #2d2d2d;
+  --cardTitleSize:24px;
+  --cardBodySize:16px;
+
+  /* VARIABLES DE NAVBAR */
+  --navbarBgColor: #f8f8f8;
+  --navbarTextColor: #3b54bb;
 
 
   /* VARIABLES DE FOOTER */
-    --footerBgColor:#004581;
-    --footerTextColor:#ffffff;
+  --footerBgColor: #004581;
+  --footerTextColor: #ffffff;
 
-
-
-
-
-    --paddingDesktop:112px;
+  --paddingDesktop: 112px;
 }
 
 * {
@@ -32,13 +45,29 @@
 html,
 body {
   max-width: 100vw;
- 
+
   font-family: var(--font-mono);
 }
-html{
+html {
   overflow-x: hidden;
 }
 a {
   color: inherit;
   text-decoration: none;
+}
+button:hover{
+  cursor: pointer;
+  transform: translateY(2px);
+}
+.btnGeneral{
+  padding: 10px 20px;
+  border: none;
+  background: #018ABD;
+  color: #f8f8f8;
+  fill: #f8f8f8;
+  font-weight: bold;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center
 }

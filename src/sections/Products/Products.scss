@@ -3,5 +3,20 @@
     width: 100%;
     height: 100vh;
 
-    background: #ffbce5;
+    background: var(--PrimaryBgColor);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .productsHeaders{
+        width: 70%;
+        text-align: center;
+        margin: 32px;
+        h2{
+            
+            margin: 0 0 32px 0;
+        }
+    }
 }

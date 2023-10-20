@@ -3,5 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h2{
+        font-size: var(--TitleTextSize);
+    }
+
+    p{
+        font-size: var(--ContentTextSize);
+    }
    
 }
