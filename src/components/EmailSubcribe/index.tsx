@@ -24,7 +24,7 @@ export default function EmailSubcribe() {
             </div>
             <div className="SubcribeImage">
                 <Image src={vectorEmail} alt=''/>
-            </div>
+            </div> 
         </div>
 
     

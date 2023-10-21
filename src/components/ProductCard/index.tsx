@@ -2,7 +2,6 @@ import React from "react";
 import "./ProductCard.scss";
 import Image from "next/image";
 import sampleImage from "@/assets/samples/filtroCocina.png";
-import arrowLeft from "@/assets/icons/chevron-right.svg";
 import IconArrowRight from "../Icons/IconArrowRight";
 
 export default function ProductCard() {

@@ -1,0 +1,94 @@
+.flexTemplate{
+  display: flex;
+  flex-direction: row;
+}
+
+.contactLocation{
+  width: 100vw;
+  color: #fff;
+  .header{
+    height: 80px;
+    text-align: center;
+    .headerLeft{
+      width: 50%;
+      background: var(--SecondaryBgColor);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      hr{
+        width: 70%;
+        margin: 0 auto;
+      }
+    }  
+    .headerRight{
+      width: 50%;
+      background: #fff;
+    } 
+  }
+
+  .LocationRow{
+    height: 500px;
+    
+    .LocationLeft{
+      width: 50%;
+      background: var(--SecondaryBgColor);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .LocationAdress{
+        max-width: 450px;
+        width: 80%;
+        margin: 0 0 0 64px;
+        p{
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .LocationRight{
+      width: 50%;
+      background: #fff;
+      color: var(--PrimaryTextColor);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2{
+        margin: 0 0 32px 0;
+      }
+
+      iframe{
+        width: 420px !important;
+        height: 280px !important;
+        border-radius: 32px;
+      }
+    }
+  }
+}
+
+.contactFrase {
+    width: 80%;
+    margin: 64px auto;
+  .frase {
+    text-align: center;
+    font-size: var(--ContentTextSize);
+    font-weight: 500;
+  }
+}
+
+.contactForm{
+  background-position: center;
+  background-size: cover;
+    height: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: center
+}
