@@ -2,6 +2,85 @@
     
     width: 100%;
     height: 100vh;
+    padding: 20px var(--paddingDesktop);
+    background: var(--PrimaryBgColor);
 
-    background: #fff8bc;
+
+    display: flex;
+    flex-direction: column;
+
+    .serviciosHeader{
+        height: 25%;
+        width: 80%;
+        margin: 50px auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        h2{
+            margin: 0 0 20px 0;
+        }
+
+    }
+    .serviciosBody{
+        height: 75%;
+
+        display: flex;
+        flex-direction: row;
+
+        .serviciosLeft{
+            width: 50%;
+
+            .servicio{
+                margin: 40px 0 ;
+            }
+        }
+
+        .serviciosRight{
+            width: 50%;
+
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+
+            img{
+                width: 100%;
+                height: 100%;
+
+                
+                
+            }
+            .galleryColumn{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+
+                .imageA{
+                    width: 100%;
+                    height: 35%;
+                    background: #d65959;
+                    // margin: 20px;
+                    border-radius: var(--border-radius-lg);
+                    overflow: hidden;
+                }
+                .imageB{
+                    width: 100%;
+                    height: 65%;
+                    background: #c159d6;
+                    // margin: 20px;
+                    border-radius: var(--border-radius-lg);
+                    overflow: hidden;
+
+
+
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,31 @@
+.HeroCard{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.171);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius-lg);
+
+    .HeroInfo{
+        position: relative;
+        top: 30px;
+        left: 70px;
+
+        width: 50%;
+        padding: 30px;
+
+        border: 1px solid black;
+        border-radius: var(--border-radius-lg);
+        background-color: rgba(214, 249, 255, 0.425);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        text-align: center;
+        h3{
+            font-size: 28px;
+            margin: 0 0 20px 0;
+        }
+    }
+}
