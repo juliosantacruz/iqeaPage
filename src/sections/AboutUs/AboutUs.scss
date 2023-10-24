@@ -12,4 +12,36 @@
 
     display: flex;
     flex-direction: row;
+
+    .carrusel{
+        width: 50%;
+        height: 80%;
+         
+
+        img{
+            height: 90%;
+            width: 70%;
+            object-fit: cover;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+    }
+
+    .content{
+        width: 50%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 50px;
+        h2{
+            font-size: var(--TitleTextSize);
+        }
+        p{
+            margin: 50px 0;
+           
+        }
+    }
 }
