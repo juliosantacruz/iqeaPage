@@ -7,7 +7,7 @@ import Image from 'next/image'
 import './CardStats.scss'
 
 export default function CardStats({data}:any) {
-    console.log(data)
+     
     
     const title = data.title
     const subtitle = data.subtitle

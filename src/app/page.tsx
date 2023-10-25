@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import './home.scss'
 import Hero from '@/sections/Hero'
