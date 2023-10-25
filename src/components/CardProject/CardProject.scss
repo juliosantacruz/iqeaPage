@@ -1,0 +1,58 @@
+.CardProject {
+  width: 360px;
+  height: 450px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    -2px -2px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius-lg);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  .CardProjectImage {
+    height: 40%;
+
+    img {
+      height: 100%;
+      // width: auto;
+      object-fit: cover;
+    }
+  }
+
+  .CardProjectBody {
+    height: 50%;
+    margin: 20px 20px 0;
+    h3{
+        margin: 0 0 5px 0;
+         max-height: 45px;
+         overflow: hidden;
+    }
+    
+  }
+  .CardProjectLabels {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin: 0 20px 20px;
+    
+    .label {
+        padding: 2px 8px;
+        color: rgb(0, 85, 146);
+        border-radius: 50px;
+      background: #e5eeff;
+      text-align: center;
+    
+      
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px; /* 133.333% */
+    }
+  }
+}
+

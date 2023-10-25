@@ -1,6 +1,6 @@
 import React from "react";
 import "./Products.scss";
-import ProductCard from "@/components/ProductCard";
+import CardProduct from "@/components/CardProduct";
 
 export default function Products() {
   return (
@@ -15,7 +15,7 @@ export default function Products() {
       </div>
 
       <div className="productsGroup">
-        <ProductCard />
+        <CardProduct />
       </div>
     </section>
   );

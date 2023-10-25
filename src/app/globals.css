@@ -91,3 +91,9 @@ button:hover{
   align-content: center;
   align-items: center;
 }
+
+.truncate {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
