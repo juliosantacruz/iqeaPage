@@ -1,6 +1,6 @@
-"use client"
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { ReactNode, useEffect, useRef, useCallback } from "react";
+import React, { ReactNode, useEffect, useRef, useCallback, CSSProperties } from "react";
 import "./Slideshow.scss";
 
 
@@ -9,11 +9,12 @@ type SlideshowProps = {
   transitionTime?: number;
   controls?: boolean;
   autoplay?: boolean;
+  styleProps?:CSSProperties;
   children: string | JSX.Element | JSX.Element[] | ReactNode | ReactNode[];
 };
 
 const Slideshow = (props: SlideshowProps) => {
-  const { animationTime = 800, transitionTime= 8000, controls = true, autoplay = false, children } = props;
+  const { animationTime = 800, transitionTime= 8000, controls = true, autoplay = false, styleProps, children } = props;
 
   const slideshowRef = useRef<any>();
   const intervaloSlideshow = useRef(null);
@@ -115,7 +116,7 @@ const Slideshow = (props: SlideshowProps) => {
   }, [autoplay, transitionTime, animationTime]);
 
   return (
-    <div className="ContenedorPrincipal">
+    <div className="ContenedorPrincipal" style={styleProps}>
       <div className="SlideshowContainer" ref={slideshowRef}>
         {children}
       </div>
