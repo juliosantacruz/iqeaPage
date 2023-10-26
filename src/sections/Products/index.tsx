@@ -17,6 +17,9 @@ export default function Products() {
       <div className="productsGroup">
         <CardProduct />
       </div>
+      <div className="buttonProducts centerDiv">
+        <button>Ver Mas</button>
+      </div>
     </section>
   );
 }

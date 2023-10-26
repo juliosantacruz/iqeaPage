@@ -1,4 +1,3 @@
-
 .statsCard {
   width: 300px;
   height: 380px;
@@ -9,7 +8,7 @@
   align-items: center;
   justify-content: flex-start;
   color: var(--SecondaryTextColor);
-  .ContenedorPrincipal{
+  .ContenedorPrincipal {
     width: 100%;
     .title {
       margin: 20px 0;
@@ -30,55 +29,60 @@
     border-radius: 50%;
   }
 
-
-  @include media-down(lg){
+  @include media-down(lg) {
     width: 220px;
     height: 340px;
 
-    .image{
+    .image {
       width: 120px;
       height: 120px;
-      img{
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+   
+  }
+  @include media-down(md) {
+    width: 220px;
+    height: 340px;
+
+    .image {
+      width: 120px;
+      height: 120px;
+      img {
         width: 100%;
         height: auto;
       }
     }
   }
 
-  
-  
-  @include media-down(md){
-    width: 200px;
-    height: 340px;
-    .ContenedorPrincipal{
+  @include media-down(sm) {
+    width: 180px;
+    height: 250px;
+    .ContenedorPrincipal {
       width: 80%;
       .title {
-        margin: 20px 0;
+        margin: 10px 0;
         h2 {
           font-size: var(--TitleTextSize);
         }
       }
       .subtitle {
         p {
+          line-height: 24px;
           text-align: left;
-          font-size: 20px;
+          font-size: var(--ContentTextSize);
         }
       }
     }
-    .image{
-      width: 100px;
-      height: 100px;
-      img{
+    .image {
+      width: 80px;
+      height: 80px;
+      img {
         width: 100%;
         height: auto;
       }
     }
   }
 }
-
-
-
-
-
-
- 

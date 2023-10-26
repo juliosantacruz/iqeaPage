@@ -1,57 +1,67 @@
 :root {
-  --max-width: 1440px;
+  --max-width: 1880px;
   --border-radius-sm: 12px;
   --border-radius-lg: 24px;
   --border-radius-xlg: 64px;
 
-
-  --font-mono: Roboto, ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
+  --font-mono: Roboto, ui-monospace, Menlo, Monaco, "Cascadia Mono",
+    "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   /* VARIABLES DE GENERALES */
   --PrimaryBgColor: #f8f8f8;
   --PrimaryTextColor: #2d2d2d;
-  --SecondaryBgColor: #557C83;
-  --TercearyBgColor: #A2D5AC;
+  --SecondaryBgColor: #557c83;
+  --TercearyBgColor: #a2d5ac;
   --SecondaryTextColor: #f8f8f8;
+
   --TitleTextSize: 36px;
   --SubtitleTextSize: 28px;
   --ContentTextSize: 18px;
   --CardTextSize: 18px;
 
-
-
   /* VARIABLES DE CARDS */
-  --cardBgColor: #dde8f0;
+  --cardBgColor: rgb(239, 248, 255);
   --cardTextColor: #2d2d2d;
-  --cardTitleSize:24px;
-  --cardBodySize:16px;
+  --cardTitleSize: 24px;
+  --cardBodySize: 16px;
 
   /* VARIABLES DE NAVBAR */
   --navbarBgColor: #f8f8f8;
   --navbarTextColor: #3b54bb;
 
-
   /* VARIABLES DE FOOTER */
-  --footerBgColor: #557C83;
+  --footerBgColor: #557c83;
   --footerTextColor: #ffffff;
 
   --paddingDesktop: 112px;
-  
-  
-  @include media-down(md){
 
+  @include media-down(lg) {
+    --paddingDesktop: 64px;
+  }
+
+  @include media-down(md) {
     --TitleTextSize: 32px;
     --SubtitleTextSize: 24px;
     --ContentTextSize: 16px;
     --CardTextSize: 16px;
 
+    --cardTitleSize: 24px;
+    --cardBodySize: 16px;
 
-    --paddingDesktop: 46px;
+    --paddingDesktop: 28px;
   }
-  
+  @include media-down(sm) {
+    --TitleTextSize: 20px;
+    --SubtitleTextSize: 18px;
+    --ContentTextSize: 16px;
+    --CardTextSize: 16px;
+
+    --cardTitleSize: 20px;
+    --cardBodySize: 16px;
+
+    --paddingDesktop: 24px;
+  }
 }
 
 * {
@@ -59,8 +69,6 @@
   padding: 0;
   margin: 0;
 }
-
-
 
 html,
 body {
@@ -78,31 +86,32 @@ a {
   color: inherit;
   text-decoration: none;
 }
-h1, h2{
+h1,
+h2 {
   font-size: var(--TitleTextSize);
 }
-p{
+p {
   font-size: var(--ContentTextSize);
   line-height: 28px;
 }
-button:hover{
+button:hover {
   cursor: pointer;
   transform: translateY(2px);
 }
-.btnGeneral{
+.btnGeneral {
   padding: 10px 20px;
   border: none;
-  background: #018ABD;
+  background: #018abd;
   color: #f8f8f8;
   fill: #f8f8f8;
   font-weight: bold;
- 
+
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
-.centerDiv{
+.centerDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,13 +125,14 @@ button:hover{
   text-overflow: ellipsis;
 }
 
-button{
+button {
   align-items: center;
   padding: 10px 16.595px 9.5px 16.795px;
   border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 6px 12px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
+    0px 6px 12px 0px rgba(0, 0, 0, 0.08);
   outline: none;
   border: none;
-  background:var(--SecondaryBgColor);
+  background: var(--SecondaryBgColor);
   color: white;
 }

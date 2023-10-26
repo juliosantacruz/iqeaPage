@@ -1,6 +1,6 @@
 .cardProduct{
-    width: 640px;
-    height: 500px;
+    width: 540px;
+    height: 360px;
     border-radius: var(--border-radius-lg);
     background-color: var(--cardBgColor);
     color: var(--cardTextColor);
@@ -12,7 +12,7 @@
     align-items: center;
     flex-direction: row;
     
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset, -2px -2px 4px 0px rgba(0, 0, 0, 0.25) inset, 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.116) inset, -2px -2px 4px 0px rgba(0, 0, 0, 0.055) inset, 2px 4px 4px 0px rgba(0, 0, 0, 0.13);
     
      
     
@@ -21,7 +21,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         height: 100%;
-        width: 50%;
+        width: 45%;
         margin: 0 20px;
         overflow: hidden;
         .productImage{
@@ -38,13 +38,13 @@
     }
 
     .cardBody{
-        width: 50%;
+        width: 55%;
         margin: 0 20px;
         h4{
             font-size: var(--cardTitleSize);
         } 
         p{  
-            line-height: 24px;
+            line-height: 18px;
             margin: 10px 0;
             font-size: var(--cardBodySize);
 

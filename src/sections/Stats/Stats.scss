@@ -34,4 +34,20 @@
       gap: 50px;
     }
   }
+
+  @include media-down(md) {
+   .skewed{
+    .statsGroup{
+      gap: 30px;
+    }
+   }
+  }
+  @include media-down(sm) {
+    .skewed{
+      height: 350px;
+      .statsGroup{
+        gap: 12px;
+      }
+   }
+  }
 }

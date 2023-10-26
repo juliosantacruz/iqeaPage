@@ -6,6 +6,7 @@ import Link from "next/link";
 import {  usePathname } from 'next/navigation';
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
+import IconMenu from "@/components/Icons/IconMenu";
 
 export default function Navbar() {
   const path =  usePathname() 
@@ -19,6 +20,9 @@ const isActiveLink = (value:string) =>{
       <nav className="navbar">
         <div className="iqeaLogo">
           <Image src={logoIqea} alt="logo" className="logoIqea" />
+        </div>
+        <div className="movilMenu">
+          <IconMenu className="hamburger"/>
         </div>
         <ul className="navLinks">
           <li>

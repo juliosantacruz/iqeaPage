@@ -30,6 +30,12 @@ header{
         border-radius: var(--border-radius-sm);
         // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       }
+      .movilMenu{
+        display: none;
+        
+         
+        
+      }
       .navLinks {
         display: flex;
     
@@ -49,11 +55,8 @@ header{
 
     @include media-down(md){
       .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        height: 60px;
+        height: 50px;
         padding: 0 var(--paddingDesktop);
       
         background-color: var(--navbarBgColor);
@@ -64,7 +67,7 @@ header{
       //   margin: 0 0 5px 0;
       
         .logoIqea {
-          width: 100px;
+          width: 80px;
           height: auto;
           background-color: white;
           padding: 10px;
@@ -78,14 +81,32 @@ header{
             list-style: none;
       
             .navLink {
-              margin: 0 20px;
-              padding: 10px 0;
+              margin: 0 10px;
+               
             }
             .active{
               border-bottom: 2px solid var(--navbarTextColor);
             }
           }
         }
+      }
+    }
+
+    @include media-down(sm){
+      .movilMenu{
+        display: flex !important;
+        position: absolute;
+        top:5px;
+        right: 20px;
+        height: 40px;
+        .hamburger{
+          height: 100%;
+          width: auto;
+        }
+        
+      }
+      .navLinks{
+        display: none !important;
       }
     }
 }
