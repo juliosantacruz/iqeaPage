@@ -7,7 +7,7 @@ import { Slide, Slideshow } from "@/components/Slideshow";
 export default function Projects() {
   return (
     <section className="projectsIqea">
-      <div className="headerProjects">
+      <div className="headerProjects centerDiv">
         <h2>PROYECTOS IQEA</h2>
         <p>
           Construimos sistemas de tratamiento de agua "llave en mano",
@@ -16,7 +16,11 @@ export default function Projects() {
       </div>
 
       <div className="bodyProjects ">
-        <Slideshow autoplay={true} controls={false} styleProps={{ width: "380px", overflowX:'scroll', scrollbarWidth:'none' }}>
+        <Slideshow 
+          autoplay={false} 
+          controls={false} 
+          styleProps={{ width: "100%", overflowX:'scroll', scrollbarWidth:'none' }}
+          slideContainerWidth={400}>
           <Slide>
             <CardProject />
           </Slide>{" "}
@@ -36,6 +40,9 @@ export default function Projects() {
             <CardProject />
           </Slide>
         </Slideshow>
+      </div>
+      <div className="buttonProjects centerDiv">
+        <button>Ver Mas</button>
       </div>
     </section>
   );

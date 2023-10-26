@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1440px;
   --border-radius-sm: 12px;
   --border-radius-lg: 24px;
   --border-radius-xlg: 64px;
@@ -39,6 +39,19 @@
   --footerTextColor: #ffffff;
 
   --paddingDesktop: 112px;
+  
+  
+  @include media-down(md){
+
+    --TitleTextSize: 32px;
+    --SubtitleTextSize: 24px;
+    --ContentTextSize: 16px;
+    --CardTextSize: 16px;
+
+
+    --paddingDesktop: 46px;
+  }
+  
 }
 
 * {
@@ -47,9 +60,14 @@
   margin: 0;
 }
 
+
+
 html,
 body {
-  max-width: 100vw;
+  background: var(--PrimaryBgColor);
+
+  margin: 0 auto;
+  max-width: var(--max-width);
 
   font-family: var(--font-mono);
 }
@@ -60,7 +78,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-h1{
+h1, h2{
   font-size: var(--TitleTextSize);
 }
 p{
@@ -96,4 +114,15 @@ button:hover{
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+button{
+  align-items: center;
+  padding: 10px 16.595px 9.5px 16.795px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 6px 12px 0px rgba(0, 0, 0, 0.08);
+  outline: none;
+  border: none;
+  background:var(--SecondaryBgColor);
+  color: white;
 }

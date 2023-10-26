@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import '../sections/Hero/Hero.scss'
 import type { Metadata } from 'next'
 import Navbar from '@/layout/Navbar'

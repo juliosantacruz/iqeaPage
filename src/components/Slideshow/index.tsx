@@ -10,11 +10,12 @@ type SlideshowProps = {
   controls?: boolean;
   autoplay?: boolean;
   styleProps?:CSSProperties;
+  slideContainerWidth?:number;
   children: string | JSX.Element | JSX.Element[] | ReactNode | ReactNode[];
 };
 
 const Slideshow = (props: SlideshowProps) => {
-  const { animationTime = 800, transitionTime= 8000, controls = true, autoplay = false, styleProps, children } = props;
+  const { animationTime = 800, transitionTime= 8000, controls = true, autoplay = false, styleProps, slideContainerWidth, children } = props;
 
   const slideshowRef = useRef<any>();
   const intervaloSlideshow = useRef(null);
@@ -115,9 +116,11 @@ const Slideshow = (props: SlideshowProps) => {
 
   }, [autoplay, transitionTime, animationTime]);
 
+    // Esta propiedad me permite ajustar el ancho de contenedor visible del slide para ver mas objetos
+    const slideContainerStyle = {width:`${slideContainerWidth}px`} 
   return (
     <div className="ContenedorPrincipal" style={styleProps}>
-      <div className="SlideshowContainer" ref={slideshowRef}>
+      <div className="SlideshowContainer" ref={slideshowRef} style={slideContainerStyle}>
         {children}
       </div>
 
