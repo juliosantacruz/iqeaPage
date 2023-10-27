@@ -90,4 +90,24 @@
             }
         }
     }
+
+
+    @include media-down(sm){
+        .serviciosHeader{
+            width: 100%;
+            margin: 20px 0;
+        }
+        .serviciosBody{
+            flex-direction: column-reverse;
+
+            .serviciosLeft{
+                width: 100%;
+                padding: 0;
+            }
+            .serviciosRight{
+                width: 100%;
+
+            }
+        }
+    }
 }
