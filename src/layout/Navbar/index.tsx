@@ -12,12 +12,14 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const path = usePathname();
 
-  const isActiveLink = (value: string) => {
-    return `navLink ${value === path ? "active" : ""}`;
-  };
   useEffect(()=>{
     setOpenMenu(false)
   },[path])
+  
+  const isActiveLink = (value: string) => {
+    return `navLink ${value === path ? "active" : ""}`;
+  };
+  
   const handlerMenu = () => {
     setOpenMenu(!openMenu);
     console.log(openMenu);

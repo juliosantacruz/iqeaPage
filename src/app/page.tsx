@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <main className='main'>
         {/* <Hero/> */}
-         <Servicios/>
-        {/* <Stats/>
-        <AboutUs/>
+         {/* <Servicios/> */}
+        <Stats/>
+        {/* <AboutUs/>
         <Subcribe/>
         <Projects/> */}
         {/* <Products/> */}

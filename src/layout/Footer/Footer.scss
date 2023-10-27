@@ -76,8 +76,14 @@
       flex-direction: column;
       justify-content: flex-end;
       height: 80%;
+      
+      .active {
+        border-bottom: 2px solid var(--PrimaryBgColor);
+      }
       .footerNav {
         margin: 8px 20px;
+        margin: 0 20px;
+        padding: 10px 0;
       }
     }
   }
@@ -146,7 +152,7 @@
       height: 60%;
 
       .navbar {
-        margin: 40px 0;
+        margin: 20px 0;
       }
     }
 
@@ -161,12 +167,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 10px 0;
         p {
           font-size: 14px;
         }
         .jsdevLogo {
           margin: 0 0 0 5px;
-          width: 100px;
+          width: 120px;
           height: auto;
         }
       }

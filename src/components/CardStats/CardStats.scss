@@ -44,7 +44,7 @@
    
   }
   @include media-down(md) {
-    width: 220px;
+    width: 180px;
     height: 340px;
 
     .image {
@@ -58,8 +58,8 @@
   }
 
   @include media-down(sm) {
-    width: 180px;
-    height: 250px;
+    width: 70%;
+    height: 100%;
     .ContenedorPrincipal {
       width: 80%;
       .title {

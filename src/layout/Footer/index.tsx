@@ -1,9 +1,10 @@
+"use client"
 import React from "react";
 import "./Footer.scss";
 import Image from "next/image";
 import Link from "next/link";
 import logoIqea from "@/assets/iqea_logo.png";
-import logoJSdev from '@/assets/logo_450x200_azul_trans.png'
+import logoJSdev from "@/assets/logo_450x200_azul_trans.png";
 
 import IconFacebook from "@/components/Icons/IconFacebook";
 import IconLinkedIn from "@/components/Icons/IconLinkedIn";
@@ -12,8 +13,16 @@ import IconInstagram from "@/components/Icons/IconInstagram";
 import IconPin from "@/components/Icons/IconPin";
 import IconPhone from "@/components/Icons/IconPhone";
 import IconMail from "@/components/Icons/IconMail";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const path = usePathname();
+
+
+  const isActiveLink = (value: string) => {
+    return `footerNav ${value === path ? "active" : ""}`;
+  };
+
   return (
     <footer className="iqeaFooter">
       <div className="footerHeader">
@@ -69,13 +78,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="navbar">
-          <Link href={"#"} className="footerNav">Inicio</Link>
-          <Link href={"#"} className="footerNav">Quienes Somos</Link>
-          <Link href={"#"} className="footerNav">Servicios</Link>
-          <Link href={"#"} className="footerNav">Productos</Link>
+          <Link href={"/"} className={isActiveLink("/")}>
+            Inicio
+          </Link>
+          <Link href={"/quienes-somos"} className={isActiveLink("/quienes-somos")}>
+            Quienes Somos
+          </Link>
+          <Link href={"/servicios"} className={isActiveLink("/servicios")}>
+            Servicios
+          </Link>
+          <Link href={"/productos"} className={isActiveLink("/productos")}>
+            Productos
+          </Link>
 
-          <Link href={"#"} className="footerNav">Proyectos</Link>
-          <Link href={"#"} className="footerNav">Contacto</Link>
+          <Link href={"/proyectos"} className={isActiveLink("/proyectos")}>
+            Proyectos
+          </Link>
+          <Link href={"/contacto"} className={isActiveLink("/contacto")}>
+            Contacto
+          </Link>
         </div>
       </div>
       <div className="footerFooter">
@@ -84,7 +105,9 @@ export default function Footer() {
         </div>
         <div className="develop">
           <p>sitio desarrollado por </p>
-          <Image src={logoJSdev} alt="logoJSdev" className="jsdevLogo"/>
+          <Link href={"https://juliosantacruz.dev"} target="_blank">
+            <Image src={logoJSdev} alt="logoJSdev" className="jsdevLogo" />
+          </Link>
         </div>
       </div>
     </footer>

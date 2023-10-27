@@ -83,35 +83,7 @@ export default function Stats() {
             <CardStats arrData={statsAguaPotable} />
             <CardStats arrData={statsAguaResidual} />
 
-
-           
-
-          {/* <Slideshow
-            controls={false}
-            autoplay={true}
-            styleProps={{ width: "300px" }}
-          >
-            {statsAguaPotable.map((data) => {
-              return (
-                <Slide key={data.id}>
-                  <CardStats data={data} />
-                </Slide>
-              );
-            })}
-          </Slideshow>
-          <Slideshow
-            controls={false}
-            autoplay={true}
-            styleProps={{ width: "300px" }}
-          >
-            {statsAguaResidual.map((data) => {
-              return (
-                <Slide key={data.id}>
-                  <CardStats data={data} />
-                </Slide>
-              );
-            })}
-          </Slideshow> */}
+ 
         </div>
       </div>
     </section>

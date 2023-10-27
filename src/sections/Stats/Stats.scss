@@ -44,9 +44,11 @@
   }
   @include media-down(sm) {
     .skewed{
-      height: 350px;
+      height: 100%;
       .statsGroup{
         gap: 12px;
+        margin: 30px 0;
+        flex-direction: column;
       }
    }
   }
