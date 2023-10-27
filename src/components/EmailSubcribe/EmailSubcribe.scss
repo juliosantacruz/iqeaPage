@@ -1,8 +1,7 @@
 .SubcribeCard {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  //  border: 1px solid;
+  width: 100%;
   border-radius: var(--border-radius-lg);
   background: var(--TercearyBgColor);
   overflow: hidden;
@@ -58,5 +57,48 @@
     width: 30%;
     padding: 12px 0 12px 0;
     margin: 0 30px 0 0;
+  }
+
+
+  @include media-down(lg){
+     
+      
+      .SubcribeContent{
+        width: 80%;
+        margin: 32px;
+  
+        .SubcribeInput{
+          width: 100%;
+        }
+      }
+    
+  }
+
+  @include media-down(md){
+     
+      .SubcribeContent{
+        width: 80%;
+        margin: 32px;
+        z-index: 5;
+        .SubcribeInput{
+          width: 100%;
+        }
+      }
+      .SubcribeImage{
+        width: 20px;
+        position: absolute;
+        right: 380px;
+
+        img{
+          height: 280px;
+        }
+      }
+     
+  }
+
+  @include media-down(sm){
+    .SubcribeContent{
+      width: 100%;
+    }
   }
 }
