@@ -12,13 +12,13 @@ import Subcribe from '@/sections/Subcribe'
 export default function Home() {
   return (
     <main className='main'>
-        <Hero/>
-        <Servicios/>
-        <Stats/>
+        {/* <Hero/> */}
+         <Servicios/>
+        {/* <Stats/>
         <AboutUs/>
         <Subcribe/>
-        <Projects/>
-        <Products/>
+        <Projects/> */}
+        {/* <Products/> */}
     </main>
   )
 }

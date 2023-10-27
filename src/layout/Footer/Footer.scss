@@ -1,102 +1,175 @@
-.iqeaFooter{
-    height: 450px;
-    padding: 0 var(--paddingDesktop);
+.iqeaFooter {
+  height: 450px;
+  padding: 0 var(--paddingDesktop);
 
-    background-color: var(--footerBgColor);
-    color:var(--footerTextColor);
-    // .footerSeparator{
-    //     width: 70%;
-    //     margin: 0 auto;
-    // }
-    .footerHeader{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 20%;
-        
+  background-color: var(--footerBgColor);
+  color: var(--footerTextColor);
+  // .footerSeparator{
+  //     width: 70%;
+  //     margin: 0 auto;
+  // }
+  .footerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
 
-
-        .logoIqea{
-            width: 120px;
-            height: auto;
-            background-color: white;
-            padding: 10px;
-            border-radius: var(--border-radius-sm);
-        }
-
-        .redesSociales{
-            ul{
-                display: flex;
-
-                li{
-                    list-style: none;
-
-                    .socialLinks{
-                         margin: 0 20px;
-                        .socialMediaIcon{
-                            width: 32px;
-                            height: 32px;
-                            fill: var(--footerTextColor);
-
-                        }
-                    }
-                }
-            }
-        }
+    .logoIqea {
+      width: 120px;
+      height: auto;
+      background-color: white;
+      padding: 10px;
+      border-radius: var(--border-radius-sm);
     }
 
-    .footerBody{
+    .redesSociales {
+      ul {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60%;
 
-        .contact{
-            h4{font-size: 24px; margin: 20px 0;}
-            .direccion, .telefono, .email{
-                display: flex;
-                margin: 10px 0;
-            }
-            .contactRow{
-                display: flex;
-                flex-direction: column;
-            }
-            .footerIcon{
-                width: 24px;
-                height: 24px;
-                margin: 0 10px 0 0;
-                fill:var(--footerTextColor);
-            }
-        }
+        li {
+          list-style: none;
 
-        .navbar{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 80%;
-            .footerNav{
-                margin: 8px 20px;
+          .socialLinks {
+            margin: 0 20px;
+            .socialMediaIcon {
+              width: 32px;
+              height: 32px;
+              fill: var(--footerTextColor);
             }
+          }
         }
+      }
+    }
+  }
+
+  .footerBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+
+    .contact {
+      h4 {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+      .direccion,
+      .telefono,
+      .email {
+        display: flex;
+        margin: 10px 0;
+      }
+      .contactRow {
+        display: flex;
+        flex-direction: column;
+      }
+      .footerIcon {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px 0 0;
+        fill: var(--footerTextColor);
+      }
     }
 
-    .footerFooter{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10%;
-
-        .develop{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            p{
-                font-size: 12px;
-            }
-            .jsdevLogo{margin: 0 0 0 5px;
-                width: 70px;
-                height: auto;
-            }
-        }
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 80%;
+      .footerNav {
+        margin: 8px 20px;
+      }
     }
+  }
+
+  .footerFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+
+    .develop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 12px;
+      }
+      .jsdevLogo {
+        margin: 0 0 0 5px;
+        width: 70px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@include media-down(sm) {
+  .iqeaFooter {
+    height: 100%;
+
+    .footerHeader {
+      flex-direction: column;
+
+      .logoIqea {
+        margin: 20px 0 10px;
+        height: auto;
+        background-color: white;
+        padding: 10px;
+        border-radius: var(--border-radius-sm);
+      }
+
+      .redesSociales {
+        margin: 20px 0;
+
+        ul {
+          display: flex;
+
+          li {
+            list-style: none;
+
+            .socialLinks {
+              margin: 0 20px;
+              .socialMediaIcon {
+                width: 32px;
+                height: 32px;
+                fill: var(--footerTextColor);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footerBody {
+      flex-direction: column-reverse;
+      height: 60%;
+
+      .navbar {
+        margin: 40px 0;
+      }
+    }
+
+    .footerFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 10%;
+
+      .develop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p {
+          font-size: 14px;
+        }
+        .jsdevLogo {
+          margin: 0 0 0 5px;
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+  }
 }

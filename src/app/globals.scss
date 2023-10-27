@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1880px;
+  --max-width: 100%;
   --border-radius-sm: 12px;
   --border-radius-lg: 24px;
   --border-radius-xlg: 64px;
@@ -41,6 +41,8 @@
   }
 
   @include media-down(md) {
+    --border-radius-sm: 10px;
+
     --TitleTextSize: 32px;
     --SubtitleTextSize: 24px;
     --ContentTextSize: 16px;
@@ -52,6 +54,9 @@
     --paddingDesktop: 28px;
   }
   @include media-down(sm) {
+    --border-radius-sm: 8px;
+
+
     --TitleTextSize: 20px;
     --SubtitleTextSize: 18px;
     --ContentTextSize: 16px;

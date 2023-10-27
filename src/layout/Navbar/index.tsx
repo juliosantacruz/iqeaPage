@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import Link from "next/link";
 import {  usePathname } from 'next/navigation';
@@ -9,10 +9,15 @@ import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
 
 export default function Navbar() {
+  const [openMenu, setOpenMenu] = useState(false)
   const path =  usePathname() 
 
 const isActiveLink = (value:string) =>{
   return `navLink ${value===path?'active':''}`
+}
+const handlerMenu=()=>{
+  setOpenMenu(!openMenu)
+  console.log(openMenu)
 }
 
   return (
@@ -22,9 +27,12 @@ const isActiveLink = (value:string) =>{
           <Image src={logoIqea} alt="logo" className="logoIqea" />
         </div>
         <div className="movilMenu">
-          <IconMenu className="hamburger"/>
+          <button onClick={handlerMenu} className="buttonMenu">
+            <IconMenu className="hamburger"/>
+
+          </button>
         </div>
-        <ul className="navLinks">
+        <ul className={`navLinks ${openMenu?'openMenu':''}`}>
           <li>
             <Link href="/" className={isActiveLink('/')}>
               Inicio
