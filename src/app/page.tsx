@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <main className='main'>
         {/* <Hero/> */}
-         {/* <Servicios/> */}
+         <Servicios/>
         <Stats/>
-        {/* <AboutUs/>
-        <Subcribe/>
+        <AboutUs/>
+        {/* <Subcribe/>
         <Projects/> */}
         {/* <Products/> */}
     </main>
