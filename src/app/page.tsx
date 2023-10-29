@@ -12,7 +12,7 @@ import Subcribe from '@/sections/Subcribe'
 export default function Home() {
   return (
     <main className='main'>
-        {/* <Hero/> */}
+        <Hero/>
          <Servicios/>
         <Stats/>
         <AboutUs/>

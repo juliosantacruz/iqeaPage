@@ -94,6 +94,7 @@ const Slideshow = (props: SlideshowProps) => {
 
       // se crea un intervalo de tiempo para el Autoplay
       (intervaloSlideshow as any).current = setInterval(() => {
+        
         nextImage();
       }, transitionTime);
   

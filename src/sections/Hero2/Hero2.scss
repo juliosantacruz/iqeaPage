@@ -1,0 +1,138 @@
+#Hero {
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    
+    animation: pan-hero-img 20s linear infinite;
+}
+
+@keyframes pan-hero-img {
+    /* recorrido 1 */
+    0%{
+        background-position: 50% 0%;
+        background-size: cover;
+    }
+    50% {
+        background-position: 80% 70%;
+        background-size: cover;
+    }
+    /* recorrido 2 */
+
+    50.0001% {
+        background-position: 20% 70%;
+        background-size: cover;
+    }
+    
+    100% {
+        background-position: 50% 0%;
+        background-size: cover;
+    }
+    
+}
+
+.title {
+    position: relative;
+    top: 30%;
+    width: 55%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(150, 150, 150, 0.6);
+    border-radius: 30px;
+    h1 {
+        font-size: 40px;
+        margin: 20px 0 10px 0;
+        color: aliceblue;
+    }
+    p {
+        font-size: 20px;
+        margin: 10px 0 20px 0;
+        font-weight: 600;
+    }
+    .text-gradient {
+        // background-image: var(--accent-gradient);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-size: 400%;
+        // background-position: 0%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        width: 80%;
+        padding: 10px;
+        border-radius: 10px;
+
+    }@keyframes pan-hero-img {
+    /* recorrido 1 */
+    0%{
+        background-position: 30% 50%;
+        background-size: cover;
+    }
+    50% {
+        background-position: 70% 70%;
+        background-size: cover;
+    }
+    /* recorrido 2 */
+
+    50.0001% {
+        background-position: 70% 70%;
+        background-size: cover;
+    }
+    
+    100% {
+        background-position: 30% 5%;
+        background-size: cover;
+    }
+    
+}
+}
+
+@media screen and (max-width: 425px) {
+    .title {
+        width: 80%;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.6rem;
+        margin: 20px 0 10px 0;
+        color: aliceblue;
+    }
+    p {
+        font-size: 18px;
+        margin: 10px 0 20px 0;
+        padding: 0 20px;
+        text-align: center;
+        font-weight: 500;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+    .title {
+        width: 80%;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 22px;
+        
+    }
+    p {
+        font-size: 16px;
+       
+    }
+}

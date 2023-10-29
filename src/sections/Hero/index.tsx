@@ -7,6 +7,7 @@ import hero2 from "@/assets/hero/heroImage2-min.jpg";
 import hero3 from "@/assets/hero/heroImage3-min.jpg";
 import hero4 from "@/assets/hero/heroImage4-min.jpg";
 import hero5 from "@/assets/hero/heroImage5-min.jpg";
+import Hero2 from "../Hero2";
 
 
 export default function Hero() {
@@ -48,26 +49,29 @@ export default function Hero() {
     },
   ];
   
+ 
 
-
-  return (
-    <section className="Hero">
-
-      <Slideshow autoplay={true} controls={true}>
+  return (<Hero2 />
+    // <section className="Hero">
+    // <HeroCard HeroData={heroArray[1]} />
+    
+    //   <Slideshow autoplay={true} controls={false} animationTime={800} transitionTime={8000}>
         
-          {heroArray &&
-            heroArray.map((element)=>{
-              return(
-                <Slide key={element.id}><HeroCard HeroData={element} /> </Slide>)
-            })
-          }
+    //       {heroArray &&
+    //         heroArray.map((element)=>{
+               
+              
+    //           return(
+    //             <Slide key={element.id}><HeroCard HeroData={element} /> </Slide>)
+    //         })
+    //       }
         
 
        
 
-      </Slideshow>
+    //   </Slideshow>
 
-    </section>
+    // </section>
   );
 }
 
