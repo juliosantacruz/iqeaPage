@@ -37,12 +37,12 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/" className="socialLinks">
+              <a href="https://www.linkedin.com/in/arturo-chavez-90979258/" target="_blank" className="socialLinks">
                 <IconLinkedIn />
               </a>
             </li>
             <li>
-              <a href="/" className="socialLinks">
+              <a href="https://www.facebook.com/profile.php?id=100064039061566" target="_blank" className="socialLinks">
                 <IconFacebook />
               </a>
             </li>

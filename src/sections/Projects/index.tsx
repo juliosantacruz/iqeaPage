@@ -3,6 +3,7 @@ import React from "react";
 import "./Projects.scss";
 import CardProject from "@/components/CardProject";
 import { Slide, Slideshow } from "@/components/Slideshow";
+import ButtonStyle from "@/components/ButtonStyle";
 
 export default function Projects() {
   return (
@@ -41,9 +42,11 @@ export default function Projects() {
           </Slide>
         </Slideshow>
       </div>
-      <div className="buttonProjects centerDiv">
-        <button>Ver Mas</button>
-      </div>
+      <ButtonStyle>
+        <button style={{maxWidth:'350px', margin:"30px 0"}}>Ver Mas</button>
+
+      </ButtonStyle>
+      
     </section>
   );
 }

@@ -7,6 +7,43 @@
   background-size: 150%;
 
   animation: pan-hero-img 20s linear infinite;
+  .title {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: rgba(122, 122, 122, 0.9);
+    border-radius: 30px;
+
+    text-align: justify;
+  text-justify: inter-word;
+  padding: 35px;
+    h1 {
+      font-size: var(--TitleTextSize);
+      margin: 20px 10px;
+      color: var(--SecondaryTextColor);
+    }
+    p {
+      font-size: var(--ContentTextSize);
+      // margin: 10px 20px ;
+      font-weight: 600;
+      color: var(--SecondaryTextColor);
+    }
+    .text-gradient {
+      // background-image: var(--accent-gradient);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      // background-size: 400%;
+      // background-position: 0%;
+    }
+  }
+  
   @keyframes pan-hero-img {
     /* recorrido 1 */
     0% {
@@ -30,50 +67,17 @@
     }
   }
   
-  .title {
-    position: relative;
-    top: 30%;
-    width: 45%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-    background-color: rgba(122, 122, 122, 0.9);
-    border-radius: 30px;
-
-    text-align: justify;
-  text-justify: inter-word;
-    h1 {
-      font-size: 40px;
-      margin: 20px 10px;
-      color: aliceblue;
-    }
-    p {
-      font-size: 20px;
-      margin: 10px 20px ;
-      font-weight: 600;
-      color: aliceblue;
-    }
-    .text-gradient {
-      // background-image: var(--accent-gradient);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      // background-size: 400%;
-      // background-position: 0%;
-    }
-  }
   @media screen and (max-width: 1024px) {
     .title {
+      left: 20%;
       width: 60%;
     }
   }
   
   @media screen and (max-width: 768px) {
     .title {
+      left: 10%;
       width: 80%;
-      padding: 10px;
       border-radius: 10px;
     }
     @keyframes pan-hero-img {
@@ -102,10 +106,13 @@
   
   @media screen and (max-width: 425px) {
     .title {
+      position: relative;
+      left: 0;
       top: 20%;
       width: 90%;
       border-radius: 20px;
-      padding: 10px;
+      padding: 20px;
+      text-align: left;
     }
     h1 {
       font-size: 1.6rem;
@@ -113,7 +120,7 @@
       color: aliceblue;
     }
     .text-gradient {
-      font-size: 60px;
+      font-size: calc(  var(--TitleTextSize) * 1.33 );
       // background-image: var(--accent-gradient);
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
@@ -122,7 +129,7 @@
     }
     p {
       font-size: 18px;
-      margin: 10px 0 20px 0;
+      // margin: 10px 0 20px 0;
       padding: 0 10px;
       text-align: center;
       font-weight: 500;
