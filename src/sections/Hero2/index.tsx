@@ -18,7 +18,7 @@ export default function Hero2() {
           {" "}
           Limpiamos el planeta, tenemos experiencia diseniando y construyendo
           sistemas de tratamiento de agua y procesos, resolviendo los retos mas
-          complejos , contamos con un portafolio de soliciones concretas para tu
+          complejos, contamos con un portafolio de soliciones concretas para tu
           proyecto
         </p>
       </div>
