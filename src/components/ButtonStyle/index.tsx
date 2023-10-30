@@ -3,11 +3,11 @@ import './ButtonStyle.scss'
 
 
 
-type ButtonStyle={
+type ButtonStyleProps={
     children:React.ReactNode , 
 
 }
-export default function ButtonStyle({children}:ButtonStyle) {
+export default function ButtonStyle({children}:ButtonStyleProps) {
   return (
     <div className='iqeaBtn'>
          {children}

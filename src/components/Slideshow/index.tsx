@@ -11,6 +11,7 @@ type SlideshowProps = {
   autoplay?: boolean;
   styleProps?:CSSProperties;
   slideContainerWidth?:number;
+  // eslint-disable-next-line no-undef
   children: string | JSX.Element | JSX.Element[] | ReactNode | ReactNode[];
 };
 

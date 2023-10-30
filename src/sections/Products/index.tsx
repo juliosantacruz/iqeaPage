@@ -1,6 +1,7 @@
 import React from "react";
 import "./Products.scss";
 import CardProduct from "@/components/CardProduct";
+import ButtonStyle from "@/components/ButtonStyle";
 
 export default function Products() {
   return (
@@ -14,12 +15,14 @@ export default function Products() {
         </p>
       </div>
 
-      <div className="productsGroup">
+      <div className="productsGroup centerDiv">
         <CardProduct />
       </div>
-      <div className="buttonProducts centerDiv">
-        <button>Ver Mas</button>
-      </div>
+      <ButtonStyle>
+
+        <button style={{margin:'20px 0', width:'300px'}}>Ver Mas</button>
+      </ButtonStyle>
+      
     </section>
   );
 }

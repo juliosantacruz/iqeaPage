@@ -2,7 +2,6 @@ import React from "react";
 import "./Contacto.scss";
 import bgImage from "@/assets/Contact-min.png";
 import FormContact from "@/components/FormContact";
-import Image from "next/image";
 export default function ContactoPage() {
   const bgContactForm = {
     backgroundImage: `url(${bgImage.src})`,

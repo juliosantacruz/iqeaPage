@@ -11,7 +11,7 @@ export default function Projects() {
       <div className="headerProjects centerDiv">
         <h2>PROYECTOS IQEA</h2>
         <p>
-          Construimos sistemas de tratamiento de agua "llave en mano",
+          Construimos sistemas de tratamiento de agua &quot;llave en mano&quot;,
           elaboramos proyectos, y trabajamos en equipo.
         </p>
       </div>

@@ -25,7 +25,7 @@ export default function HeroCard({ HeroData }: PropsHeroCard)  {
         </div>
       </div>
     );
-  };
+  }
 
 
  
