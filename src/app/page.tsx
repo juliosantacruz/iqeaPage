@@ -17,8 +17,8 @@ export default function Home() {
          <Servicios/>
         <Stats/>
         <AboutUs/>
-        <Subcribe/>
         <Projects/>
+        <Subcribe/>
         <Products/>
     </main>
   )

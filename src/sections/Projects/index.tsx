@@ -11,8 +11,7 @@ export default function Projects() {
       <div className="headerProjects centerDiv">
         <h2>PROYECTOS IQEA</h2>
         <p>
-          Construimos sistemas de tratamiento de agua &quot;llave en mano&quot;,
-          elaboramos proyectos, y trabajamos en equipo.
+          Minim deserunt occaecat veniam anim eiusmod eu cupidatat anim eiusmod excepteur. Quis proident fugiat enim incididunt ut quis velit sint non non veniam eiusmod reprehenderit. Aliqua ipsum incididunt aliquip laboris sint deserunt elit tempor officia ex elit. Ullamco sit est in elit aliquip sit veniam quis veniam.
         </p>
       </div>
 
@@ -20,8 +19,8 @@ export default function Projects() {
         <Slideshow 
           autoplay={false} 
           controls={false} 
-          styleProps={{ width: "100%", overflowX:'scroll', scrollbarWidth:'none' }}
-          slideContainerWidth={400}>
+          styleProps={{ width: "100%", height:'460px',overflowX:'scroll', scrollbarWidth:'none' }}
+          slideContainerWidth={400} slideContainerHeight={460}>
           <Slide>
             <CardProject />
           </Slide>{" "}
