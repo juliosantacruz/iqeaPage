@@ -17,7 +17,7 @@ export default function Home() {
         <Stats/>
         <AboutUs/>
         <Subcribe/>
-        {/* <Projects/> */}
+        <Projects/>
         {/* <Products/> */}
     </main>
   )

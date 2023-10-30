@@ -33,7 +33,7 @@
   .title {
     position: relative;
     top: 30%;
-    width: 55%;
+    width: 45%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -42,14 +42,17 @@
   
     background-color: rgba(122, 122, 122, 0.9);
     border-radius: 30px;
+
+    text-align: justify;
+  text-justify: inter-word;
     h1 {
       font-size: 40px;
-      margin: 20px 0 10px 0;
+      margin: 20px 10px;
       color: aliceblue;
     }
     p {
       font-size: 20px;
-      margin: 10px 0 20px 0;
+      margin: 10px 20px ;
       font-weight: 600;
       color: aliceblue;
     }
