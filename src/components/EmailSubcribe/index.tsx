@@ -3,7 +3,7 @@ import React, { FormEvent, useState }  from "react";
 import vectorEmail from "@/assets/EmailSubcriptionVector.svg";
 import Image from "next/image";
 import "./EmailSubcribe.scss";
-import { API_URL_STRAPI } from "@/config";
+import { API_URL_STRAPI_PROD } from "@/config";
 import axios from "axios";
 
 
@@ -12,7 +12,9 @@ import axios from "axios";
 
 export default  function EmailSubcribe() {
   const [success, segSuccess]=useState(false)
-console.log(API_URL_STRAPI, process.env.API_URL_STRAPI)
+console.log(API_URL_STRAPI_PROD, process.env.API_URL_STRAPI_PROD)
+
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault()
     const email = (event.currentTarget.elements[0] as HTMLFormElement).value
@@ -30,7 +32,7 @@ console.log(API_URL_STRAPI, process.env.API_URL_STRAPI)
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: `${process.env.API_URL_STRAPI}/newsfeeds`,
+      url: `${process.env.API_URL_STRAPI_PROD}/newsfeeds`,
       headers: { 
         'Content-Type': 'application/json'
       },
