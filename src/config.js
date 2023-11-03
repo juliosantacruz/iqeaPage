@@ -1,5 +1,9 @@
-export const { 
-    API_URL_STRAPI,
-    API_URL_STRAPI_PROD 
+const {API_URL_STRAPI_DEV, API_URL_STRAPI_PROD, IS_DEV} = process.env
 
-} = process.env
+const isDev = IS_DEV
+
+
+
+const API_URL_STRAPI = isDev? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
+
+export  {API_URL_STRAPI } 

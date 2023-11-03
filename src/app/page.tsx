@@ -11,10 +11,11 @@ import './home.scss'
 
 
 export default function Home() {
+  
   return (
     <main className='main'>
         <Hero/>
-         <Servicios/>
+        <Servicios/>
         <Stats/>
         <AboutUs/>
         <Projects/>

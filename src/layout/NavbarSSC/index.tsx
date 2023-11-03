@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import Link from "next/link";
@@ -7,37 +5,27 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
-import { fetchNavContent } from "@/services/api";
-
 
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
+export default async function NavbarSSC() {
+  // const [openMenu, setOpenMenu] = useState(false);
+  let openMenu: boolean = false;
+  const setOpenMenu = (state: boolean) => {
+    openMenu = state;
+  };
 
+  // const path = usePathname();
+  const path = "/";
 
-export default function Navbar() {
-  const [openMenu, setOpenMenu] = useState(false);
-  const [navData, setNavData] = useState()
-  
-  const path = usePathname();
-
-   
-
-  useEffect(()=>{
-    setOpenMenu(false)
-  },[path])
-  
-  useEffect(()=>{
-
-    
-    const data:any = fetchNavContent()
-    setNavData(data)
-  },[])
-  console.log(navData)
+  // useEffect(()=>{
+  //   setOpenMenu(false)
+  // },[path])
 
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
   };
-  
+
   const handlerMenu = () => {
     setOpenMenu(!openMenu);
     console.log(openMenu);
@@ -50,6 +38,7 @@ export default function Navbar() {
           <Image src={logoIqea} alt="logo" className="logoIqea" />
         </div>
         <div className="movilMenu">
+            
           <button onClick={handlerMenu} className="buttonMenu">
             <IconMenu className="hamburger" />
           </button>

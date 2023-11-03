@@ -18,7 +18,7 @@ export default function Projects() {
       <div className="bodyProjects ">
         <Slideshow 
           autoplay={false} 
-          controls={false} 
+          controls={true} 
           styleProps={{ width: "100%", height:'460px',overflowX:'scroll', scrollbarWidth:'none' }}
           slideContainerWidth={400} slideContainerHeight={460}>
           <Slide>
