@@ -7,37 +7,25 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
-import { fetchNavContent } from "@/services/api";
-
 
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
-
-
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [navData, setNavData] = useState()
-  
+  const [navData, setNavData] = useState();
+
   const path = usePathname();
 
-   
+  useEffect(() => {
+    setOpenMenu(false);
+  }, [path]);
 
-  useEffect(()=>{
-    setOpenMenu(false)
-  },[path])
-  
-  useEffect(()=>{
-
-    
-    const data:any = fetchNavContent()
-    setNavData(data)
-  },[])
-  console.log(navData)
+ 
 
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
   };
-  
+
   const handlerMenu = () => {
     setOpenMenu(!openMenu);
     console.log(openMenu);
