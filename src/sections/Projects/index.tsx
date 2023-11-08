@@ -16,7 +16,7 @@ export default function Projects() {
       </div>
 
       <div className="bodyProjects ">
-        <Slideshow 
+        {/* <Slideshow 
           autoplay={false} 
           controls={true} 
           styleProps={{ width: "100%", height:'460px',overflowX:'scroll', scrollbarWidth:'none' }}
@@ -39,7 +39,7 @@ export default function Projects() {
           <Slide>
             <CardProject />
           </Slide>
-        </Slideshow>
+        </Slideshow> */}
       </div>
       <ButtonStyle>
         <button style={{maxWidth:'350px', margin:"30px 0"}}>Ver Mas</button>
