@@ -1,4 +1,5 @@
 import { getProyectos } from "@/services/fetchData";
+import Link from "next/link";
 import React from "react";
 
 export default async function page() {
@@ -8,13 +9,15 @@ export default async function page() {
     <section>
       <h3>test</h3>
       {data.map((proyecto: any) => {
-        const { titulo } = proyecto.attributes;
+        const { titulo, slug } = proyecto.attributes;
         // console.log("data --->", proyecto.attributes);
-        return <article key={proyecto.id}>{titulo}</article>;
+        return <article key={proyecto.id}>
+          <Link href={`proyectos/${slug}`} >
+          {titulo}
+          </Link>
+        </article>;
       })}
-      {/* <h2>{data.attributes.titulo}</h2>
-      <p>{data.attributes.anio}</p>
-      <div>{data.attributes.descripcion}</div> */}
+    
     </section>
   );
 }

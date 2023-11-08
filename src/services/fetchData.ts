@@ -41,9 +41,8 @@ export async function getServicios() {
   return data;
 }
 
-//Pendiente 
-export async function getServiciosBySlug() {
-  const res = await fetch(`${API_URL_STRAPI}/servicios/`);
+export async function getServiciosBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/servicios/${slug}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -62,8 +61,28 @@ export async function getProyectos() {
   return data;
 }
 
+export async function getProyectosBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/proyectos/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
 export async function getProductos() {
   const res = await fetch(`${API_URL_STRAPI}/productos/`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
+export async function getProductosBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/productos/${slug}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

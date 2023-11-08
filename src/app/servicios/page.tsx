@@ -1,4 +1,5 @@
 import { getServicios } from "@/services/fetchData";
+import Link from "next/link";
 import React from "react";
 
 export default async function page() {
@@ -11,10 +12,12 @@ export default async function page() {
     <section>
       <h3>test</h3>
       {data.map((servicio: any) => {
-        const { titulo } = servicio.attributes;
+        const { titulo, slug } = servicio.attributes;
         // console.log("data --->", servicio.attributes);
         return (
-          <article key={servicio.id}>{titulo}</article>
+          <article key={servicio.id}>
+            <Link href={`servicios/${slug}`}>mira :D {titulo}</Link>
+          </article>
         );
       })}
     </section>
