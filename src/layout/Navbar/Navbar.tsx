@@ -20,8 +20,6 @@ export default function Navbar() {
     setOpenMenu(false);
   }, [path]);
 
- 
-
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
   };
@@ -34,9 +32,11 @@ export default function Navbar() {
   return (
     <header>
       <nav className="navbar">
-        <div className="iqeaLogo">
-          <Image src={logoIqea} alt="logo" className="logoIqea" />
-        </div>
+        <Link href="/">
+          <div className="iqeaLogo">
+            <Image src={logoIqea} alt="logo" className="logoIqea" />
+          </div>
+        </Link>
         <div className="movilMenu">
           <button onClick={handlerMenu} className="buttonMenu">
             <IconMenu className="hamburger" />
@@ -54,6 +54,14 @@ export default function Navbar() {
               className={isActiveLink("/quienes-somos")}
             >
               Quiénes Somos
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/procesos"
+              className={isActiveLink("/procesos")}
+            >
+              Procesos
             </Link>
           </li>
           <li>

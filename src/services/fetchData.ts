@@ -9,7 +9,7 @@ const API_URL_STRAPI = isDEV? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
 // console.log('PROD',API_URL_STRAPI_PROD);
 // console.log('lol',API_URL_STRAPI);
 
-
+// http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
 export async function fetchNavContent() {
   let config = {
@@ -83,6 +83,27 @@ export async function getProductos() {
 
 export async function getProductosBySlug(slug:string) {
   const res = await fetch(`${API_URL_STRAPI}/productos/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
+// Filtrar la informacion del fetch para solo traer lo basico
+export async function getProcesos() {
+  const res = await fetch(`${API_URL_STRAPI}/tipo-procesos?populate=*`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
+export async function getProcesosBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/tipo-proceso/${slug}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
