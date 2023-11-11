@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {
   ReactNode,
   useEffect,
@@ -66,7 +65,7 @@ const Slideshow = (props: SlideshowProps) => {
     //   // Eventlistener para cuando termina la primer animacion
     //   slideshowRef.current.addEventListener("transitionend", transition);
     // }
-  }, [animationTime]);
+  }, []);
 
   const prevImage = () => {
     // Comprobamos que exista 1 imagen o mas
@@ -86,7 +85,6 @@ const Slideshow = (props: SlideshowProps) => {
       slideshowRef.current.style.transition = "none";
 
       // Definimos el ancho del slide
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const slideSize = (slideshowRef.current.children[0] as any).offsetWidth;
 
       // movemos el slide

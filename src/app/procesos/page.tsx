@@ -5,7 +5,7 @@ import React from "react";
 export default async function page() {
   const data = await getProcesos();
 
-  console.log('data ------->',data);
+  // console.log('data ------->',data);
   return (
     <section>
       <h3>test</h3>
