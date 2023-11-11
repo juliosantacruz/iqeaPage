@@ -1,0 +1,10 @@
+{
+    "determiningMeasuringUnit": {
+        "productWaterStorage": {
+            "ui:widget": "RadioWidget"
+        },
+        "permeateRepressurizationRequired": {
+            "ui:widget": "RadioWidget"
+        }
+    }
+}

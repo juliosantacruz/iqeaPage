@@ -1,0 +1,331 @@
+{
+    "title": " ",
+    "type": "object",
+    "properties": {
+        "contactForm":{
+            "title": "Reverse Osmosis Design Request",
+            "description": "If you'd like a quote for a Reverse Osmosis application, please fill out as much information as possible in the form below and we'll gladly quote the right system for your project.",
+            "type": "object",
+            "required": [
+                "companyName",
+                "firstName",
+                "lastName",
+                "city",
+                "country",
+                "phone",
+                "email",
+                "zip",
+                "describeYourProject"
+            ],
+            "properties": {
+                "companyName": {
+                    "type": "string",
+                    "title": "Company Name"
+                },
+                "firstName": {
+                    "type": "string",
+                    "title": "First Name"
+                },
+                "lastName": {
+                    "type": "string",
+                    "title": "Last Name"
+                },
+                "streetAddress": {
+                    "type": "string",
+                    "title": "Street Address"
+                },
+                "city": {
+                    "type": "string",
+                    "title": "City"
+                },
+                "state": {
+                    "type": "string",
+                    "title": "State / Province / Region"
+                },
+                "zip": {
+                    "type": "string",
+                    "title": "Zip"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country"
+                },
+                "phone": {
+                    "type": "string",
+                    "title": "Phone"
+                },
+                "email": {
+                    "type": "string",
+                    "title": "Email",
+                    "format": "email"
+                },
+                "describeYourProject": {
+                    "type": "string",
+                    "title": "Please briefly describe your project"
+                }
+            }
+        },
+        "treatementRequirements": {
+            "title": "Treated Water Requirements (permeate)",
+            "type": "object",
+            "properties": {
+                "volumePerDay": {
+                    "type": "string",
+                    "title": "Volume per Day"
+                },
+                "volumePerMinute": {
+                    "type": "string",
+                    "title": "Volume per Minute"
+                },
+                "hoursOperationUnit": {
+                    "type": "string",
+                    "title": "Hours of Operation of the Unit"
+                },
+                "MaxDemandInPeakHours": {
+                    "type": "string",
+                    "title": "Maximum Demand in Peak Hours"
+                },
+                "usageOfTheWater": {
+                    "type": "string",
+                    "title": "Usage of the Product Water"
+                }
+            }
+        },
+        "feedWaterSource": {
+            "title": "Feed Water Source",
+            "type": "object",
+            "properties": {
+                "source": {
+                    "type": "string",
+                    "title": "Source"
+                },
+                "averageAnnualTemperature": {
+                    "type": "string",
+                    "title": "Average Annual Temperature"
+                },
+                "minimumFlowGPM": {
+                    "type": "string",
+                    "title": "Minimum Flow in GPM"
+                },
+                "maximumFlowGPM": {
+                    "type": "string",
+                    "title": "Maximum Flow in GPM"
+                },
+                "FeedWaterPressure": {
+                    "type": "string",
+                    "title": "Feed Water Pressure"
+                },
+                "presenceFreeChlorinePPM": {
+                    "type": "string",
+                    "title": "Presence of Free Chlorine / PPM"
+                }
+            }
+        },
+        "maximumSpaceAvailableSystem": {
+            "title": "Maximum Space Available for the System",
+            "type": "object",
+            "properties": {
+                "length": {
+                    "type": "string",
+                    "title": "Length"
+                },
+                "width": {
+                    "type": "string",
+                    "title": "Width"
+                },
+                "height": {
+                    "type": "string",
+                    "title": "Height"
+                }
+            }
+        },
+        "energySource": {
+            "title": "Energy Source",
+            "type": "object",
+            "properties": {
+                "voltage": {
+                    "type": "string",
+                    "title": "Voltage"
+                },
+                "cycles": {
+                    "type": "string",
+                    "title": "Cycles"
+                },
+                "phases": {
+                    "type": "string",
+                    "title": "Phases"
+                },
+                "maxAmps": {
+                    "type": "string",
+                    "title": "Max Amps"
+                }
+            }
+        },
+        "chemicalAnalysisFeedWater": {
+            "title": "Chemical Analysis of the Feed Water",
+            "type": "object",
+            "properties": {
+                "temperature": {
+                    "type": "string",
+                    "title": "Temperature"
+                },
+                "turbidity": {
+                    "type": "string",
+                    "title": "Turbidity/SDI"
+                },
+                "conductivity": {
+                    "type": "string",
+                    "title": "Conductivity"
+                },
+                "TDS": {
+                    "type": "string",
+                    "title": "TDS"
+                },
+                "TSS": {
+                    "type": "string",
+                    "title": "TSS"
+                },
+                "Bacteria CFU": {
+                    "type": "string",
+                    "title": "Bacteria CFU"
+                },
+                "pH": {
+                    "type": "string",
+                    "title": "pH"
+                },
+                "CO2": {
+                    "type": "string",
+                    "title": "CO2"
+                },
+                "totalHardness": {
+                    "type": "string",
+                    "title": "Total Hardness"
+                },
+                "totalAlkalinety": {
+                    "type": "string",
+                    "title": "Total Alkalinity"
+                },
+                "iron": {
+                    "type": "string",
+                    "title": "Iron"
+                },
+                "hydrogenSulfides": {
+                    "type": "string",
+                    "title": "Hydrogen Sulfides (SH2)"
+                },
+                "calcium": {
+                    "type": "string",
+                    "title": "Calcium"
+                },
+                "carbonates": {
+                    "type": "string",
+                    "title": "Carbonates"
+                },
+                "magnesium": {
+                    "type": "string",
+                    "title": "Magnesium"
+                },
+                "bicarbonates": {
+                    "type": "string",
+                    "title": "Bicarbonates"
+                },
+                "sodium": {
+                    "type": "string",
+                    "title": "Sodium"
+                },
+                "sulfates": {
+                    "type": "string",
+                    "title": "Sulfates"
+                },
+                "potassium": {
+                    "type": "string",
+                    "title": "Potassium"
+                },
+                "chlorides": {
+                    "type": "string",
+                    "title": "Chlorides"
+                },
+                "ammonia": {
+                    "type": "string",
+                    "title": "Ammonia"
+                },
+                "nitrates": {
+                    "type": "string",
+                    "title": "Nitrates"
+                },
+                "strontium": {
+                    "type": "string",
+                    "title": "Strontium"
+                },
+                "phosphates": {
+                    "type": "string",
+                    "title": "Phosphates"
+                },
+                "barium": {
+                    "type": "string",
+                    "title": "Barium"
+                },
+                "silicaOxide": {
+                    "type": "string",
+                    "title": "Silica Oxide (SiO2)"
+                },
+                "freeResidualChlorine": {
+                    "type": "string",
+                    "title": "Free Residual Chlorine"
+                }
+            }
+        },
+        "determiningMeasuringUnit": {
+            "title": "Determining the Measuring Unit (mg/l, ppm. CO3Ca, etc.)",
+            "type": "object",
+            "properties": {
+                "feedWatterPipeDiameter": {
+                    "type": "string",
+                    "title": "Feed Water Pipe Diameter"
+                },
+                "totalStorageVolume": {
+                    "type": "string",
+                    "title": "Total Storage Volume (gals/m3)"
+                },
+                "distanceHeightCistern": {
+                    "type": "string",
+                    "title": "Distance & Height of the Cistern"
+                },
+                "availabilityDrainage": {
+                    "type": "string",
+                    "title": "Availability of Drainage"
+                },
+                "productWaterStorage": {
+                    "title": "Product Water Storage",
+                    "type": "boolean",
+                    "oneOf": [
+                        {
+                            "title": "yes",
+                            "const": true
+                        },
+                        {
+                            "title": "no",
+                            "const": false
+                        }
+                    ]
+                },
+                "permeateRepressurizationRequired": {
+                    "title": "Permeate Re pressurization Required (flow & pressure)",
+                    "type": "boolean",
+                    "oneOf": [
+                        {
+                            "title": "yes",
+                            "const": true
+                        },
+                        {
+                            "title": "no",
+                            "const": false
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+
+
