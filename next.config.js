@@ -17,7 +17,7 @@ const nextConfig = {
     API_URL_STRAPI:API_URL_STRAPI,
 
   },
-  typedRoutes: true,
+  // typedRoutes: true,
 };
 
 module.exports = nextConfig;

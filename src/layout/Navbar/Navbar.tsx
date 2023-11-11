@@ -83,6 +83,10 @@ export default function Navbar() {
             <Link href="/contacto" className={isActiveLink("/contacto")}>
               Contacto
             </Link>
+          </li><li>
+            <Link href="/formulario" className={isActiveLink("/formulario")}>
+              Formulario
+            </Link>
           </li>
         </ul>
       </nav>
