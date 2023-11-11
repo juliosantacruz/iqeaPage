@@ -1,9 +1,8 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 import validator from "@rjsf/validator-ajv8";
 import Form from "@rjsf/core";
-import { RJSFSchema } from "@rjsf/utils";
-import './JSONForm.scss'
+import "./JSONForm.scss";
 
 export default function JSONForm({ jsonData, JsonUI }: any) {
     const log = (type: string) => console.log.bind(console, type);
@@ -15,7 +14,7 @@ export default function JSONForm({ jsonData, JsonUI }: any) {
             uiSchema={JsonUI}
             // onChange={log("changed")}
             onSubmit={log("submitted")}
-            // onError={log("errors")}
+        // onError={log("errors")}
         />
-    )
+    );
 }
