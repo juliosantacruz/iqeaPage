@@ -6,17 +6,6 @@
             "title": "Reverse Osmosis Design Request",
             "description": "If you'd like a quote for a Reverse Osmosis application, please fill out as much information as possible in the form below and we'll gladly quote the right system for your project.",
             "type": "object",
-            "required": [
-                "companyName",
-                "firstName",
-                "lastName",
-                "city",
-                "country",
-                "phone",
-                "email",
-                "zip",
-                "describeYourProject"
-            ],
             "properties": {
                 "companyName": {
                     "type": "string",
