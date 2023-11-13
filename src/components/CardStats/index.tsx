@@ -11,7 +11,7 @@ export default function CardStats({ arrData }: any) {
       <div className="image">
         <Image src={image} alt="" height={120} width={120} />
       </div>
-      {/* <Slideshow autoplay={true} controls={false}   transitionTime={3000} >
+      <Slideshow autoplay={true} controls={false}   transitionTime={3000} >
         {arrData &&
           arrData.map((data: any) => {
             const title = data.title;
@@ -29,7 +29,7 @@ export default function CardStats({ arrData }: any) {
               </Slide>
             );
           })}
-      </Slideshow> */}
+      </Slideshow>
     </article>
   );
 }

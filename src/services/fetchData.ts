@@ -111,3 +111,13 @@ export async function getProcesosBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
+
+export async function getFormularioBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/formularios-contactos/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}

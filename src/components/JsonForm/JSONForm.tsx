@@ -5,16 +5,17 @@ import validator from "@rjsf/validator-ajv8";
 import Form from "@rjsf/core";
 import "./JSONForm.scss";
 
-export default function JSONForm({ jsonData, JsonUI }: any) {
+export default function JSONForm({ jsonData, jsonUI, title }: any) {
+    
     const [formData, setFormData] = useState(null);
     const handlerOnSubmit = () => {
         console.log(formData);
 
-        
         let data = JSON.stringify({
             data: {
-                formulario: {
-                    formData
+                title:title,
+                data: {
+                    formData,
                 },
             },
         });
@@ -22,7 +23,7 @@ export default function JSONForm({ jsonData, JsonUI }: any) {
         let config = {
             method: "post",
             maxBodyLength: Infinity,
-            url: `${process.env.API_URL_STRAPI}/formularios`,
+            url: `${process.env.API_URL_STRAPI}/formularios-recibidos`,
             headers: {
                 "Content-Type": "application/json",
             },
@@ -43,7 +44,7 @@ export default function JSONForm({ jsonData, JsonUI }: any) {
         <Form
             schema={jsonData}
             validator={validator}
-            uiSchema={JsonUI}
+            uiSchema={jsonUI}
             onChange={(e) => setFormData(e.formData)}
             onSubmit={handlerOnSubmit}
         // onError={log("errors")}

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
+import DropDown from "@/components/DropDown";
 
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
@@ -84,9 +85,11 @@ export default function Navbar() {
               Contacto
             </Link>
           </li><li>
-            <Link href="/formulario" className={isActiveLink("/formulario")}>
+            {/* <Link href="/formulario" className={isActiveLink("/formulario")}>
               Formulario
-            </Link>
+            </Link> */}
+            
+            <DropDown/>
           </li>
         </ul>
       </nav>

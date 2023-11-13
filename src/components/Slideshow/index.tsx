@@ -31,41 +31,41 @@ const Slideshow = (props: SlideshowProps) => {
     children,
   } = props;
 
-  const slideshowRef = useRef<any>();
+  const slideshowRef = useRef<any>(null);
   const intervaloSlideshow = useRef(null);
 
   const nextImage = useCallback(() => {
     // Comprobamos que exista 1 imagen o mas
-    // if (slideshowRef.current.children.length > 0) {
-    //   // definismos la primer imagen del carrusel
-    //   const firstSlide = slideshowRef.current.children[0];
+    if (slideshowRef.current&&slideshowRef.current.children.length > 0) {
+      // definismos la primer imagen del carrusel
+      const firstSlide = slideshowRef.current.children[0];
 
-    //   // Establecemos la animacion de transicion de elementos
-    //   slideshowRef.current.style.transition = `${animationTime}ms ease-out all`;
+      // Establecemos la animacion de transicion de elementos
+      slideshowRef.current.style.transition = `${animationTime}ms ease-out all`;
 
-    //   // Definimos el ancho del slide
-    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    //   const slideSize = (slideshowRef.current.children[0] as any).offsetWidth;
+      // Definimos el ancho del slide
+      const slideSize = (slideshowRef.current.children[0] as any).offsetWidth;
 
-    //   // Movemos las imagenes
-    //   slideshowRef.current.style.transform = `translateX(-${slideSize}px)`;
+      // Movemos las imagenes
+      slideshowRef.current.style.transform = `translateX(-${slideSize}px)`;
 
-    //   // definimos funcion para reiniciar la animacion
-    //   const transition = () => {
-    //     slideshowRef.current.style.transition = "none";
-    //     slideshowRef.current.style.transform = `translateX(0)`;
+      // definimos funcion para reiniciar la animacion
+      const transition = () => {
+        slideshowRef.current.style.transition = "none";
+        slideshowRef.current.style.transform = `translateX(0)`;
 
-    //     // Tomamos el primer elemento y lo mandamos al final
-    //     slideshowRef.current.appendChild(firstSlide);
+        // Tomamos el primer elemento y lo mandamos al final
+        slideshowRef.current.appendChild(firstSlide);
 
-    //     // eliminamos el event listener
-    //     slideshowRef.current.removeEventListener("transitionend", transition);
-    //   };
+        // eliminamos el event listener
+        slideshowRef.current.removeEventListener("transitionend", transition);
+      };
 
-    //   // Eventlistener para cuando termina la primer animacion
-    //   slideshowRef.current.addEventListener("transitionend", transition);
-    // }
-  }, []);
+      // Eventlistener para cuando termina la primer animacion
+      slideshowRef.current.addEventListener("transitionend", transition);
+    }
+  }, [animationTime]);
+
 
   const prevImage = () => {
     // Comprobamos que exista 1 imagen o mas
@@ -97,26 +97,26 @@ const Slideshow = (props: SlideshowProps) => {
     }
   };
 
-  // useEffect(() => {
-  //   if (autoplay) {
-  //     // se crea un intervalo de tiempo para el Autoplay
-  //     (intervaloSlideshow as any).current = setInterval(() => {
-  //       nextImage();
-  //     }, transitionTime);
+  useEffect(() => {
+    if (autoplay) {
+      // se crea un intervalo de tiempo para el Autoplay
+      (intervaloSlideshow as any).current = setInterval(() => {
+        nextImage();
+      }, transitionTime);
 
-  //     // se limpia el intervalo cuando el mouse entra al carrusel
-  //     slideshowRef.current.addEventListener("mouseenter", () => {
-  //       clearInterval((intervaloSlideshow as any).current);
-  //     });
+      // se limpia el intervalo cuando el mouse entra al carrusel
+      slideshowRef.current.addEventListener("mouseenter", () => {
+        clearInterval((intervaloSlideshow as any).current);
+      });
 
-  //     // se crea intervalo cuando el mouse sale del carrusel
-  //     slideshowRef.current.addEventListener("mouseleave", () => {
-  //       (intervaloSlideshow as any).current = setInterval(() => {
-  //         nextImage();
-  //       }, transitionTime);
-  //     });
-  //   }
-  // }, [autoplay, transitionTime, animationTime]);
+      // se crea intervalo cuando el mouse sale del carrusel
+      slideshowRef.current.addEventListener("mouseleave", () => {
+        (intervaloSlideshow as any).current = setInterval(() => {
+          nextImage();
+        }, transitionTime);
+      });
+    }
+  }, [autoplay, transitionTime, animationTime]);
 
   // Esta propiedad me permite ajustar el ancho de contenedor visible del slide para ver mas objetos
   const slideContainerStyle = {
@@ -149,15 +149,7 @@ const Slideshow = (props: SlideshowProps) => {
 
 // require image and text
 const Slide = ({ children }: any) => {
-  // Slide Template
-  //      <div className="Slide">
-  //         <a href="/" rel="noopener noreferrer">
-  //           <img src={img1} alt="" />
-  //         </a>
-  //         <div className="SlideText">
-  //           <p>title on Image</p>
-  //         </div>
-  //       </div>
+
 
   return <div className="Slide">{children}</div>;
 };
