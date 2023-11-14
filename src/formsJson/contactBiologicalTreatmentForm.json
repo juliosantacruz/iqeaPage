@@ -7,6 +7,16 @@
             "contactForm": {
                 "title": "Contact Information",
                 "type": "object",
+                "required": [
+                    "companyName",
+                    "firstName",
+                    "lastName",
+                    "city",
+                    "state",
+                    "country",
+                    "phone",
+                    "email"
+                ],
                 "properties": {
                     "companyName": {
                         "type": "string",
@@ -56,6 +66,7 @@
                 }
             },
             "biologicalTreatment": {
+                "title": "Biological Treatment",
                 "type": "object",
                 "properties": {
                     "InfluentLevels": {
@@ -185,21 +196,25 @@
         }
     },
     "uiSchema": {
+        "ui:title": "",
         "contactForm": {
-            "companyName": {
-                "ui:placeholder": "eing required"
-            },
-            "describeYourProject": {
-                
-            }
+            "companyName": {},
+            "describeYourProject": {}
         },
         "biologicalTreatment": {
+            "ui:title": "",
             "InfluentLevels": {
                 "ui:classNames": "InfluentLevelsColumn"
             },
             "EffluentRequirement": {
                 "ui:classNames": "EffluentRequirementColumn"
             }
+        },
+        "ui:submitButtonOptions": {
+            "props": {
+                "className": "btn-submit"
+            },
+            "submitText": "Enviar"
         }
     }
 }
