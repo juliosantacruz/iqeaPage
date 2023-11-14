@@ -1,4 +1,3 @@
-import jsonData from "../../../formsJson/contactBiologicalTreatmentForm.json";
 import JSONForm from "@/components/JsonForm/JSONForm";
 import { getFormularioBySlug } from "@/services/fetchData";
 import './Formulario.scss'
@@ -8,12 +7,11 @@ import React from "react";
 export default async function page({ params }: { params: { slug: string } }) {
     const data = await getFormularioBySlug(params.slug);
     const { attributes } = data;
-    const query = params.slug;
     // console.log(query, data)
 
-    const title = jsonData.formData.title;
-    const formData = jsonData.formData;
-    const formUI = jsonData.uiSchema;
+    const title = attributes.titulo;
+    const formData = attributes.formularioJson.formData;
+    const formUI = attributes.formularioJson.uiSchema;
 
     return (
         <section className="formPage">

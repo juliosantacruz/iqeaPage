@@ -91,11 +91,7 @@ export default function Navbar() {
               <DropDownItem
                 title={"Reverse Osmosis Design Request"}
                 href={"/formulario/reverse-osmosis-design-request"}
-              />
-              <DropDownItem
-                title={"Reasdf Osmosis Design Request"}
-                href={"/formulario/reverse-osmosis-design-request"}
-              />
+              /> 
             </DropDown>
           </li>
         </ul>
