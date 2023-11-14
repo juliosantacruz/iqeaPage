@@ -1,5 +1,6 @@
 .menuContainer {
     z-index: 9;
+    width: 100px;
     ul {
         list-style: none;
         padding: 0;
@@ -44,8 +45,10 @@
         text-decoration: none;
     }
     .menuTrigger {
-        // position: absolute;
-        // top: 20px;
+        position: absolute;
+        top: 30px;
+        width: 100px;
+        text-align: center;
         // right: 20px;
         // height: 60px;
         // border-radius: 50%;
@@ -54,9 +57,9 @@
         cursor: pointer;
     }
     .dropdown-menu {
-        position: absolute;
-        top: 70px;
-        right: 70px;
+        position: relative;
+        top: 150px;
+        // right: 150px;
         background-color: var(--navbarBgColor);
         border-radius: 10px;
         // border: 1px solid black;
@@ -90,8 +93,8 @@
     .dropdown-menu::before {
         content: "";
         position: absolute;
-        top: -11px;
-        right: 20px;
+        top: -10px;
+        right: 45px;
         height: 20px;
         width: 20px;
         background-color: var(--navbarBgColor);
@@ -109,6 +112,28 @@
         span {
             font-size: 14px;
             font-weight: 400;
+        }
+    }
+
+    @include media-down(md) {
+        .menuTrigger {
+            top: 16px;
+        }
+    }
+    @include media-down(sm) {
+        width: 100%;
+        .menuTrigger {
+            position: relative;
+            width: 100%;
+
+        }
+        .dropdown-menu {
+            top:30px;
+            left: 100px;
+            background: #e4e4e4;
+        }.dropdown-menu::before{
+            background: #e4e4e4;
+            left: 120px;
         }
     }
 }

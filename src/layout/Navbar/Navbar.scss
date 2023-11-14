@@ -8,7 +8,7 @@ header {
   .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
     padding: 0 var(--paddingDesktop);
@@ -41,6 +41,7 @@ header {
         .navLink {
           margin: 0 20px;
           padding: 10px 0;
+          height: 100%;
         }
         .active {
           border-bottom: 2px solid var(--navbarTextColor);
@@ -48,7 +49,18 @@ header {
       }
     }
   }
-
+@include media-down(lg){
+  .navbar{
+    .navLinks{
+      li{
+        .navLink{
+          font-size: var(--navbarTextSize);
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+}
   @include media-down(md) {
     .navbar {
       align-items: center;

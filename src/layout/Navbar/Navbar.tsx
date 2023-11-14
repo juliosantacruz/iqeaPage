@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
-import DropDown from "@/components/DropDown";
+import DropDown, { DropDownItem } from "@/components/DropDown";
 
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
@@ -49,19 +49,16 @@ export default function Navbar() {
               Inicio
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href="/quienes-somos"
               className={isActiveLink("/quienes-somos")}
             >
               Quiénes Somos
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link
-              href="/procesos"
-              className={isActiveLink("/procesos")}
-            >
+            <Link href="/procesos" className={isActiveLink("/procesos")}>
               Procesos
             </Link>
           </li>
@@ -71,7 +68,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/productos" className={isActiveLink("/productos")}>
+            <Link href="/proyectos" className={isActiveLink("/productos")}>
               Productos
             </Link>
           </li>
@@ -84,12 +81,22 @@ export default function Navbar() {
             <Link href="/contacto" className={isActiveLink("/contacto")}>
               Contacto
             </Link>
-          </li><li>
-            {/* <Link href="/formulario" className={isActiveLink("/formulario")}>
-              Formulario
-            </Link> */}
-            
-            <DropDown/>
+          </li>
+          <li>
+            <DropDown title={"Formularios"} positionX={200}>
+              <DropDownItem
+                title={"Biological Treatment Background"}
+                href={"/formulario/biological-treatment-background"}
+              />
+              <DropDownItem
+                title={"Reverse Osmosis Design Request"}
+                href={"/formulario/reverse-osmosis-design-request"}
+              />
+              <DropDownItem
+                title={"Reasdf Osmosis Design Request"}
+                href={"/formulario/reverse-osmosis-design-request"}
+              />
+            </DropDown>
           </li>
         </ul>
       </nav>

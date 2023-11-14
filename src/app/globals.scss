@@ -29,15 +29,20 @@
   /* VARIABLES DE NAVBAR */
   --navbarBgColor: #f8f8f8;
   --navbarTextColor: #3b54bb;
+  --navbarTextSize:16px;
 
   /* VARIABLES DE FOOTER */
   --footerBgColor: #557c83;
   --footerTextColor: #ffffff;
 
   --paddingDesktop: 112px;
+  @include media-down(xlg){
+    --paddingDesktop: 72px;
 
+  }
   @include media-down(lg) {
-    --paddingDesktop: 64px;
+    --paddingDesktop: 48px;
+    
   }
 
   @include media-down(md) {
