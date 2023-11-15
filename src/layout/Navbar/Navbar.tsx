@@ -8,17 +8,38 @@ import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
 import DropDown, { DropDownItem } from "@/components/DropDown";
+// import { API_URL_STRAPI } from "@/config";
+import { getContactForm } from "@/services/fetchData";
 
-// http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
+// const API_URL_STRAPI_DEV  = process.env.API_URL_STRAPI_DEV
+// const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD
+// const IS_DEV = process.env.IS_DEV
+// const isDev = IS_DEV
+// const API_URL_STRAPI = isDev? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
+
+
+
+
+
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [navData, setNavData] = useState();
+  const [contactForm, setContactForm] = useState([]);
 
   const path = usePathname();
 
   useEffect(() => {
-    setOpenMenu(false);
+    const fetchData = async () => {
+      try {
+        const forms = await getContactForm(process.env.API_URL_STRAPI as string);
+        setContactForm(forms);
+        setOpenMenu(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, [path]);
 
   const isActiveLink = (value: string) => {
@@ -84,14 +105,25 @@ export default function Navbar() {
           </li>
           <li>
             <DropDown title={"Formularios"} positionX={200}>
-              <DropDownItem
+              {contactForm !== undefined
+                ? contactForm.map((element) => {
+                    return (
+                      <DropDownItem
+                        key={(element as any).id}
+                        title={(element as any).attributes.titulo}
+                        href={(element as any).attributes.slug}
+                      />
+                    );
+                  })
+                : null}
+              {/* <DropDownItem
                 title={"Biological Treatment Background"}
                 href={"/formulario/biological-treatment-background"}
               />
               <DropDownItem
                 title={"Reverse Osmosis Design Request"}
                 href={"/formulario/reverse-osmosis-design-request"}
-              /> 
+              /> */}
             </DropDown>
           </li>
         </ul>
