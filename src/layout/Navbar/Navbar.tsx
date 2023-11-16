@@ -10,6 +10,7 @@ import IconMenu from "@/components/Icons/IconMenu";
 import DropDown, { DropDownItem } from "@/components/DropDown";
 // import { API_URL_STRAPI } from "@/config";
 import { getContactForm } from "@/services/fetchData";
+import { FORM_ROUTER } from "@/app/formulario/[slug]/page";
 
 // const API_URL_STRAPI_DEV  = process.env.API_URL_STRAPI_DEV
 // const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD
@@ -24,24 +25,24 @@ import { getContactForm } from "@/services/fetchData";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [contactForm, setContactForm] = useState([]);
+  // const [contactForm, setContactForm] = useState([]);
 
-  const path = usePathname();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const forms = await getContactForm(process.env.API_URL_STRAPI as string);
-        setContactForm(forms);
-        setOpenMenu(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, [path]);
-
+  // useEffect(() => {
+    //   const fetchData = async () => {
+  //     try {
+  //       const forms = await getContactForm(process.env.API_URL_STRAPI as string);
+  //       setContactForm(forms);
+  //       setOpenMenu(false);
+  //     } catch (error) {
+    //       console.error("Error fetching data:", error);
+    //     }
+    //   };
+    
+    //   fetchData();
+    // }, [path]);
+  
+    const contactForm = FORM_ROUTER
+    const path = usePathname();
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
   };
@@ -89,7 +90,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/proyectos" className={isActiveLink("/productos")}>
+            <Link href="/productos" className={isActiveLink("/productos")}>
               Productos
             </Link>
           </li>
@@ -110,8 +111,8 @@ export default function Navbar() {
                     return (
                       <DropDownItem
                         key={(element as any).id}
-                        title={(element as any).attributes.titulo}
-                        href={`/formulario/${(element as any).attributes.slug}`}
+                        title={(element as any).title}
+                        href={`/formulario/${(element as any).slug}`}
                       />
                     );
                   })

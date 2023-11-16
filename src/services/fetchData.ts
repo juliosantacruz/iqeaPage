@@ -71,6 +71,26 @@ export async function getProyectosBySlug(slug:string) {
   return data;
 }
 
+export async function getCatProductos() {
+  const res = await fetch(`${API_URL_STRAPI}/categoria-productos?populate=*`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
+export async function getCatProductosBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/categoria-productos/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
 export async function getProductos() {
   const res = await fetch(`${API_URL_STRAPI}/productos/`);
 
@@ -90,6 +110,7 @@ export async function getProductosBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
+
 
 // Filtrar la informacion del fetch para solo traer lo basico
 export async function getProcesos() {
