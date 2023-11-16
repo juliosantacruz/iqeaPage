@@ -3,37 +3,10 @@ import JSONForm from "@/components/JsonForm/JSONForm";
 import { getFormularioBySlug } from "@/services/fetchData";
 import "./Formulario.scss";
 import jsonDataDev from "../../../formsJson/contactSettlingClarifierSystem.json";
-import form1 from "@/formsJson/contactBiologicalTreatmentForm.json";
-import form2 from "@/formsJson/contactAnaerobicRequestForm.json";
-import form3 from "@/formsJson/contactSettlingClarifierSystem.json";
-import form4 from "@/formsJson/contactReverseOsmosisForm.json";
+import { FORM_ROUTER } from "@/services/routers";
 
-export const FORM_ROUTER = [
-    {
-        id: "1",
-        title: "Biological Treatment Background",
-        slug: "biological-treatment-background",
-        formData: form1,
-    },
-    {
-        id: "2",
-        title: "Anaerobic Request Form",
-        slug: "anaerobic-request-form",
-        formData: form2,
-    },
-    {
-        id: "3",
-        title: "Settling Clarifier System",
-        slug: "settling-clarifier-system",
-        formData: form3,
-    },
-    {
-        id: "4",
-        title: "Reverse Osmosis Design Request",
-        slug: "reverse-osmosis-design-request",
-        formData: form4,
-    },
-];
+
+
 
 export default async function page({ params }: { params: { slug: string } }) {
     // const data = await getFormularioBySlug(params.slug);

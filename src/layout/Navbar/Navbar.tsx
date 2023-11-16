@@ -10,7 +10,8 @@ import IconMenu from "@/components/Icons/IconMenu";
 import DropDown, { DropDownItem } from "@/components/DropDown";
 // import { API_URL_STRAPI } from "@/config";
 import { getContactForm } from "@/services/fetchData";
-import { FORM_ROUTER } from "@/app/formulario/[slug]/page";
+import { FORM_ROUTER } from "@/services/routers";
+
 
 // const API_URL_STRAPI_DEV  = process.env.API_URL_STRAPI_DEV
 // const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD
@@ -37,10 +38,10 @@ export default function Navbar() {
     //       console.error("Error fetching data:", error);
     //     }
     //   };
-    
+
     //   fetchData();
     // }, [path]);
-  
+
     const contactForm = FORM_ROUTER
     const path = usePathname();
   const isActiveLink = (value: string) => {
