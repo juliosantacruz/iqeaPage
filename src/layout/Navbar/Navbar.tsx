@@ -111,7 +111,7 @@ export default function Navbar() {
                       <DropDownItem
                         key={(element as any).id}
                         title={(element as any).attributes.titulo}
-                        href={(element as any).attributes.slug}
+                        href={`/formulario/${(element as any).attributes.slug}`}
                       />
                     );
                   })
