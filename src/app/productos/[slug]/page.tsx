@@ -19,6 +19,19 @@ export default async function page({ params }: { params: { slug: string } }) {
     { id: 3, title: `/${params.slug}.. `, url: `/productos/${params.slug}/` },
   ];
 
+  const productArray = productos.data.map((element:any)=>{
+    const {cover} =  element.attributes
+    const newObj = {
+      id:element.id,
+      title:element.attributes.titulo,
+      slug:element.attributes.slug,
+      coverUrl: cover? cover.data?.attributes?.formats?.thumbnail.url:null
+    }
+    return newObj
+  }).sort((a:any,b:any)=>a.title.localeCompare(b.title))
+
+  // console.log(productArray)
+
   return (
     <section className="catProductDetail">
       {BREADCRUMS ? (
@@ -44,14 +57,15 @@ export default async function page({ params }: { params: { slug: string } }) {
       )}
 
         <div className="productGroup">
-          {productos.data.map((producto: any) => {
-            const { id, attributes } = producto;
+          {productArray.map((producto: any) => {
+            const { id, title, descripcion, slug,coverUrl } = producto;
             return (
               <ProductCardList
                 key={id}
-                title={attributes.titulo}
-                descripcion={attributes.descripcion}
-                href={`/productos/${catProductSlug}/${attributes.slug}`}
+                title={title}
+                descripcion={descripcion}
+                href={`/productos/${catProductSlug}/${slug}`}
+                imageUrl={coverUrl}
               />
             );
           })}

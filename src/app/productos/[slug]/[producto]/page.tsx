@@ -9,7 +9,6 @@ export default async function page({
   params: { slug: string; producto: string };
 }) {
   const data = await getProductosBySlug(params.producto);
-
   const { titulo, descripcion, contenido } = data.attributes;
 
   const BREADCRUMS = [

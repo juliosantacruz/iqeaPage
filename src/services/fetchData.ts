@@ -18,7 +18,7 @@ export async function fetchNavContent() {
     url: `${API_URL_STRAPI}/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*`,
     headers: {},
   };
-  
+
   const data: any = axios
     .request(config)
     .then((response) => {
@@ -82,7 +82,7 @@ export async function getCatProductos() {
 }
 
 export async function getCatProductosBySlug(slug:string) {
-  const res = await fetch(`${API_URL_STRAPI}/categoria-productos/${slug}`);
+  const res = await fetch(`${API_URL_STRAPI}/categoria-productos/${slug}?populate=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
