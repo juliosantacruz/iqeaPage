@@ -65,8 +65,14 @@
       .table{
         table{
           border-collapse: collapse;
+          thead{
+            background-color: rgb(197, 201, 255);
+          }
           tbody{
+            tr:nth-child(even) {background-color: #c2edff;}
             tr{
+            background-color: #dbffa8;
+
               td{
                 padding: 6px !important;
                 // width: 150px;
