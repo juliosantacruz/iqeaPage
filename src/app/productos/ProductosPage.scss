@@ -1,0 +1,14 @@
+.ProductsPage{
+  padding: 0 var(--paddingDesktop);
+  min-height: 700px;
+.pageTitle{
+  margin: 30px 0;
+}
+
+  .productCategoryGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}

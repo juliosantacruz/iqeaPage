@@ -2,6 +2,7 @@ import { getProductosBySlug } from "@/services/fetchData";
 import Link from "next/link";
 import React from "react";
 import "./Producto.scss";
+import CallToActionBanner from "@/components/CallToActionBanner";
 export default async function page({
   params,
 }: {
@@ -16,7 +17,7 @@ export default async function page({
     { id: 2, title: "/Productos.. ", url: "/productos" },
     { id: 3, title: `/${params.slug}.. `, url: `/productos/${params.slug}/` },
     {
-      id: 3,
+      id: 4,
       title: `/${params.producto} `,
       url: `/productos/${params.slug}/${params.producto}/`,
     },
@@ -41,6 +42,8 @@ export default async function page({
       <div className="contenido">
         <div dangerouslySetInnerHTML={{ __html: contenido }} />
       </div>
+
+      <CallToActionBanner/>
     </section>
   );
 }

@@ -27,23 +27,14 @@ import { FORM_ROUTER } from "@/services/routers";
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   // const [contactForm, setContactForm] = useState([]);
-
-  // useEffect(() => {
-    //   const fetchData = async () => {
-  //     try {
-  //       const forms = await getContactForm(process.env.API_URL_STRAPI as string);
-  //       setContactForm(forms);
-  //       setOpenMenu(false);
-  //     } catch (error) {
-    //       console.error("Error fetching data:", error);
-    //     }
-    //   };
-
-    //   fetchData();
-    // }, [path]);
-
-    const contactForm = FORM_ROUTER
+const contactForm = FORM_ROUTER
     const path = usePathname();
+  useEffect(() => {
+
+    setOpenMenu(false);
+    }, [path]);
+
+
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
   };

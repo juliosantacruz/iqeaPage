@@ -1,0 +1,23 @@
+.callToAction{
+  display: flex;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin: 30px 0 ;
+
+  a{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+  border: none;
+  background: #018abd;
+  color: #f8f8f8;
+  fill: #f8f8f8;
+  font-weight: bold;
+  }
+  a:hover {
+    cursor: pointer;
+    transform: translateY(2px);
+  }
+}

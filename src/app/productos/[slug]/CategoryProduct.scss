@@ -1,0 +1,23 @@
+.catProductDetail{
+  padding: 0 var(--paddingDesktop);
+  margin: auto;
+  max-width: 1200px;
+
+
+  .breadcrums{
+    margin: 20px 0;
+    font-weight: 300;
+  }
+
+  .catProductDetailTitle{
+    text-align: center;
+    margin: 20px 0 ;
+  }
+
+  .productGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
