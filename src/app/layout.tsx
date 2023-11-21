@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import NavbarSSC from "@/layout/NavbarSSC";
 import Footer from "@/layout/Footer";
 import Head from "next/head";
 import "./globals.scss";
