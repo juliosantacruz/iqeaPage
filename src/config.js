@@ -10,4 +10,4 @@ const isDev = IS_DEV
 
 const API_URL_STRAPI = isDev? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
 
-export  {API_URL_STRAPI } 
+export  {API_URL_STRAPI }

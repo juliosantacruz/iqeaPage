@@ -1,0 +1,166 @@
+[
+  {
+    "id": 4,
+    "attributes": {
+      "title": "Productos Químicos",
+      "slug": "productos-quimicos",
+      "productos": {
+        "data": []
+      }
+    }
+  },
+  {
+    "id": 5,
+    "attributes": {
+      "title": "Estaciones de Elevación y Control de Olores",
+      "slug": "estaciones-de-elevacion-y-control-de-olores",
+      "productos": {
+        "data": []
+      }
+    }
+  },
+  {
+    "id": 8,
+    "attributes": {
+      "title": "Filtros Autolimpiantes",
+      "slug": "filtros-autolimpiantes",
+      "productos": {
+        "data": [
+          {
+            "id": 5,
+            "attributes": {
+              "titulo": "Filtros automáticos de pantalla única",
+              "slug": "filtros-automaticos-de-pantalla-unica"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "attributes": {
+      "title": "Separadores de Agua/Aceite",
+      "slug": "separadores-de-agua-aceite",
+      "productos": {
+        "data": []
+      }
+    }
+  },
+  {
+    "id": 1,
+    "attributes": {
+      "title": "Carbon Activado",
+      "slug": "carbon-activado",
+      "productos": {
+        "data": [
+          {
+            "id": 1,
+            "attributes": {
+              "titulo": "Carbón activado a base de carbón mineral",
+              "slug": "carbon-activado-a-base-de-carbon-mineral"
+            }
+          },
+          {
+            "id": 6,
+            "attributes": {
+              "titulo": "Carbón activado con cáscara de coco",
+              "slug": "carbon-activado-con-cascara-de-coco"
+            }
+          },
+          {
+            "id": 7,
+            "attributes": {
+              "titulo": "Producto de carbón activado impregnado",
+              "slug": "producto-carbon-activado-impregnado"
+            }
+          },
+          {
+            "id": 8,
+            "attributes": {
+              "titulo": "Productos de carbón activado de lignito",
+              "slug": "productos-de-carbon-activado-de-lignito"
+            }
+          },
+          {
+            "id": 9,
+            "attributes": {
+              "titulo": "Productos especiales de carbón activado",
+              "slug": "productos-especiales-de-carbon-activado"
+            }
+          },
+          {
+            "id": 10,
+            "attributes": {
+              "titulo": "Productos de carbón activado a base de madera",
+              "slug": "productos-de-carbon-activado-a-base-de-madera"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "attributes": {
+      "title": "Filtros de Bolsa y Recipientes",
+      "slug": "filtros-de-bolsa-y-recipientes",
+      "productos": {
+        "data": []
+      }
+    }
+  },
+  {
+    "id": 7,
+    "attributes": {
+      "title": "Filtros de Presión",
+      "slug": "filtros-de-presion",
+      "productos": {
+        "data": []
+      }
+    }
+  },
+  {
+    "id": 9,
+    "attributes": {
+      "title": "Separadores y Coladores",
+      "slug": "separadores-y-coladores",
+      "productos": {
+        "data": [
+          {
+            "id": 4,
+            "attributes": {
+              "titulo": "Filtros de cono para tratamiento de aguas residuales",
+              "slug": "filtros-de-cono-para-tratamiento-de-aguas-residuales"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "attributes": {
+      "title": "Deshidratación de Lodos",
+      "slug": "deshidratacion-de-lodos",
+      "productos": {
+        "data": [
+          {
+            "id": 2,
+            "attributes": {
+              "titulo": "Filtro prensa de deshidratación de lodos",
+              "slug": "filtro-prensa-de-deshidratacion-de-lodos"
+            }
+          },
+          {
+            "id": 3,
+            "attributes": {
+              "titulo": "Prensa de tornillo multiplaca (MPSP)",
+              "slug": "prensa-de-tornillo-multiplaca-mpsp"
+            }
+          }
+        ]
+      }
+    }
+  }
+]

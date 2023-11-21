@@ -1,0 +1,95 @@
+:root {
+  --border: 1px solid #474a4d;
+  --border-radius: 12px;
+  --speed: 500ms;
+}
+
+.nav-item {
+  // width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(var(--nav-size) - 31px);
+  right: -16px;
+  width: 260px;
+
+  background-color: var(--navbarBgColor);
+  box-shadow: var(--box-shadow-navbar);
+  border-top: var(--border);
+  // border-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: 1rem;
+  overflow-x: hidden;
+  // overflow-y: visible;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: height var(--speed) ease;
+
+  .menu-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+  }
+
+  .menu-item:hover {
+    background-color: rgba(82, 83, 87, 0.103);
+  }
+  .icon-right {
+    margin-left: auto;
+  }
+}
+
+.arrow {
+  content: "";
+  position: absolute;
+  top: calc(var(--nav-size) * .5 );
+  right: 25px;
+  height: 20px;
+  width: 20px;
+  background-color: var(--navbarBgColor);
+  // background-color: #345;
+  border-top: var(--border);
+  border-left: var(--border);
+  transform: rotate(45deg);
+  z-index: 101;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit {
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}

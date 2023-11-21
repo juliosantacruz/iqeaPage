@@ -10,7 +10,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: var(--nav-size);
     padding: 0 var(--paddingDesktop);
 
     background-color: var(--navbarBgColor);
@@ -33,7 +33,7 @@ header {
     }
     .navLinks {
       display: flex;
-
+      height: var(--nav-size);
       align-items: center;
       li {
         list-style: none;
@@ -85,6 +85,7 @@ header {
       .navLinks {
         display: flex;
 
+
         li {
           list-style: none;
           width: 100%;
@@ -101,7 +102,7 @@ header {
 
   @include media-down(sm) {
     .navbar {
-      height: 60px;
+
       flex-direction: row;
 
       .movilMenu {

@@ -4,11 +4,13 @@ const isDEV = true
 const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD;
 const API_URL_STRAPI_DEV = process.env.API_URL_STRAPI_DEV;
 const API_URL_STRAPI = isDEV? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
+const PUBLIC_API_URL_STRAPI  = process.env.PUBLIC_API_URL_STRAPI
+
 
 // console.log('DEV', API_URL_STRAPI_DEV);
 // console.log('PROD',API_URL_STRAPI_PROD);
 // console.log('lol',API_URL_STRAPI);
-
+// http://localhost:1337/api/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
 
 export async function fetchNavContent() {
@@ -30,7 +32,25 @@ export async function fetchNavContent() {
 
   return data;
 }
+export async function fetchProductContent() {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: `${PUBLIC_API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug`,
+    headers: {},
+  };
 
+  const data: any = axios
+    .request(config)
+    .then((response) => {
+      return JSON.stringify(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return data;
+}
 export async function getServicios() {
   const res = await fetch(`${API_URL_STRAPI}/servicios/`);
 

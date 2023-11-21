@@ -29,20 +29,23 @@
   /* VARIABLES DE NAVBAR */
   --navbarBgColor: #f8f8f8;
   --navbarTextColor: #3b54bb;
-  --navbarTextSize:16px;
+  --navbarTextSize: 16px;
+  --nav-size: 80px;
+
+  --box-shadow-primary: 0px 2px 4px 0px rgba(0, 0, 0, 0.74),
+    0px 6px 12px 0px rgba(0, 0, 0, 0.08);
+  --box-shadow-navbar:0px 3px 3px 0px rgba(0, 0, 0, 0.459);
 
   /* VARIABLES DE FOOTER */
   --footerBgColor: #557c83;
   --footerTextColor: #ffffff;
 
   --paddingDesktop: 112px;
-  @include media-down(xlg){
+  @include media-down(xlg) {
     --paddingDesktop: 72px;
-
   }
   @include media-down(lg) {
     --paddingDesktop: 48px;
-    
   }
 
   @include media-down(md) {
@@ -61,15 +64,14 @@
   @include media-down(sm) {
     --border-radius-sm: 8px;
 
-
     --TitleTextSize: 20px;
     --SubtitleTextSize: 18px;
     --ContentTextSize: 16px;
-    
+
     --CardTextSize: 16px;
 
     --cardTitleSize: 20px;
-    
+
     --cardBodySize: 16px;
 
     --paddingDesktop: 24px;

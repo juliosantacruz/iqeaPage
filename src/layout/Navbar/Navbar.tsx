@@ -9,9 +9,15 @@ import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
 import DropDown, { DropDownItem } from "@/components/DropDown";
 // import { API_URL_STRAPI } from "@/config";
-import { getContactForm } from "@/services/fetchData";
+import { fetchProductContent, getContactForm } from "@/services/fetchData";
 import { FORM_ROUTER } from "@/services/routers";
-
+import {
+  DropdownGroup,
+  DropdownItem,
+  DropdownMenu,
+  NavItem,
+} from "@/components/DropDownMultiLevel/DropDown";
+// import navDataJson from "./test.json";
 
 // const API_URL_STRAPI_DEV  = process.env.API_URL_STRAPI_DEV
 // const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD
@@ -19,21 +25,53 @@ import { FORM_ROUTER } from "@/services/routers";
 // const isDev = IS_DEV
 // const API_URL_STRAPI = isDev? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
 
-
-
-
-
-
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   // const [contactForm, setContactForm] = useState([]);
-const contactForm = FORM_ROUTER
-    const path = usePathname();
+  const [productNav, setProductNav] = useState([]);
+
   useEffect(() => {
+    const getProductNav = async () => {
+      try {
+        const navDataJson = await fetchProductContent();
 
+        if (navDataJson) {
+          const navData = JSON.parse(navDataJson).map((element: any) => {
+            const arrProductos: [] = element.attributes.productos.data;
+            const newProductos = arrProductos.map((producto: any) => {
+              const newProducto = {
+                id: producto.id,
+                title: producto.attributes.titulo,
+                slug: producto.attributes.slug,
+              };
+              return newProducto;
+            });
+
+            const newElement = {
+              id: element.id,
+              title: element.attributes.title,
+              slug: element.attributes.slug,
+              productos: newProductos,
+            };
+            return newElement;
+          });
+
+          setProductNav(navData);
+        } else {
+          console.error("Data not found in the response.");
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getProductNav();
+  }, []);
+
+  const contactForm = FORM_ROUTER;
+  const path = usePathname();
+  useEffect(() => {
     setOpenMenu(false);
-    }, [path]);
-
+  }, [path]);
 
   const isActiveLink = (value: string) => {
     return `navLink ${value === path ? "active" : ""}`;
@@ -81,11 +119,66 @@ const contactForm = FORM_ROUTER
               Servicios
             </Link>
           </li>
-          <li>
-            <Link href="/productos" className={isActiveLink("/productos")}>
+
+          {/* <Link href="/productos" className={isActiveLink("/productos")}>
               Productos
-            </Link>
-          </li>
+            </Link> */}
+
+          <NavItem title="Productos" href={'/productos'}>
+            <DropdownMenu>
+              <DropdownGroup nameGroup="main">
+              {productNav &&
+                productNav.map((element: any) => {
+                    return (
+                    <>
+                      <DropdownItem key={element.id} href={`/productos/${element.slug}`}>
+                        {element.title}
+                      </DropdownItem>
+
+                      {/* {element.productos &&
+                        element.productos.map((subElement: any) => {
+                          return (
+                            <DropdownGroup nameGroup="main">
+                              <DropdownItem key={subElement.id}>
+                                {element.title}
+                              </DropdownItem>
+                            </DropdownGroup>
+                          );
+                        })} */}
+                    </>
+                    );
+                  })}
+                  </DropdownGroup>;
+
+              <DropdownGroup nameGroup="settings">
+                <DropdownItem leftIcon="<" goToMenu="main">
+                  back
+                </DropdownItem>
+
+                <DropdownItem>profile</DropdownItem>
+                <DropdownItem>payments</DropdownItem>
+                <DropdownItem>resolution</DropdownItem>
+              </DropdownGroup>
+
+              <DropdownGroup nameGroup="menu3">
+                <DropdownItem leftIcon="<" goToMenu="main">
+                  back
+                </DropdownItem>
+
+                <DropdownItem>option 1</DropdownItem>
+                <DropdownItem>option 2</DropdownItem>
+                <DropdownItem>option 3</DropdownItem>
+                <DropdownItem>option 4</DropdownItem>
+                <DropdownItem>option 5</DropdownItem>
+                <DropdownItem>option 6</DropdownItem>
+                <DropdownItem>option 7</DropdownItem>
+                <DropdownItem>option 8</DropdownItem>
+                <DropdownItem>option 9</DropdownItem>
+                <DropdownItem>option 0</DropdownItem>
+              </DropdownGroup>
+            </DropdownMenu>
+          </NavItem>
+
           <li>
             <Link href="/proyectos" className={isActiveLink("/proyectos")}>
               Proyectos
