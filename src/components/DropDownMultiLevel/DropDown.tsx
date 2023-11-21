@@ -63,15 +63,15 @@ export function NavItem(props: NavItemProps) {
 export const DropdownItem = (props: any) => {
   return (
     <Link
-      href={props.href}
+      href={props.href?props.href:''}
       className="menu-item"
-      onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}
+
     >
-      {props.leftIcon && <span className="icon-button">{props.leftIcon}</span>}
+      {props.leftIcon && <span className="icon-button" onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}>{props.leftIcon}</span>}
 
       {props.children}
       {props.rightIcon && (
-        <span className="icon-button">{props.rightIcon}</span>
+        <span className="icon-button" onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}>{props.rightIcon}</span>
       )}
     </Link>
   );

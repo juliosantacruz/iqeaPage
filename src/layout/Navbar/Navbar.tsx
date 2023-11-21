@@ -29,7 +29,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   // const [contactForm, setContactForm] = useState([]);
   const [productNav, setProductNav] = useState([]);
-
+  // console.log(productNav);
   useEffect(() => {
     const getProductNav = async () => {
       try {
@@ -79,7 +79,7 @@ export default function Navbar() {
 
   const handlerMenu = () => {
     setOpenMenu(!openMenu);
-    console.log(openMenu);
+    // console.log(openMenu);
   };
 
   return (
@@ -120,37 +120,50 @@ export default function Navbar() {
             </Link>
           </li>
 
-          {/* <Link href="/productos" className={isActiveLink("/productos")}>
-              Productos
-            </Link> */}
-
-          <NavItem title="Productos" href={'/productos'}>
+          <NavItem title="Productos" href={"/productos"}>
             <DropdownMenu>
               <DropdownGroup nameGroup="main">
+                {productNav &&
+                  productNav.map((element: any) => {
+                      return (
+                        <DropdownItem
+                          key={element.id}
+                          href={`/productos/${element.slug}`}
+                          goToMenu={element.productos ? element.slug : ""}
+                          rightIcon={element.productos.length>0?'>':null}
+
+                        >
+                          {element.title}
+                        </DropdownItem>
+                      );
+
+                  })}
+              </DropdownGroup>
+
               {productNav &&
                 productNav.map((element: any) => {
+                  if (element.productos) {
                     return (
-                    <>
-                      <DropdownItem key={element.id} href={`/productos/${element.slug}`}>
-                        {element.title}
-                      </DropdownItem>
+                      <DropdownGroup nameGroup={element.slug} key={element.id}>
+                        <DropdownItem goToMenu="main" leftIcon={'<'} >Regresar</DropdownItem>
 
-                      {/* {element.productos &&
-                        element.productos.map((subElement: any) => {
-                          return (
-                            <DropdownGroup nameGroup="main">
-                              <DropdownItem key={subElement.id}>
-                                {element.title}
+
+                        {element.productos &&
+                          element.productos.map((producto: any) => {
+                            return (
+                              <DropdownItem
+                                key={producto.id}
+                                href={`/productos/${element.slug}/${producto.slug}`}
+                              >
+                                {producto.title}
                               </DropdownItem>
-                            </DropdownGroup>
-                          );
-                        })} */}
-                    </>
+                            );
+                          })}
+                      </DropdownGroup>
                     );
-                  })}
-                  </DropdownGroup>;
-
-              <DropdownGroup nameGroup="settings">
+                  }
+                })}
+              <DropdownGroup nameGroup="menu3">
                 <DropdownItem leftIcon="<" goToMenu="main">
                   back
                 </DropdownItem>
@@ -158,23 +171,6 @@ export default function Navbar() {
                 <DropdownItem>profile</DropdownItem>
                 <DropdownItem>payments</DropdownItem>
                 <DropdownItem>resolution</DropdownItem>
-              </DropdownGroup>
-
-              <DropdownGroup nameGroup="menu3">
-                <DropdownItem leftIcon="<" goToMenu="main">
-                  back
-                </DropdownItem>
-
-                <DropdownItem>option 1</DropdownItem>
-                <DropdownItem>option 2</DropdownItem>
-                <DropdownItem>option 3</DropdownItem>
-                <DropdownItem>option 4</DropdownItem>
-                <DropdownItem>option 5</DropdownItem>
-                <DropdownItem>option 6</DropdownItem>
-                <DropdownItem>option 7</DropdownItem>
-                <DropdownItem>option 8</DropdownItem>
-                <DropdownItem>option 9</DropdownItem>
-                <DropdownItem>option 0</DropdownItem>
               </DropdownGroup>
             </DropdownMenu>
           </NavItem>

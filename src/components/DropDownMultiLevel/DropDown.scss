@@ -16,7 +16,7 @@
   position: absolute;
   top: calc(var(--nav-size) - 31px);
   right: -16px;
-  width: 260px;
+  width: 275px;
 
   background-color: var(--navbarBgColor);
   box-shadow: var(--box-shadow-navbar);
@@ -25,7 +25,7 @@
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   padding: 1rem;
-  overflow-x: hidden;
+  overflow: hidden;
   // overflow-y: visible;
 
   display: flex;
@@ -37,23 +37,42 @@
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
+
+    .icon-button {
+      --button-size: calc(var(--nav-size) * 0.3);
+      width: var(--button-size);
+      min-width: 10%;
+      height: var(--button-size);
+      background-color: #484a4d28;
+      border-radius: 50%;
+
+      padding: 5px;
+      margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      transition: filter 300ms;
+    }
+    .icon-right {
+      margin-left: auto;
+    }
   }
 
   .menu-item:hover {
     background-color: rgba(82, 83, 87, 0.103);
-  }
-  .icon-right {
-    margin-left: auto;
   }
 }
 
 .arrow {
   content: "";
   position: absolute;
-  top: calc(var(--nav-size) * .5 );
+  top: calc(var(--nav-size) * 0.5);
   right: 25px;
   height: 20px;
   width: 20px;
