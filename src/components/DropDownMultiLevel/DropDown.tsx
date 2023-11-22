@@ -43,14 +43,14 @@ export function NavItem(props: NavItemProps) {
 
   return (
     <li
-      className={`nav-item ${props.className}`}
+      className={`nav-item`}
       ref={menuDropdownRef as any}
       onMouseEnter={handleDropdownMouseEnter}
 
     >
       <Link
         href={props.href || "#"}
-        className="icon-button"
+        className={`icon-button ${props.className}`}
         onClick={handleDropdown}
       >
         {/* {props.icon ? props.icon:null}*/} {props.title}

@@ -40,8 +40,8 @@ header {
         list-style: none;
 
         .navLink {
-          margin: 0 20px;
-          padding: 10px 0;
+          margin: 0 5px;
+          padding: 15px 10px ;
           height: 100%;
         }
         .active {
@@ -50,6 +50,7 @@ header {
       }
     }
   }
+
 @include media-down(lg){
   .navbar{
     .navLinks{

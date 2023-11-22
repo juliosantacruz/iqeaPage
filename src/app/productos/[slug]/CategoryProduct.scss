@@ -1,7 +1,8 @@
 .catProductDetail{
-  padding: 0 var(--paddingDesktop);
+  // padding: 0 var(--paddingDesktop);
   margin: auto;
-  max-width: 1200px;
+  max-width: var(--max-width);
+
 
 
   .breadcrums{
