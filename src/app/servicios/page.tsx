@@ -1,16 +1,17 @@
 import { getServicios } from "@/services/fetchData";
 import Link from "next/link";
 import React from "react";
+import "./Servicios.scss";
 
 export default async function page() {
-
-
   const data = await getServicios();
 
   // console.log('data ------->',data);
   return (
-    <section>
-      <h3>test</h3>
+    <section className="serviciosPage">
+      <div className="serviciosPageTitle">
+        <h2>Servicios IQEA</h2>
+      </div>
       {data.map((servicio: any) => {
         const { titulo, slug } = servicio.attributes;
         // console.log("data --->", servicio.attributes);

@@ -4,6 +4,7 @@
 
   background-color: var(--footerBgColor);
   color: var(--footerTextColor);
+
   // .footerSeparator{
   //     width: 70%;
   //     margin: 0 auto;
@@ -13,6 +14,8 @@
     justify-content: space-between;
     align-items: center;
     height: 20%;
+    margin: 0 auto;
+    max-width: var(--max-width);
 
     .logoIqea {
       width: 120px;
@@ -41,13 +44,17 @@
       }
     }
   }
-
+  .footerSeparator{
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
   .footerBody {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60%;
-
+    margin: 0 auto;
+    max-width: var(--max-width);
     .contact {
       h4 {
         font-size: 24px;
@@ -76,7 +83,7 @@
       flex-direction: column;
       justify-content: flex-end;
       height: 80%;
-      
+
       .active {
         border-bottom: 2px solid var(--PrimaryBgColor);
       }
@@ -93,6 +100,8 @@
     justify-content: space-between;
     align-items: center;
     height: 10%;
+    margin: 0 auto;
+    max-width: var(--max-width);
 
     .develop {
       display: flex;
@@ -103,7 +112,7 @@
       }
       .jsdevLogo {
         margin: 0 0 0 5px;
-        width: 70px;
+        width: 100px;
         height: auto;
       }
     }

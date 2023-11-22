@@ -4,5 +4,8 @@
     justify-content: center;
     align-content: center;
 
-    padding: 20px  var(--paddingDesktop);
+    // padding: 20px  var(--paddingDesktop);
+
+    margin: 0 auto;
+    max-width: var(--max-width);
 }

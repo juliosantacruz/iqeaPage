@@ -11,19 +11,13 @@ import DropDown, { DropDownItem } from "@/components/DropDown";
 // import { API_URL_STRAPI } from "@/config";
 import { fetchProductContent, getContactForm } from "@/services/fetchData";
 import { FORM_ROUTER } from "@/services/routers";
-import {
-  DropdownGroup,
-  DropdownItem,
-  DropdownMenu,
-  NavItem,
-} from "@/components/DropDownMultiLevel/DropDown";
-// import navDataJson from "./test.json";
 
-// const API_URL_STRAPI_DEV  = process.env.API_URL_STRAPI_DEV
-// const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD
-// const IS_DEV = process.env.IS_DEV
-// const isDev = IS_DEV
-// const API_URL_STRAPI = isDev? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
+import NavProductos from "./Submenus/NavProductos";
+import NavSistemas from "./Submenus/NavSistemas";
+import NavProcesos from "./Submenus/NavProcesos";
+import NavServicios from "./Submenus/NavServicios";
+import NavForms from "./Submenus/NavForms";
+
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -95,85 +89,12 @@ export default function Navbar() {
             <IconMenu className="hamburger" />
           </button>
         </div>
+
         <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
-          <li>
-            <Link href="/" className={isActiveLink("/")}>
-              Inicio
-            </Link>
-          </li>
-          {/* <li>
-            <Link
-              href="/quienes-somos"
-              className={isActiveLink("/quienes-somos")}
-            >
-              Quiénes Somos
-            </Link>
-          </li> */}
-          <li>
-            <Link href="/procesos" className={isActiveLink("/procesos")}>
-              Procesos
-            </Link>
-          </li>
-          <li>
-            <Link href="/servicios" className={isActiveLink("/servicios")}>
-              Servicios
-            </Link>
-          </li>
-
-          <NavItem title="Productos" href={"/productos"}>
-            <DropdownMenu>
-              <DropdownGroup nameGroup="main">
-                {productNav &&
-                  productNav.map((element: any) => {
-                      return (
-                        <DropdownItem
-                          key={element.id}
-                          href={`/productos/${element.slug}`}
-                          goToMenu={element.productos ? element.slug : ""}
-                          rightIcon={element.productos.length>0?'>':null}
-
-                        >
-                          {element.title}
-                        </DropdownItem>
-                      );
-
-                  })}
-              </DropdownGroup>
-
-              {productNav &&
-                productNav.map((element: any) => {
-                  if (element.productos) {
-                    return (
-                      <DropdownGroup nameGroup={element.slug} key={element.id}>
-                        <DropdownItem goToMenu="main" leftIcon={'<'} >Regresar</DropdownItem>
-
-
-                        {element.productos &&
-                          element.productos.map((producto: any) => {
-                            return (
-                              <DropdownItem
-                                key={producto.id}
-                                href={`/productos/${element.slug}/${producto.slug}`}
-                              >
-                                {producto.title}
-                              </DropdownItem>
-                            );
-                          })}
-                      </DropdownGroup>
-                    );
-                  }
-                })}
-              <DropdownGroup nameGroup="menu3">
-                <DropdownItem leftIcon="<" goToMenu="main">
-                  back
-                </DropdownItem>
-
-                <DropdownItem>profile</DropdownItem>
-                <DropdownItem>payments</DropdownItem>
-                <DropdownItem>resolution</DropdownItem>
-              </DropdownGroup>
-            </DropdownMenu>
-          </NavItem>
+          <NavProductos />
+          <NavSistemas />
+          <NavProcesos />
+          <NavServicios/>
 
           <li>
             <Link href="/proyectos" className={isActiveLink("/proyectos")}>
@@ -185,29 +106,8 @@ export default function Navbar() {
               Contacto
             </Link>
           </li>
-          <li>
-            <DropDown title={"Formularios"} positionX={200}>
-              {contactForm !== undefined
-                ? contactForm.map((element) => {
-                    return (
-                      <DropDownItem
-                        key={(element as any).id}
-                        title={(element as any).title}
-                        href={`/formulario/${(element as any).slug}`}
-                      />
-                    );
-                  })
-                : null}
-              {/* <DropDownItem
-                title={"Biological Treatment Background"}
-                href={"/formulario/biological-treatment-background"}
-              />
-              <DropDownItem
-                title={"Reverse Osmosis Design Request"}
-                href={"/formulario/reverse-osmosis-design-request"}
-              /> */}
-            </DropDown>
-          </li>
+          <NavForms/>
+
         </ul>
       </nav>
     </header>

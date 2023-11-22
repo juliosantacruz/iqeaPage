@@ -8,6 +8,7 @@ type NavItemProps = {
   icon?: string;
   title?: string;
   href?: Url;
+  className?:string,
   children?: any;
 };
 
@@ -42,7 +43,7 @@ export function NavItem(props: NavItemProps) {
 
   return (
     <li
-      className="nav-item"
+      className={`nav-item ${props.className}`}
       ref={menuDropdownRef as any}
       onMouseEnter={handleDropdownMouseEnter}
 

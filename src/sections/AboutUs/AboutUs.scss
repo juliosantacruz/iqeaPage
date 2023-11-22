@@ -2,11 +2,14 @@
   width: 100%;
   height: 100%;
 
-  padding: 20px var(--paddingDesktop);
+  // padding: 20px var(--paddingDesktop);
   background: var(--PrimaryBgColor);
 
   display: flex;
   flex-direction: row;
+
+  margin: 0 auto;
+    max-width: var(--max-width);
 
   .carrusel {
     display: flex;
@@ -38,7 +41,7 @@
     p {
       margin: 50px 0;
     }
-    
+
   }
 
   @include media-down(md){
@@ -72,7 +75,7 @@
       p{
         margin: 20px 0;
       }
-       
+
     }
   }
 }
