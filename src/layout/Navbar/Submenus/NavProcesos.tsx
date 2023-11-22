@@ -12,12 +12,10 @@ import { usePathname } from "next/navigation";
 
 export default function NavProcesos() {
   const [processTypeNav, setProcessTypeNav] = useState([]);
-  console.log(processTypeNav);
   useEffect(() => {
     const getProductNav = async () => {
       try {
         const navDataJson = await fetchProcesosContent();
-        console.log(navDataJson);
 
         if (navDataJson) {
           const navData = JSON.parse(navDataJson).map((element: any) => {

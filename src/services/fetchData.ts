@@ -72,6 +72,47 @@ export async function fetchProcesosContent() {
 
   return data;
 }
+
+export async function fetchServiciosContent() {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: `${PUBLIC_API_URL_STRAPI}/servicios?fields[0]=titulo&fields[1]=slug`,
+    headers: {},
+  };
+
+  const data: any = axios
+    .request(config)
+    .then((response) => {
+      return JSON.stringify(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return data;
+}
+
+export async function fetchSTratamientoContent() {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: `${PUBLIC_API_URL_STRAPI}/sistemas-tratamientos?fields[0]=titulo&fields[1]=slug`,
+    headers: {},
+  };
+
+  const data: any = axios
+    .request(config)
+    .then((response) => {
+      return JSON.stringify(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return data;
+}
+
 export async function getServicios() {
   const res = await fetch(`${API_URL_STRAPI}/servicios/`);
 
@@ -165,7 +206,7 @@ export async function getProcesos() {
 }
 
 export async function getProcesosBySlug(slug:string) {
-  const res = await fetch(`${API_URL_STRAPI}/tipo-proceso/${slug}`);
+  const res = await fetch(`${API_URL_STRAPI}/tipo-procesos/${slug}?populate=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

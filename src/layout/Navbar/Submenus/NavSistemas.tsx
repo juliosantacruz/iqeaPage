@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { fetchProductContent } from "@/services/fetchData";
+import { fetchSTratamientoContent } from "@/services/fetchData";
 import {
   DropdownGroup,
   DropdownItem,
@@ -11,35 +11,30 @@ import {
 import { usePathname } from "next/navigation";
 
 export default function NavSistemas() {
-  const [productNav, setProductNav] = useState([]);
-  // console.log(productNav);
+  const [navData, setNavData] = useState([]);
+
   useEffect(() => {
     const getProductNav = async () => {
       try {
-        const navDataJson = await fetchProductContent();
+        const navDataJson = await fetchSTratamientoContent();
+
 
         if (navDataJson) {
           const navData = JSON.parse(navDataJson).map((element: any) => {
-            const arrProductos: [] = element.attributes.productos.data;
-            const newProductos = arrProductos.map((producto: any) => {
-              const newProducto = {
-                id: producto.id,
-                title: producto.attributes.titulo,
-                slug: producto.attributes.slug,
-              };
-              return newProducto;
-            });
+
 
             const newElement = {
               id: element.id,
-              title: element.attributes.title,
+              title: element.attributes.titulo,
               slug: element.attributes.slug,
-              productos: newProductos,
+
             };
+
+
             return newElement;
           });
 
-          setProductNav(navData);
+          setNavData(navData);
         } else {
           console.error("Data not found in the response.");
         }
@@ -56,17 +51,17 @@ export default function NavSistemas() {
     return `navLink ${value === path ? "active" : ""}`;
   };
   return (
-    <NavItem title="Sistemas" href={"/"} className={isActiveLink("/sistemas")}>
+    <NavItem title="Sistemas" href={"/"} className={isActiveLink("/sistema-de-tratamiento")}>
       <DropdownMenu>
         <DropdownGroup nameGroup="main">
-          {productNav &&
-            productNav.map((element: any) => {
+          {navData &&
+            navData.map((element: any) => {
               return (
                 <DropdownItem
                   key={element.id}
-                  href={`/productos/${element.slug}`}
+                  href={`/sistema-de-tratamiento/${element.slug}`}
                   goToMenu={element.productos ? element.slug : ""}
-                  rightIcon={element.productos.length > 0 ? ">" : null}
+
                 >
                   {element.title}
                 </DropdownItem>
@@ -74,39 +69,6 @@ export default function NavSistemas() {
             })}
         </DropdownGroup>
 
-        {productNav &&
-          productNav.map((element: any) => {
-            if (element.productos) {
-              return (
-                <DropdownGroup nameGroup={element.slug} key={element.id}>
-                  <DropdownItem goToMenu="main" leftIcon={"<"}>
-                    Regresar
-                  </DropdownItem>
-
-                  {element.productos &&
-                    element.productos.map((producto: any) => {
-                      return (
-                        <DropdownItem
-                          key={producto.id}
-                          href={`/productos/${element.slug}/${producto.slug}`}
-                        >
-                          {producto.title}
-                        </DropdownItem>
-                      );
-                    })}
-                </DropdownGroup>
-              );
-            }
-          })}
-        <DropdownGroup nameGroup="menu3">
-          <DropdownItem leftIcon="<" goToMenu="main">
-            back
-          </DropdownItem>
-
-          <DropdownItem>profile</DropdownItem>
-          <DropdownItem>payments</DropdownItem>
-          <DropdownItem>resolution</DropdownItem>
-        </DropdownGroup>
       </DropdownMenu>
     </NavItem>
   );
