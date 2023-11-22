@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { fetchProductContent } from "@/services/fetchData";
+import { fetchProcesosContent } from "@/services/fetchData";
 import {
   DropdownGroup,
   DropdownItem,
@@ -11,17 +11,18 @@ import {
 import { usePathname } from "next/navigation";
 
 export default function NavProcesos() {
-  const [productNav, setProductNav] = useState([]);
-  // console.log(productNav);
+  const [processTypeNav, setProcessTypeNav] = useState([]);
+  console.log(processTypeNav);
   useEffect(() => {
     const getProductNav = async () => {
       try {
-        const navDataJson = await fetchProductContent();
+        const navDataJson = await fetchProcesosContent();
+        console.log(navDataJson);
 
         if (navDataJson) {
           const navData = JSON.parse(navDataJson).map((element: any) => {
-            const arrProductos: [] = element.attributes.productos.data;
-            const newProductos = arrProductos.map((producto: any) => {
+            const arrElement: [] = element.attributes.procesos.data;
+            const newProductos = arrElement.map((producto: any) => {
               const newProducto = {
                 id: producto.id,
                 title: producto.attributes.titulo,
@@ -32,14 +33,14 @@ export default function NavProcesos() {
 
             const newElement = {
               id: element.id,
-              title: element.attributes.title,
+              title: element.attributes.titulo,
               slug: element.attributes.slug,
-              productos: newProductos,
+              procesos: newProductos,
             };
             return newElement;
           });
 
-          setProductNav(navData);
+          setProcessTypeNav(navData);
         } else {
           console.error("Data not found in the response.");
         }
@@ -64,14 +65,14 @@ export default function NavProcesos() {
     >
       <DropdownMenu>
         <DropdownGroup nameGroup="main">
-          {productNav &&
-            productNav.map((element: any) => {
+          {processTypeNav &&
+            processTypeNav.map((element: any) => {
               return (
                 <DropdownItem
                   key={element.id}
-                  href={`/productos/${element.slug}`}
-                  goToMenu={element.productos ? element.slug : ""}
-                  rightIcon={element.productos.length > 0 ? ">" : null}
+                  href={`/procesos/${element.slug}`}
+                  goToMenu={element.procesos ? element.slug : ""}
+                  rightIcon={element.procesos.length > 0 ? ">" : null}
                 >
                   {element.title}
                 </DropdownItem>
@@ -79,23 +80,23 @@ export default function NavProcesos() {
             })}
         </DropdownGroup>
 
-        {productNav &&
-          productNav.map((element: any) => {
-            if (element.productos) {
+        {processTypeNav &&
+          processTypeNav.map((element: any) => {
+            if (element.procesos) {
               return (
                 <DropdownGroup nameGroup={element.slug} key={element.id}>
                   <DropdownItem goToMenu="main" leftIcon={"<"}>
                     Regresar
                   </DropdownItem>
 
-                  {element.productos &&
-                    element.productos.map((producto: any) => {
+                  {element.procesos &&
+                    element.procesos.map((procesos: any) => {
                       return (
                         <DropdownItem
-                          key={producto.id}
-                          href={`/productos/${element.slug}/${producto.slug}`}
+                          key={procesos.id}
+                          href={`/procesos/${element.slug}/${procesos.slug}`}
                         >
-                          {producto.title}
+                          {procesos.title}
                         </DropdownItem>
                       );
                     })}
@@ -103,15 +104,6 @@ export default function NavProcesos() {
               );
             }
           })}
-        <DropdownGroup nameGroup="menu3">
-          <DropdownItem leftIcon="<" goToMenu="main">
-            back
-          </DropdownItem>
-
-          <DropdownItem>profile</DropdownItem>
-          <DropdownItem>payments</DropdownItem>
-          <DropdownItem>resolution</DropdownItem>
-        </DropdownGroup>
       </DropdownMenu>
     </NavItem>
   );

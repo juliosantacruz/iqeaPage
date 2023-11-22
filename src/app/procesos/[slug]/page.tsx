@@ -4,7 +4,7 @@ import React from "react";
 export default async function page({ params }: { params: { slug: string } }) {
     const data = await getProcesosBySlug(params.slug);
     const textContent = data.attributes.descripcion;
-
+  console.log(data)
   // console.log(data);
   return (
     <section>

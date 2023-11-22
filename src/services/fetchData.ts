@@ -32,11 +32,32 @@ export async function fetchNavContent() {
 
   return data;
 }
+
 export async function fetchProductContent() {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
     url: `${PUBLIC_API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug`,
+    headers: {},
+  };
+
+  const data: any = axios
+    .request(config)
+    .then((response) => {
+      return JSON.stringify(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return data;
+}
+
+export async function fetchProcesosContent() {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: `${PUBLIC_API_URL_STRAPI}/tipo-procesos?fields[0]=titulo&fields[1]=slug&populate[procesos][fields][2]=titulo&populate[procesos][fields][3]=slug`,
     headers: {},
   };
 
