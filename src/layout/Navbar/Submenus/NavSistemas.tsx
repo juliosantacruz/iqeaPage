@@ -51,7 +51,7 @@ export default function NavSistemas() {
     return `navLink ${value === path ? "active" : ""}`;
   };
   return (
-    <NavItem title="Sistemas" href={"/"} className={isActiveLink("/sistema-de-tratamiento")}>
+    <NavItem title="Sistemas" href={"/sistemas-de-tratamiento"} className={isActiveLink("/sistemas-de-tratamiento")}>
       <DropdownMenu>
         <DropdownGroup nameGroup="main">
           {navData &&
@@ -59,7 +59,7 @@ export default function NavSistemas() {
               return (
                 <DropdownItem
                   key={element.id}
-                  href={`/sistema-de-tratamiento/${element.slug}`}
+                  href={`/sistemas-de-tratamiento/${element.slug}`}
                   goToMenu={element.productos ? element.slug : ""}
 
                 >

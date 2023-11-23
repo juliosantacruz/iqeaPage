@@ -235,3 +235,22 @@ export async function getContactForm(API_URL:string) {
   return data;
 }
 
+export async function getSistemasTratamiento() {
+  const res = await fetch(`${API_URL_STRAPI}/sistemas-tratamientos?populate=*`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
+
+export async function getSistemasTratamientoBySlug(slug:string) {
+  const res = await fetch(`${API_URL_STRAPI}/sistemas-tratamientos/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  return data;
+}
