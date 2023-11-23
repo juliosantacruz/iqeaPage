@@ -22,9 +22,9 @@ header {
     //   margin: 0 0 5px 0;
 
     .logoIqea {
-      width: 120px;
+      width: 160px;
       height: auto;
-      background-color: white;
+      // background-color: rgba(255, 255, 255, 0.438);
       padding: 10px;
       border-radius: var(--border-radius-sm);
       // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -53,6 +53,10 @@ header {
 
 @include media-down(lg){
   .navbar{
+    .logoIqea{
+      width: 120px;
+
+    }
     .navLinks{
       li{
         .navLink{
@@ -79,7 +83,7 @@ header {
       .logoIqea {
         width: 100px;
         height: auto;
-        background-color: white;
+        // background-color: white;
         padding: 6px;
         border-radius: var(--border-radius-sm);
         // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

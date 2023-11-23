@@ -134,7 +134,7 @@ export async function getServiciosBySlug(slug:string) {
 }
 
 export async function getProyectos() {
-  const res = await fetch(`${API_URL_STRAPI}/proyectos/`);
+  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&populate[cover][fields][2]=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
