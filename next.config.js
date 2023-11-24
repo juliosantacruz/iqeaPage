@@ -20,6 +20,9 @@ const nextConfig = {
     PUBLIC_API_URL_STRAPI:PUBLIC_API_URL_STRAPI
 
   },
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
   // typedRoutes: true,
 };
 

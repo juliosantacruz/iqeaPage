@@ -34,7 +34,7 @@ export default async function page() {
           <article className="proyectCard" key={proyecto.id}>
               <Link href={`proyectos/${proyecto.slug}`}  >
               {proyecto.cover && (
-                <Image src={proyecto.cover} alt="imagen cover para proyectos" />
+                <Image src={proyecto.cover} alt="imagen cover para proyectos" width={400} height={400}/>
               )}
               <h4>{proyecto.title}</h4>
           </Link>
