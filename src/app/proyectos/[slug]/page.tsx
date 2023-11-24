@@ -2,6 +2,7 @@ import { getProyectosBySlug } from "@/services/fetchData";
 import React from "react";
 import "./ProyectosDetail.scss";
 import CallToActionBanner from "@/components/CallToActionBanner";
+import Image from "next/image";
 
 export default async function page({ params }: { params: { slug: string } }) {
   const data = await getProyectosBySlug(params.slug);
@@ -40,7 +41,7 @@ export default async function page({ params }: { params: { slug: string } }) {
               return (
                 //
                 <div key={image.id}>
-                  <img
+                  <Image
                     src={image.attributes.url}
                     alt={
                       image.attributes.alternativeText

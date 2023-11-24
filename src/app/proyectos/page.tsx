@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import "./Proyectos.scss";
 import CallToActionBanner from "@/components/CallToActionBanner";
+import Image from "next/image";
 
 export default async function page() {
   const data = await getProyectos();
@@ -33,7 +34,7 @@ export default async function page() {
           <article className="proyectCard" key={proyecto.id}>
               <Link href={`proyectos/${proyecto.slug}`}  >
               {proyecto.cover && (
-                <img src={proyecto.cover} alt="imagen cover para proyectos" />
+                <Image src={proyecto.cover} alt="imagen cover para proyectos" />
               )}
               <h4>{proyecto.title}</h4>
           </Link>

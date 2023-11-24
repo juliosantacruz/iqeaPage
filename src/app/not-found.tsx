@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import './notFound.scss'
-
+import Image from 'next/image'
+import notFoundImg from '@/assets/notFoundImage.png'
 
 export default function NotFound() {
  const buttonStyle ={
@@ -12,6 +13,7 @@ export default function NotFound() {
  }
   return (
     <div className='notFound'>
+      <Image src={notFoundImg} alt='' width={300}/>
       <h2>Pagina no encontrada</h2>
       <p>Lo sentimos, la pagina a la que quieres acceder no existe o no tienes acceso
         <br/> Haz click para regresar a la pagina principal
