@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import "./Footer.scss";
 import Image from "next/image";
@@ -18,7 +18,6 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const path = usePathname();
 
-
   const isActiveLink = (value: string) => {
     return `footerNav ${value === path ? "active" : ""}`;
   };
@@ -37,12 +36,20 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/arturo-chavez-90979258/" target="_blank" className="socialLinks">
+              <a
+                href="https://www.linkedin.com/in/arturo-chavez-90979258/"
+                target="_blank"
+                className="socialLinks"
+              >
                 <IconLinkedIn />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/profile.php?id=100064039061566" target="_blank" className="socialLinks">
+              <a
+                href="https://www.facebook.com/profile.php?id=100064039061566"
+                target="_blank"
+                className="socialLinks"
+              >
                 <IconFacebook />
               </a>
             </li>
@@ -81,7 +88,10 @@ export default function Footer() {
           <Link href={"/"} className={isActiveLink("/")}>
             Inicio
           </Link>
-          <Link href={"/quienes-somos"} className={isActiveLink("/quienes-somos")}>
+          <Link
+            href={"/quienes-somos"}
+            className={isActiveLink("/quienes-somos")}
+          >
             Quienes Somos
           </Link>
           <Link href={"/servicios"} className={isActiveLink("/servicios")}>
@@ -90,12 +100,20 @@ export default function Footer() {
           <Link href={"/productos"} className={isActiveLink("/productos")}>
             Productos
           </Link>
+          <Link href={"/procesos"} className={isActiveLink("/procesos")}>
+            Procesos
+          </Link>
 
           <Link href={"/proyectos"} className={isActiveLink("/proyectos")}>
             Proyectos
           </Link>
           <Link href={"/contacto"} className={isActiveLink("/contacto")}>
             Contacto
+          </Link><Link
+            href={"/sistemas-de-tratamiento"}
+            className={isActiveLink("/sistemas-de-tratamiento")}
+          >
+          Sistemas
           </Link>
         </div>
       </div>

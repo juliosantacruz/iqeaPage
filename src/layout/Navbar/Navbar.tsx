@@ -21,47 +21,8 @@ import NavForms from "./Submenus/NavForms";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  // const [contactForm, setContactForm] = useState([]);
-  const [productNav, setProductNav] = useState([]);
-  // console.log(productNav);
-  useEffect(() => {
-    const getProductNav = async () => {
-      try {
-        const navDataJson = await fetchProductContent();
 
-        if (navDataJson) {
-          const navData = JSON.parse(navDataJson).map((element: any) => {
-            const arrProductos: [] = element.attributes.productos.data;
-            const newProductos = arrProductos.map((producto: any) => {
-              const newProducto = {
-                id: producto.id,
-                title: producto.attributes.titulo,
-                slug: producto.attributes.slug,
-              };
-              return newProducto;
-            });
 
-            const newElement = {
-              id: element.id,
-              title: element.attributes.title,
-              slug: element.attributes.slug,
-              productos: newProductos,
-            };
-            return newElement;
-          });
-
-          setProductNav(navData);
-        } else {
-          console.error("Data not found in the response.");
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    getProductNav();
-  }, []);
-
-  const contactForm = FORM_ROUTER;
   const path = usePathname();
   useEffect(() => {
     setOpenMenu(false);
@@ -93,15 +54,15 @@ export default function Navbar() {
         <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
           <NavProductos />
           <NavSistemas />
-          <NavProcesos />
-          <NavServicios/>
+          {/* <NavProcesos /> */}
+          <NavServicios />
 
-          <li>
+          {/* <li>
             <Link href="/proyectos" className={isActiveLink("/proyectos")}>
               Proyectos
             </Link>
-          </li>
-          <li>
+          </li> */}
+          <li className="nav-item">
             <Link href="/contacto" className={isActiveLink("/contacto")}>
               Contacto
             </Link>

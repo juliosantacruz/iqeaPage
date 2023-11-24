@@ -53,6 +53,8 @@ header {
 
 @include media-down(lg){
   .navbar{
+    padding: 0 var(--paddingDesktop);
+
     .logoIqea{
       width: 120px;
 
@@ -61,7 +63,9 @@ header {
       li{
         .navLink{
           font-size: var(--navbarTextSize);
-          margin: 0 6px;
+          margin: 0  10px;
+          padding: 15px 10px ;
+
         }
       }
     }
@@ -70,7 +74,7 @@ header {
   @include media-down(md) {
     .navbar {
       align-items: center;
-      height: 50px;
+      height: 60px;
       padding: 0 var(--paddingDesktop);
 
       background-color: var(--navbarBgColor);
@@ -96,7 +100,7 @@ header {
           list-style: none;
           width: 100%;
           .navLink {
-            margin: 0 5px;
+            margin: 0 ;
           }
           .active {
             border-bottom: 2px solid var(--navbarTextColor);
@@ -133,7 +137,7 @@ header {
       .navLinks {
         display: flex !important;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         position: fixed;
         top: 60px;
         left: 0;
@@ -155,13 +159,24 @@ header {
         padding: 0 20px;
 
         li {
-          margin: 20px 0;
+          padding: 20px 0;
+          a{
+            width: 80%;
+          }
+        }
+        li:hover{
+          background-color: rgb(216, 216, 216);
         }
       }
       .openMenu {
         transform: translate(0);
       }
     }
-
+    .arrow{
+      display: none;
+    }
+    .dropdown{
+      display: none;
+    }
   }
 }

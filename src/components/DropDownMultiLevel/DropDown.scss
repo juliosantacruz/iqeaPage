@@ -1,5 +1,5 @@
 :root {
-  --border: 1px solid #474a4d;
+  --border: 1px solid #c5c5c5;
   --border-radius: 12px;
   --speed: 500ms;
 }
@@ -21,9 +21,9 @@
   background-color: var(--navbarBgColor);
   box-shadow: var(--box-shadow-navbar);
   border-top: var(--border);
-  // border-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  border-radius: var(--border-radius);
+  // border-bottom-left-radius: var(--border-radius);
+  // border-bottom-right-radius: var(--border-radius);
   padding: 1rem;
   overflow: hidden;
   // overflow-y: visible;
@@ -34,13 +34,21 @@
   transition: height var(--speed) ease;
 
   .menu-item {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
+
+    .menu-item-link{
+      display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 80%;
+    }
 
     .icon-button {
       --button-size: calc(var(--nav-size) * 0.3);

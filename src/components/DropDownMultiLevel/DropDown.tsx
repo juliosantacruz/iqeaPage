@@ -8,14 +8,13 @@ type NavItemProps = {
   icon?: string;
   title?: string;
   href?: Url;
-  className?:string,
+  className?: string;
   children?: any;
 };
 
 export function NavItem(props: NavItemProps) {
   const [open, setOpen] = useState(false);
 
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
   const menuDropdownRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +23,6 @@ export function NavItem(props: NavItemProps) {
         menuDropdownRef.current &&
         !(menuDropdownRef.current as any).contains(event.target)
       ) {
-        // console.log(menuDropdownRef);
         setOpen(false);
       }
     };
@@ -33,83 +31,30 @@ export function NavItem(props: NavItemProps) {
 
   const handleDropdown = () => {
     setOpen(!open);
+
   };
   const handleDropdownMouseEnter = () => {
-    setOpen(true);
-  };
-  const handleDropdownMouseLeave = () => {
-    setOpen(false);
+    setOpen(!open);
   };
 
   return (
     <li
       className={`nav-item`}
       ref={menuDropdownRef as any}
-      onMouseEnter={handleDropdownMouseEnter}
-
-    >
+      >
       <Link
         href={props.href || "#"}
         className={`icon-button ${props.className}`}
-        onClick={handleDropdown}
+        onMouseEnter={handleDropdownMouseEnter}
+
       >
-        {/* {props.icon ? props.icon:null}*/} {props.title}
+        {props.title}
       </Link>
 
       {open && props.children}
     </li>
   );
 }
-
-export const DropdownItem = (props: any) => {
-  return (
-    <Link
-      href={props.href?props.href:''}
-      className="menu-item"
-
-    >
-      {props.leftIcon && <span className="icon-button" onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}>{props.leftIcon}</span>}
-
-      {props.children}
-      {props.rightIcon && (
-        <span className="icon-button" onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}>{props.rightIcon}</span>
-      )}
-    </Link>
-  );
-};
-
-export const DropdownGroup = (props: any) => {
-    // Función para clonar los elementos hijos y pasarles props adicionales
-    const renderChildrenWithProps = () => {
-      return React.Children.map(props.children, (child) => {
-        if (React.isValidElement(child)) {
-          // Definir el tipo de props adicionales
-          const additionalProps: ChildComponentProps = {
-            calcHeight: props.calcHeight,
-            activeMenu:props.activeMenu,
-            setActiveMenu: props.setActiveMenu,
-          };
-
-          // Pasar las props adicionales al elemento clonado
-          return React.cloneElement(child, additionalProps);
-        }
-        return child;
-      });
-    };
-  return (
-    <CSSTransition
-      in={props.activeMenu === props.nameGroup}
-      unmountOnExit
-      timeout={500}
-      classNames={`menu-${
-        props.nameGroup === "main" ? "primary" : "secondary"
-      }`}
-      onEnter={props.calcHeight}
-    >
-      <div className="menu">{renderChildrenWithProps()}</div>
-    </CSSTransition>
-  );
-};
 
 export function DropdownMenu(props: any) {
   const [activeMenu, setActiveMenu] = useState("main");
@@ -127,7 +72,7 @@ export function DropdownMenu(props: any) {
         // Definir el tipo de props adicionales
         const additionalProps: ChildComponentProps = {
           calcHeight: calcHeight,
-          activeMenu:activeMenu,
+          activeMenu: activeMenu,
           setActiveMenu: setActiveMenu,
         };
 
@@ -139,17 +84,84 @@ export function DropdownMenu(props: any) {
   };
   return (
     <>
-
       <div className="arrow"></div>
-    <div className="dropdown" style={{ height: menuHeight }}>
-      {renderChildrenWithProps()}
-    </div>
+      <div className="dropdown" style={{ height: menuHeight }}>
+        {renderChildrenWithProps()}
+      </div>
     </>
   );
 }
 
+export const DropdownGroup = (props: any) => {
+  // Función para clonar los elementos hijos y pasarles props adicionales
+  const renderChildrenWithProps = () => {
+    return React.Children.map(props.children, (child) => {
+      if (React.isValidElement(child)) {
+        // Definir el tipo de props adicionales
+        const additionalProps: ChildComponentProps = {
+          calcHeight: props.calcHeight,
+          activeMenu: props.activeMenu,
+          setActiveMenu: props.setActiveMenu,
+        };
+
+        // Pasar las props adicionales al elemento clonado
+        return React.cloneElement(child, additionalProps);
+      }
+      return child;
+    });
+  };
+  return (
+    <CSSTransition
+      in={props.activeMenu === props.nameGroup}
+      unmountOnExit
+      timeout={500}
+      classNames={`menu-${
+        props.nameGroup === "main" ? "primary" : "secondary"
+      }`}
+      onEnter={props.calcHeight}
+    >
+      <div className="menu">{renderChildrenWithProps()}</div>
+    </CSSTransition>
+  );
+};
+
+export const DropdownItem = (props: any) => {
+  const handleRightIcon = (event: React.MouseEvent) => {
+    event.stopPropagation();
+
+    if (props.goToMenu && props.setActiveMenu) {
+      props.setActiveMenu(props.goToMenu);
+    }
+  };
+  return (
+    <div className="menu-item">
+
+    <Link href={props.href ? props.href : ""} className="menu-item-link">
+      {props.leftIcon && (
+        <span
+          className="icon-button"
+          onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}
+        >
+          {props.leftIcon}
+        </span>
+      )}
+
+      {props.children}
+    </Link>
+      {props.rightIcon && (
+        <span
+          className="icon-button"
+          onClick={(event) => handleRightIcon(event)}
+        >
+          {props.rightIcon}
+        </span>
+      )}
+    </div>
+  );
+};
+
 interface ChildComponentProps {
   calcHeight: any;
-  activeMenu:string
+  activeMenu: string;
   setActiveMenu: React.Dispatch<React.SetStateAction<string>>;
 }
