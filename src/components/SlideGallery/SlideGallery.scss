@@ -1,0 +1,9 @@
+.imgGallery{
+  width: 600px;
+    height: 440px;
+
+  background-color: rgba(182, 182, 182, 0.185);
+  img{
+    object-fit: cover;
+  }
+}

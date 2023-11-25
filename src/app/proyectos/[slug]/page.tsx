@@ -3,6 +3,8 @@ import React from "react";
 import "./ProyectosDetail.scss";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import Image from "next/image";
+import SlideGallery from "@/components/SlideGallery/SlideGallery";
+
 
 export default async function page({ params }: { params: { slug: string } }) {
   const data = await getProyectosBySlug(params.slug);
@@ -36,23 +38,10 @@ export default async function page({ params }: { params: { slug: string } }) {
         <>
           <hr className="projectSeparator" />
           <div className="galeria">
-            {project?.galery?.map((image: any) => {
-              // console.log('imagen nueva --------->',image.attributes)
-              return (
-                //
-                <div key={image.id}>
-                  <Image
-                    src={image.attributes.url}
-                    alt={
-                      image.attributes.alternativeText
-                        ? image.attributes.alternativeText
-                        : "galeria"
-                    }
-                  />
-                </div>
-              );
-            })}
+          <SlideGallery imageArr={project.galery} />
+
           </div>
+
         </>
       )}
       <div className="projectTitle">
