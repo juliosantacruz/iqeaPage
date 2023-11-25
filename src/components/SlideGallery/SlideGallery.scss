@@ -6,4 +6,10 @@
   img{
     object-fit: cover;
   }
+
+  @include media-down(sm){
+    min-width: 300px;
+    width: 100%;
+
+  }
 }

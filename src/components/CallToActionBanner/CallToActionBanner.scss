@@ -5,6 +5,7 @@
   gap: 30px;
 
   margin: 30px 0;
+  text-align: center;
 
   a {
     font-size: 20px;
@@ -19,5 +20,9 @@
   a:hover {
     cursor: pointer;
     transform: translateY(2px);
+  }
+  @include media-down(sm){
+    flex-direction: column;
+
   }
 }

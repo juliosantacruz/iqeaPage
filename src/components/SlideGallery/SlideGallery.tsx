@@ -62,8 +62,7 @@ export default function SlideGallery({ imageArr }: any) {
           <div className="imgGallery">
             <Image
               src={setUrl(image.attributes.url, error) as string}
-              width={600}
-              height={440}
+              layout="fill"
               onError={handleImageError}
               alt={
                 image.attributes.alternativeText
