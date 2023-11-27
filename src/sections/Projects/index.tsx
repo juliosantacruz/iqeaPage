@@ -36,7 +36,7 @@ export default function Projects({ projectsData }: any) {
             // when window width is >= 640px
             640: {
               width: 640,
-              slidesPerView: 1,
+              slidesPerView: 1.6,
             },
             // when window width is >= 768px
             768: {
@@ -46,7 +46,7 @@ export default function Projects({ projectsData }: any) {
             // when window width is >= 1240px
             1240: {
               width: 1240,
-              slidesPerView: 2,
+              slidesPerView: 3.3,
             },
           }}
           // modules={[Navigation, Pagination, Scrollbar, A11y]}

@@ -148,7 +148,7 @@ export async function getProjectsGalery() {
       const newTag = tag.attributes.tag
       console.log(newTag)
       return newTag
-    })||[]
+    })
 
     const newProject={
       id:project.id,
@@ -157,7 +157,7 @@ export async function getProjectsGalery() {
       cover:coverImage,
       scope:alcance,
       altText:cover.data?.attributes.alternativeText,
-      tags:arrTags
+      tags:arrTags||[]
     }
     return newProject
   })
