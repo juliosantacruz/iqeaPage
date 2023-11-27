@@ -157,7 +157,7 @@ export async function getProjectsGalery() {
       cover:coverImage,
       scope:alcance,
       altText:cover.data?.attributes.alternativeText,
-      tags:arrTags||[]
+      tags:arrTags||['test']
     }
     return newProject
   })
