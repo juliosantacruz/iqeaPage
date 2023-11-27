@@ -132,6 +132,7 @@ export async function getServiciosBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
+
 export async function getProjectsGalery() {
   const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=alcance&populate[cover][fields][3]=*&populate[tags][fields][4]=*`);
 
@@ -145,6 +146,7 @@ export async function getProjectsGalery() {
 
     const arrTags = tags.data?.map((tag:any)=>{
       const newTag = tag.attributes.tag
+      console.log(newTag)
       return newTag
     })||[]
 
