@@ -140,16 +140,15 @@ export async function getProjectsGalery() {
     throw new Error("Failed to fetch data");
   }
   const { data } = await res.json();
-  console.log(data)
+  // console.log(data)
   const projectsData = data.map((project:any)=>{
     const { titulo, slug, cover, alcance, tags } = project.attributes;
     const coverImage = cover.data?.attributes.url
 
-    const arrTags = tags.data?.map((tag:any)=>{
-      const newTag = tag.attributes.tag
-      console.log(newTag)
-      return newTag
-    })
+    // const arrTags = tags.data?.map((tag:any)=>{
+    //   const newTag = tag.attributes.tag
+    //   return newTag
+    // })
 
     const newProject={
       id:project.id,
@@ -158,7 +157,7 @@ export async function getProjectsGalery() {
       cover:coverImage,
       scope:alcance,
       altText:cover.data?.attributes.alternativeText,
-      tags:arrTags||['test']
+      tags:tags.data
     }
     return newProject
   })

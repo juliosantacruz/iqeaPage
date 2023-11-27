@@ -11,7 +11,7 @@ import ImageNotFound from "@/assets/Image-not-found.png";
 import Image from "next/image";
 
 export default function Projects({ projectsData }: any) {
-  console.log(projectsData)
+  // console.log(projectsData)
   return (
     <section className="projectsIqea">
       <div className="headerProjects centerDiv">
