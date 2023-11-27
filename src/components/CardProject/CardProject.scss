@@ -1,10 +1,7 @@
 .CardProject {
   width: 320px;
   height: 450px;
-  box-shadow:
-    2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset,
-    -2px -2px 4px 0px rgba(0, 0, 0, 0.25) inset,
-    2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:var(--box-shadow-primary);
   border-radius: var(--border-radius-sm);
 
   overflow: hidden;
@@ -63,5 +60,9 @@
       font-weight: 500;
       line-height: 16px; /* 133.333% */
     }
+  }
+
+  @include media-down(sm){
+    width: 260px;
   }
 }

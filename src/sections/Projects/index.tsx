@@ -7,13 +7,11 @@ import ButtonStyle from "@/components/ButtonStyle";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import ImageNotFound from '@/assets/Image-not-found.png'
+import ImageNotFound from "@/assets/Image-not-found.png";
 import Image from "next/image";
 
-
-
 export default function Projects({ projectsData }: any) {
-  // console.log(projectData)
+  console.log(projectsData)
   return (
     <section className="projectsIqea">
       <div className="headerProjects centerDiv">
@@ -28,79 +26,57 @@ export default function Projects({ projectsData }: any) {
       </div>
 
       <div className="bodyProjects ">
-        {/* <Slideshow
-          autoplay={false}
-          controls={true}
-          styleProps={{
-            width: "100%",
-            height: "460px",
-            overflowX: "scroll",
-            scrollbarWidth: "none",
+        <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            320: {
+              width: 320,
+              slidesPerView: 1.1,
+            },
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            // when window width is >= 1240px
+            1240: {
+              width: 1240,
+              slidesPerView: 2,
+            },
           }}
-          slideContainerWidth={400}
-          slideContainerHeight={460}
+          // modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={10}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
-          {projectsData.map((element: any) => {
+          {projectsData?.map((image: any) => {
+            const [error, setError] = useState(false);
+            const handleImageError = (e: any) => {
+              console.error(`Error loading image: ${e}`);
+              setError(true);
+            };
+
+            const setUrl = (src: string, error: boolean) => {
+              if (!error) {
+                return src;
+              }
+              if (error) {
+                return ImageNotFound;
+              }
+            };
+
             return (
-              <Slide key={element.id}>
-                <CardProject leProject={element} />
-              </Slide>
+              <SwiperSlide key={image.id}>
+                <CardProject leProject={image} />
+              </SwiperSlide>
             );
           })}
-        </Slideshow> */}
-
-
-        <Swiper
-      breakpoints={{
-        // when window width is >= 640px
-        320: {
-          width: 320,
-          slidesPerView: 1,
-        },
-        // when window width is >= 640px
-        640: {
-          width: 640,
-          slidesPerView: 1,
-        },
-        // when window width is >= 768px
-        768: {
-          width: 768,
-          slidesPerView: 2,
-        },
-        // when window width is >= 1240px
-        1240: {
-          width: 1240,
-          slidesPerView: 2,
-        },
-      }}
-      // modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={5}
-      // onSlideChange={() => console.log("slide change")}
-      // onSwiper={(swiper) => console.log(swiper)}
-    >
-      {projectsData?.map((image:any) => {
-        const [error, setError]=useState(false)
-          const handleImageError = (e:any) => {
-            console.error(`Error loading image: ${e}`);
-            setError( true)
-          };
-
-        const setUrl = (src:string, error:boolean)=>{
-          if(!error){
-            return src
-          }
-          if(error){
-            return ImageNotFound
-          }
-        }
-
-        return(
-        <SwiperSlide key={image.id}>
-         <CardProject leProject={image} />
-        </SwiperSlide>
-      )})}
-    </Swiper>
-
+        </Swiper>
       </div>
       <ButtonStyle>
         <Link
