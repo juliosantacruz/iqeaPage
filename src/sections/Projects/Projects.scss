@@ -3,20 +3,17 @@
   height: 100%;
 
   background: var(--PrimaryBgColor);
-  // padding: 20px var(--paddingDesktop);
 
-  margin: 0 auto;
-    max-width: var(--max-width);
-
+  margin: 40px auto;
+  max-width: var(--max-width);
 
   .headerProjects {
-    margin: 50px 0 ;
-    h2{
+    margin: 50px 0;
+    h2 {
       margin: 0 0 20px 0;
     }
-    p{
-      width: 80%;
-
+    p {
+      width: 100%;
     }
   }
 
@@ -29,16 +26,20 @@
     ::-webkit-scrollbar {
       display: none;
     }
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 
-  .buttonProjects{
+  .buttonProjects {
     max-width: 350px;
     width: 100%;
-    margin: 30px auto 50px ;
-    button{
+    margin: 30px auto 50px;
+    button {
       width: 100%;
     }
+  }
+
+  @include media-down(lg) {
+    padding: 0 var(--paddingDesktop);
   }
 }

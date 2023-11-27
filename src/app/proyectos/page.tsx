@@ -16,7 +16,8 @@ export default async function page() {
       title:titulo,
       slug:slug,
       cover:coverImage,
-      altText:cover.data?.attributes.alternativeText
+      altText:cover.data?.attributes.alternativeText,
+      tags:[]
     }
     return newProject
   })

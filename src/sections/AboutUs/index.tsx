@@ -21,7 +21,6 @@ export default function AboutUs() {
           <button type="button" >Cotiza tu Proyecto</button>
 
         </ButtonStyle>
-         
       </div>
       <div className="carrusel  ">
         <Image src={imgSample} alt="" />

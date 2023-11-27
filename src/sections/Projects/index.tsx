@@ -4,8 +4,10 @@ import "./Projects.scss";
 import CardProject from "@/components/CardProject";
 import { Slide, Slideshow } from "@/components/Slideshow";
 import ButtonStyle from "@/components/ButtonStyle";
+import Link from "next/link";
 
-export default function Projects() {
+export default function Projects({projectsData}:any) {
+  // console.log(projectData)
   return (
     <section className="projectsIqea">
       <div className="headerProjects centerDiv">
@@ -16,31 +18,28 @@ export default function Projects() {
       </div>
 
       <div className="bodyProjects ">
-        <Slideshow 
-          autoplay={false} 
-          controls={true} 
+        <Slideshow
+          autoplay={false}
+          controls={true}
           styleProps={{ width: "100%", height:'460px',overflowX:'scroll', scrollbarWidth:'none' }}
           slideContainerWidth={400} slideContainerHeight={460}>
-          <Slide>
-            <CardProject />
-          </Slide>{" "}
-          <Slide>
-            <CardProject />
-          </Slide>{" "}
-          <Slide>
-            <CardProject />
-          </Slide>{" "}
-          <Slide>
-            <CardProject />
-          </Slide>{" "}
-          
+          {projectsData.map((element:any)=>{
+
+            return(
+              <Slide key={element.id}>
+            <CardProject leProject={element}/>
+          </Slide>
+
+            )
+          })}
+
         </Slideshow>
       </div>
       <ButtonStyle>
-        <button style={{maxWidth:'350px', margin:"30px 0"}}>Ver Mas</button>
+        <Link href={'/proyectos'} style={{maxWidth:'350px', margin:"30px 0"}}>Ver Mas...</Link>
 
       </ButtonStyle>
-      
+
     </section>
   );
 }

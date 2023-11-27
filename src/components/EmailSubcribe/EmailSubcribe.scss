@@ -83,17 +83,13 @@
         width: 100%;
       }
     }
-    .SubcribeImage {
-      img {
-      }
-    }
   }
 
   @include media-down(sm) {
+    border-radius: 0;
     .SubcribeContent {
       margin: 15px;
       width: 100%;
-
       .SubcribeInput {
         gap: 0;
         .SubcribeBtn {

@@ -7,18 +7,21 @@ import Projects from '@/sections/Projects'
 import Products from '@/sections/Products'
 import Subcribe from '@/sections/Subcribe'
 import './home.scss'
+import { getProjectsGalery } from '@/services/fetchData'
 
 
 
-export default function Home() {
-  
+export default async function Home() {
+  const projectsData = await getProjectsGalery();
+
+
   return (
     <main className='main'>
         <Hero/>
         <Servicios/>
         <Stats/>
         <AboutUs/>
-        <Projects/>
+        <Projects projectsData={projectsData}/>
         <Subcribe/>
         <Products/>
     </main>

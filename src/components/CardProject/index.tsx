@@ -4,25 +4,32 @@ import Image from "next/image";
 
 import sample from "@/assets/servicios/ImgHt1.jpg";
 
-export default function CardProjects() {
+export default function CardProjects({leProject}:any) {
+
   return (
     <article className="CardProject">
       <div className="CardProjectImage">
-        <Image src={sample} alt="" />
+        {leProject.cover &&
+
+        <Image src={leProject.cover} alt={leProject.altText?leProject.altText:'galeria'} width={340} height={300}/>
+        }
       </div>
       <div className="CardProjectBody truncate">
-        <h3 className="">PTAR SSD Plasticos El Realito Tijuana B.C.</h3>
+        <h3 className="">{leProject.title}</h3>
         <p className="">
-          Sistema de tratamiento de aguas de servicios residuales de 50 m3/d a
-          base de sistema de torres de oxidación para reusó de agua en riego de
-          áreas verdes de acuerdo a la NOM-003-ECOL-19.  
+          {leProject.scope}
         </p>
+
       </div>
       <div className="CardProjectLabels">
-        <div className="label">2008</div>
-        <div className="label">Construccion</div>
-        <div className="label">WWT</div>
-        <div className="label">Comercial</div>
+        {
+          leProject.tags &&
+          leProject.tags.map((tag:string)=>{
+
+            return (<div className="label" key={tag}>{tag}</div>)
+          })
+        }
+
       </div>
     </article>
   );

@@ -132,9 +132,37 @@ export async function getServiciosBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
+export async function getProjectsGalery() {
+  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=alcance&populate[cover][fields][3]=*&populate[tags][fields][4]=*`);
 
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const { data } = await res.json();
+  const projectsData = data.map((project:any)=>{
+    const { titulo, slug, cover, alcance, tags } = project.attributes;
+    const coverImage = cover.data?.attributes.url
+
+    const arrTags = tags.data?.map((tag:any)=>{
+      const newTag = tag.attributes.tag
+      return newTag
+    })||[]
+
+    const newProject={
+      id:project.id,
+      title:titulo,
+      slug:slug,
+      cover:coverImage,
+      scope:alcance,
+      altText:cover.data?.attributes.alternativeText,
+      tags:arrTags
+    }
+    return newProject
+  })
+  return projectsData;
+}
 export async function getProyectos() {
-  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&populate[cover][fields][2]=*`);
+  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&populate[cover][fields][2]=*&populate[tags][fields][3]=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

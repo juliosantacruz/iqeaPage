@@ -93,7 +93,10 @@
             }
         }
     }
+    @include media-down(lg){
+    padding: 20px var(--paddingDesktop);
 
+    }
 
     @include media-down(sm){
         .serviciosHeader{
