@@ -3,10 +3,12 @@ import "./CardProject.scss";
 import Image from "next/image";
 
 import sample from "@/assets/servicios/ImgHt1.jpg";
+import Link from "next/link";
 
 export default function CardProjects({leProject}:any) {
 
   return (
+    <Link href={`/proyectos/${leProject.slug}`}>
     <article className="CardProject">
       <div className="CardProjectImage">
         {leProject.cover &&
@@ -31,6 +33,6 @@ export default function CardProjects({leProject}:any) {
         }
 
       </div>
-    </article>
+    </article></Link>
   );
 }
