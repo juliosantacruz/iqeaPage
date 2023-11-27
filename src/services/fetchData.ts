@@ -140,6 +140,7 @@ export async function getProjectsGalery() {
     throw new Error("Failed to fetch data");
   }
   const { data } = await res.json();
+  console.log(data)
   const projectsData = data.map((project:any)=>{
     const { titulo, slug, cover, alcance, tags } = project.attributes;
     const coverImage = cover.data?.attributes.url
