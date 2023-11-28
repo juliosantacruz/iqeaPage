@@ -17,8 +17,8 @@ const nextConfig = {
   },
   env: {
     API_URL_STRAPI:API_URL_STRAPI,
-    PUBLIC_API_URL_STRAPI:PUBLIC_API_URL_STRAPI
-
+    PUBLIC_API_URL_STRAPI:PUBLIC_API_URL_STRAPI,
+    BASE_URL:process.env.BASE_URL
   },
   images: {
     remotePatterns: [

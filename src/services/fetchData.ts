@@ -284,3 +284,4 @@ export async function getSistemasTratamientoBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
+

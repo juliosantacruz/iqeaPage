@@ -6,6 +6,35 @@ import Image from "next/image";
 import SlideGallery from "@/components/SlideGallery/SlideGallery";
 
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const data = await getProyectosBySlug(params.slug);
+  const project = {
+    title: data.attributes.titulo,
+    description: data.attributes.descripcion,
+    cover: data.attributes.cover?.data.attributes.url
+  };
+
+  return{
+    title:project.title,
+    description: data.attributes.descripcion,
+    openGraph:{
+      title:project.title,
+      description:'Iqea es una compania mexicana que desarrolla sistemas de purificacion y tratamiento de agua, haciendo uso de metodos de ultima generacion como Osmosis inversa o Electrocuagulacion garantizamos la calidad de su proyecto',
+      url:'/',
+      siteName:'IQEA Ingenieria Quimica Electromicanica Ambiental',
+      images:[{
+        url:project.cover?`${project.cover}`:'/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdqhvp0atv%2Fimage%2Fupload%2Fv1700861892%2F2_41ea60e311.jpg&w=2048&q=75',
+        width:1280,
+        height:800
+      }],
+      locale:'es-MX',
+      type:'website'
+    }
+  }
+}
+
+
+
 export default async function page({ params }: { params: { slug: string } }) {
   const data = await getProyectosBySlug(params.slug);
   const project = {
