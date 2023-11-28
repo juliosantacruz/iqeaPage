@@ -1,94 +1,185 @@
-.flexTemplate{
+.flexTemplate {
   display: flex;
   flex-direction: row;
 }
+.mainContacto {
+  --row-height: 400px;
+  // --min-width: 580px;
+  .contactLocation {
+    width: 100vw;
+    color: #fff;
 
-.contactLocation{
-  width: 100vw;
-  color: #fff;
-  .header{
-    height: 80px;
-    text-align: center;
-    .headerLeft{
-      width: 50%;
-      background: var(--SecondaryBgColor);
+    .header {
+      height: 80px;
+      text-align: center;
+      .headerLeft {
+        width: 50%;
+        background: var(--SecondaryBgColor);
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      hr{
-        width: 70%;
-        margin: 0 auto;
+        hr {
+          width: 70%;
+          margin: 0 auto;
+        }
       }
-    }  
-    .headerRight{
-      width: 50%;
-      background: #fff;
-    } 
-  }
+      .headerRight {
+        width: 50%;
+        background: #fff;
+      }
+    }
 
-  .LocationRow{
-    height: 500px;
-    
-    .LocationLeft{
-      width: 50%;
+    .infoContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .leftTitle {
       background: var(--SecondaryBgColor);
+      height: 80px;
+      width: 50%;
+      // min-width: var(--min-width);
+      .headerLeft {
+        margin: 30px;
+        width: 80%;
+        text-align: center;
+        float: right;
+      }
+    }
 
+    .leftStyle {
+      background: var(--SecondaryBgColor);
+      width: 50%;
+      // min-width: var(--min-width);
+      height: var(--row-height);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      .LocationAdress{
-        max-width: 450px;
-        width: 80%;
-        margin: 0 0 0 64px;
-        p{
-          margin: 10px 0;
+      align-items: flex-end;
+      .LocationLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--SecondaryBgColor);
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        .LocationAdress {
+          max-width: 450px;
+          width: 80%;
+          // margin: 0 0 0 64px;
+          p {
+            margin: 10px 0;
+          }
         }
       }
     }
 
-    .LocationRight{
-      width: 50%;
+    .rightTitle {
       background: #fff;
-      color: var(--PrimaryTextColor);
+      height: 80px;
+      width: 50%;
+      // min-width: var(--min-width);
+    }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .rightStyle {
+      height: var(--row-height);
+      width: 50%;
+      // min-width: var(--min-width);
 
-      h2{
-        margin: 0 0 32px 0;
-      }
+      .LocationRight {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        color: var(--PrimaryTextColor);
 
-      iframe{
-        width: 420px !important;
-        height: 280px !important;
-        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          margin: 0 0 12px 0;
+        }
+
+        iframe {
+          width: 320px !important;
+          height: 280px !important;
+          border-radius: var(--border-radius-sm);
+        }
       }
     }
   }
-}
 
-.contactFrase {
+  .contactFrase {
     width: 80%;
     margin: 64px auto;
-  .frase {
-    text-align: center;
-    font-size: var(--ContentTextSize);
-    font-weight: 500;
+    .frase {
+      text-align: center;
+      font-size: var(--ContentTextSize);
+      font-weight: 500;
+    }
   }
-}
 
-.contactForm{
-  background-position: center;
-  background-size: cover;
+  .contactForm {
+    background-position: center;
+    background-size: cover;
     height: 750px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
-    align-items: center
+    align-items: center;
+  }
+
+  @include media-down(md) {
+    .contactLocation {
+      .rightStyle {
+        .LocationRight {
+          iframe {
+            width: 220px !important;
+            height: 200px !important;
+            border-radius: var(--border-radius-sm);
+          }
+        }
+      }
+    }
+    .contactForm{
+      justify-content: center;
+    }
+  }
+
+  @include media-down(sm) {
+    .contactLocation {
+      --row-height: 300px;
+      .infoContainer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .leftTitle {
+          width: 100%;
+        }
+        .leftStyle {
+          width: 100%;
+        }
+        .rightTitle {
+          display: none;
+        }
+        .rightStyle {
+          width: 100%;
+          .LocationRight {
+            iframe{
+
+              min-width: 320px !important;
+              min-width: 80% !important;
+
+            }
+          }
+        }
+      }
+    }
+  }
 }

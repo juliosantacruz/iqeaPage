@@ -17,12 +17,12 @@ export default  function EmailSubcribe() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault()
     const email = (event.currentTarget.elements[0] as HTMLFormElement).value
-    console.log(email)
+
     emailSubscription(email)
   }
-  
+
   async function emailSubscription(email:string) {
-    
+
     let data = JSON.stringify({
       "data": {
         "email": email
@@ -32,13 +32,13 @@ export default  function EmailSubcribe() {
       method: 'post',
       maxBodyLength: Infinity,
       url: `${process.env.API_URL_STRAPI}/newsfeeds`,
-      headers: { 
+      headers: {
         'Content-Type': 'application/json'
       },
       data : data
     };
-  
-  
+
+
     axios.request(config)
     .then((response) => {
       segSuccess(true)
@@ -47,10 +47,9 @@ export default  function EmailSubcribe() {
     .catch((error) => {
       console.log(error);
     });
-    
-    // const res = fetch(`${API_URL}/newsfeeds`)
+
   }
-  
+
 
 
 
@@ -79,7 +78,7 @@ export default  function EmailSubcribe() {
         </form>:
         <h3>Gracias por suscribirte :D</h3>
         }
-        
+
       </div>
       <div className="SubcribeImage">
         <Image src={vectorEmail} alt="" />

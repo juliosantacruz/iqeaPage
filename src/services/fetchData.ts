@@ -163,6 +163,7 @@ export async function getProjectsGalery() {
   })
   return projectsData;
 }
+
 export async function getProyectos() {
   const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&populate[cover][fields][2]=*&populate[tags][fields][3]=*`);
 
@@ -222,7 +223,6 @@ export async function getProductosBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
-
 
 // Filtrar la informacion del fetch para solo traer lo basico
 export async function getProcesos() {
