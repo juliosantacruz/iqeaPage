@@ -1,6 +1,7 @@
 import React from 'react'
 import './sistemasDetail.scss'
 import { getSistemasTratamientoBySlug } from '@/services/fetchData';
+import CallToActionBanner from '@/components/CallToActionBanner';
 
 export default async function page({ params }: { params: { slug: string } }) {
   const data = await getSistemasTratamientoBySlug(params.slug);
@@ -32,6 +33,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       )}
+      <CallToActionBanner/>
     </section>
   )
 }

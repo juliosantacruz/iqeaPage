@@ -5,4 +5,84 @@
   .pageTitle{
     margin: 30px 0;
   }
+  .sistemasContent{
+    display: flex;
+
+    .SistemasList{
+      width: 50%;
+      padding-right: 50px;
+      .servicioCard{
+        article{
+
+          margin: 20px 0;
+          .descripcion{
+            line-clamp: 3;
+            -webkit-line-clamp: 3;
+
+          }
+        }
+      }
+    }
+
+    .serviciosRight{
+      width: 50%;
+      // height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap:20px;
+
+      img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+
+      }
+      .galleryColumn{
+          width: 50%;
+          max-width: 300px;
+          // height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap:20px;
+
+          .imageA{
+              width: 100%;
+              height: 35%;
+              background: #d65959;
+              // margin: 20px;
+              border-radius: var(--border-radius-lg);
+              overflow: hidden;
+          }
+          .imageB{
+              width: 100%;
+              height: 65%;
+              background: #c159d6;
+              // margin: 20px;
+              border-radius: var(--border-radius-lg);
+              overflow: hidden;
+
+
+
+          }
+      }
+  }
+  }
+
+  @include media-down(lg){
+    padding: var(--paddingDesktop);
+  }
+
+  @include media-down(sm){
+    .sistemasContent{
+      flex-direction: column-reverse;
+.SistemasList{
+  width: 100%;
+}
+.serviciosRight{
+  width: 100%;
+}
+
+    }
+  }
 }
