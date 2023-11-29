@@ -2,7 +2,6 @@ import React from "react";
 import "./CardProject.scss";
 import Image from "next/image";
 
-import sample from "@/assets/servicios/ImgHt1.jpg";
 import Link from "next/link";
 
 export default function CardProjects({ leProject }: any) {

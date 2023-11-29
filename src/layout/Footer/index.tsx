@@ -100,9 +100,9 @@ export default function Footer() {
           <Link href={"/productos"} className={isActiveLink("/productos")}>
             Productos
           </Link>
-          <Link href={"/procesos"} className={isActiveLink("/procesos")}>
+          {/* <Link href={"/procesos"} className={isActiveLink("/procesos")}>
             Procesos
-          </Link>
+          </Link> */}
 
           <Link href={"/proyectos"} className={isActiveLink("/proyectos")}>
             Proyectos

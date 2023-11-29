@@ -114,7 +114,7 @@ export async function fetchSTratamientoContent() {
 }
 
 export async function getServicios() {
-  const res = await fetch(`${API_URL_STRAPI}/servicios/`);
+  const res = await fetch(`${API_URL_STRAPI}/servicios?populate=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

@@ -30,12 +30,7 @@ export default function ProductCardList({
           {imageUrl !== null && imageUrl !== undefined ? <img src={imageUrl} alt="productImage" /> : null}
         </div>
         <div className="cardFooter">
-          {/* <ButtonStyle>
-          <button className="btnGeneral">
-            FICHA TÉCNICA
-            <IconArrowRight />
-          </button>
-        </ButtonStyle> */}
+
         </div>
       </article>
     </Link>
