@@ -22,16 +22,16 @@ export default async function page({ params }: { params: { slug: string } }) {
       </div>
 
       {description && (
-        <div className="descripcion">
-          <div dangerouslySetInnerHTML={{ __html: description }} />
-        </div>
+
+          <div className="descripcion" dangerouslySetInnerHTML={{ __html: description }} />
+
       )}
       <hr />
 
       {content && (
-        <div className="descripcion">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        </div>
+
+          <div className="contenido" dangerouslySetInnerHTML={{ __html: content }} />
+
       )}
       <CallToActionBanner/>
     </section>

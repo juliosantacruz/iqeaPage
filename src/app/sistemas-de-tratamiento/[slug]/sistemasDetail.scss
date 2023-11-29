@@ -5,4 +5,22 @@
   .pageTitle{
     margin: 30px 0;
   }
+
+
+  .contenido{
+    overflow: hidden;
+    margin: 30px 0;
+      .table{
+        overflow-x: scroll !important;
+
+        table{
+          border-collapse: collapse;
+        }
+      }
+
+  }
+
+  @include media-down(lg){
+    padding: 0 var(--paddingDesktop);
+  }
 }

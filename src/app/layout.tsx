@@ -4,6 +4,10 @@ import Footer from "@/layout/Footer";
 import "./globals.scss";
 import "../sections/Hero/Hero.scss";
 import Navbar from "@/layout/Navbar/Navbar";
+import WhattsButton from "@/components/WhattsButton/WhattsButton";
+
+
+
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -49,11 +53,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
+
+
   return (
     <html lang="es">
       <body className={"body"}>
         <Navbar />
         {children}
+        <WhattsButton/>
         <Footer />
       </body>
 

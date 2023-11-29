@@ -5,4 +5,10 @@
   .serviciosPageTitle{
     margin: 30px 0;
   }
+
+
+  @include media-down(lg){
+  padding: 0 var(--paddingDesktop);
+
+  }
 }

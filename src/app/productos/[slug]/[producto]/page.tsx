@@ -39,7 +39,7 @@ export default async function page({
       </div>
 
       <div className="contenido">
-        <div dangerouslySetInnerHTML={{ __html: contenido }} />
+        <div className="contenido" dangerouslySetInnerHTML={{ __html: contenido }} />
       </div>
 
       <CallToActionBanner/>
