@@ -185,7 +185,7 @@ export async function getProyectosBySlug(slug:string) {
 }
 
 export async function getCatProductos() {
-  const res = await fetch(`${API_URL_STRAPI}/categoria-productos?populate=*`);
+  const res = await fetch(`${API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&fields[2]=descripcion&populate[cover][fields][3]=*&populate[productos][fields][4]=titulo&populate[productos][fields][5]=slug&populate[productos][populate][cover]=*`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

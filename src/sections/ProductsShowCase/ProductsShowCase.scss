@@ -1,0 +1,114 @@
+.ProductsShowCase{
+  width: 100%;
+
+  display: flex;
+
+
+  .categoryProducts{
+    width: 20%;
+    max-width: 180px;
+    .categoryList{
+      list-style: none;
+      li{
+        margin: 15px 0;
+        padding: 10px 5px;
+      }
+      li:hover{
+        background-color: rgba(153, 153, 153, 0.349);
+        border-top: 1px solid rgba(0, 0, 0, 0.322);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+
+      }
+      .active{
+        background-color: rgba(96, 116, 153, 0.349);
+        border-top: 1px solid rgba(0, 0, 0, 0.322);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+      }
+    }
+  }
+
+  .categoryDetailsSection{
+    width: 80%;
+    margin-left: 30px;
+
+    .categoryDetails{
+      width: 100%;
+
+      .description{
+        p{font-size: 16px;}
+      }
+
+      .productsList{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        padding: 0 10px;
+
+        .productCard{
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          min-width: 150px;
+          width: 25%;
+          max-width: 180px;
+          margin: 0 auto;
+          box-shadow: var(--box-shadow-primary);
+          img{
+            // border-radius: 50%;
+            width: 100%;
+          }
+          .productTitle{
+            padding: 0 8px;
+            text-align: center;
+            p{
+              width: 100%;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-down(sm){
+    flex-direction: column;
+
+    .categoryProducts{
+      width: 100%;
+      max-width: 100%;
+      .categoryList{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+        li{
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          // max-width: 200px;
+          width: 40%;
+          text-align: center;
+          box-shadow: var(--box-shadow-primary);
+          margin: 0 auto;
+          padding: 10px;
+        }
+        @media (max-width:350px){
+          li{
+            max-width: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .categoryDetailsSection{
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+
+
