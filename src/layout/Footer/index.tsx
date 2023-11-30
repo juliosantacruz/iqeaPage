@@ -14,6 +14,7 @@ import IconPin from "@/components/Icons/IconPin";
 import IconPhone from "@/components/Icons/IconPhone";
 import IconMail from "@/components/Icons/IconMail";
 import { usePathname } from "next/navigation";
+import IconYoutube from "@/components/Icons/IconYouTube";
 
 export default function Footer() {
   const path = usePathname();
@@ -31,31 +32,34 @@ export default function Footer() {
         <div className="redesSociales">
           <ul>
             <li>
-              <a href="/" className="socialLinks">
-                <IconWhattsapp />
+              <a href="https://www.youtube.com/channel/UCsLINXnJkeZOQFBwlE9Cp9g"
+                target="_blank"
+                className="socialLinks">
+                <IconYoutube className='youtube' />
+
               </a>
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/arturo-chavez-90979258/"
+                href="https://www.linkedin.com/company/iqeamx/"
                 target="_blank"
                 className="socialLinks"
               >
-                <IconLinkedIn />
+                <IconLinkedIn className={'facebook'}/>
               </a>
             </li>
             <li>
               <a
                 href="https://www.facebook.com/profile.php?id=100064039061566"
                 target="_blank"
-                className="socialLinks"
+                className="socialLinks "
               >
-                <IconFacebook />
+                <IconFacebook className={'facebook'}/>
               </a>
             </li>
             <li>
-              <a href="/" className="socialLinks">
-                <IconInstagram />
+              <a href="https://www.instagram.com/iqeamx/" target="_blank" className="socialLinks">
+                <IconInstagram className={'instagram'}/>
               </a>
             </li>
           </ul>
@@ -67,21 +71,35 @@ export default function Footer() {
           <h4>Contacto</h4>
           <div className="direccion ">
             <IconPin className="footerIcon" />
-            <div className="contactRow">
-              <p> Callejón Manuel M. Doria No. 12612</p>
-              <p>Col. Libertad 22400. Tijuana, B.C., México.</p>
-            </div>
+            <Link
+              href={"https://maps.app.goo.gl/M1phzAGV6f8bBM5v8"}
+              target="_blank"
+            >
+              <div className="contactRow">
+                <p> Callejón Manuel M. Doria No. 12612</p>
+                <p>Col. Libertad 22400. Tijuana, B.C., México.</p>
+              </div>
+            </Link>
           </div>
           <div className="telefono ">
             <IconPhone className="footerIcon" />
             <div className="contactRow">
-              <p>+52 (664) 210-1017</p>
-              <p>+52 (664) 609-4415</p>
+              <Link href={"tel:526642101017"}>
+                {" "}
+                <p>+52 (664) 210-1017</p>
+              </Link>
+              <Link href={"tel:526646094415"}>
+                {" "}
+                <p>+52 (664) 609-4415</p>
+              </Link>
             </div>
           </div>
           <div className="email ">
             <IconMail className="footerIcon" />
+            <Link href={'mailto:info@iqea.mx'}>
+
             <p>info@iqea.mx</p>
+            </Link>
           </div>
         </div>
         <div className="navbar">
@@ -109,11 +127,12 @@ export default function Footer() {
           </Link>
           <Link href={"/contacto"} className={isActiveLink("/contacto")}>
             Contacto
-          </Link><Link
+          </Link>
+          <Link
             href={"/sistemas-de-tratamiento"}
             className={isActiveLink("/sistemas-de-tratamiento")}
           >
-          Sistemas
+            Sistemas
           </Link>
         </div>
       </div>

@@ -24,7 +24,7 @@ const className = {zIndex: "1000"};
     avatar={whattsappAvatar.src}
     statusMessage={statusMessage}
     chatMessage={chatMessage}
-    allowClickAway={true}
+    // allowClickAway={true}
     style={className}
   />
   )

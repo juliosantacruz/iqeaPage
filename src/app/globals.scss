@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 :root {
   --max-width: 1200px;
-  --border-radius-sm: 12px;
-  --border-radius-lg: 24px;
-  --border-radius-xlg: 64px;
+  --border-radius-logo:10px;
+  --border-radius-sm: 0;
+  --border-radius-lg: 0;
+  --border-radius-xlg: 0;
 
-  --font-mono: Roboto, ui-monospace, Menlo, Monaco, "Cascadia Mono",
+  --font-mono: 'Merriweather Sans', sans-serif, ui-monospace, Menlo, Monaco, "Cascadia Mono",
     "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
@@ -49,7 +51,7 @@
   }
 
   @include media-down(md) {
-    --border-radius-sm: 10px;
+    --border-radius-sm: 0;
 
     --TitleTextSize: 32px;
     --SubtitleTextSize: 24px;
@@ -62,7 +64,7 @@
     --paddingDesktop: 28px;
   }
   @include media-down(sm) {
-    --border-radius-sm: 8px;
+    --border-radius-sm: 0;
 
     --TitleTextSize: 20px;
     --SubtitleTextSize: 18px;
