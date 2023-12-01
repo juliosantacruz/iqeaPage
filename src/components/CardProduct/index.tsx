@@ -5,17 +5,9 @@ import sampleImage from "@/assets/samples/filtroCocina.png";
 import IconArrowRight from "../Icons/IconArrowRight";
 import ButtonStyle from "../ButtonStyle";
 import ImageNotFound from '@/assets/Image-not-found.png'
+import Link from "next/link";
 
 export default function ProductCard({productData}:any) {
-  const textSample = `
-
-        <p>- Capacidad máxima: 12 lpm.</p>
-        <p>- 3 de polipropileno de alto impacto.</p>
-        <p>- Cartucho sedimentador.</p>
-        <p>- Cartucho carbón block.</p>
-        <p>- Cartucho carbón activado granulado.</p>
-        <p>- Watts de lámpara: 18 (10,000 hrs vida útil).</p>
-  `;
 
   return (
     <article className="cardProduct">
@@ -29,10 +21,10 @@ export default function ProductCard({productData}:any) {
       </div>
       <div className="cardFooter">
         <ButtonStyle>
-          <button className="btnGeneral">
-            FICHA TÉCNICA
+          <Link className="btnGeneral" href={`/productos/${productData.category_slug}/${productData.slug}`}>
+            Ver mas
             <IconArrowRight />
-          </button>
+          </Link>
         </ButtonStyle>
       </div>
     </article>
