@@ -1,0 +1,14 @@
+.imgGallery {
+  width: 600px;
+  height: 440px;
+
+  // background-color: rgba(182, 182, 182, 0.185);
+  img {
+    object-fit: cover;
+  }
+
+  @include media-down(sm) {
+    min-width: 300px;
+    width: 100%;
+  }
+}

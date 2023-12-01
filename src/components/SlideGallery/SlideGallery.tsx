@@ -37,7 +37,7 @@ export default function SlideGallery({ imageArr }: any) {
         },
       }}
       // modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={5}
+      spaceBetween={10}
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={(swiper) => console.log(swiper)}
     >
