@@ -12,46 +12,47 @@ import { usePathname } from "next/navigation";
 
 
 
-export default function NavProductos() {
-  const [productNav, setProductNav] = useState([]);
+export default function NavProductos({Products}:any) {
+  // const [productNav, setProductNav] = useState([]);
   // console.log(productNav);
-  useEffect(() => {
-    const getProductNav = async () => {
-      try {
-        const navDataJson = await fetchProductContent();
+  // useEffect(() => {
+  //   const getProductNav = async () => {
+  //     try {
+  //       const navDataJson = await fetchProductContent();
 
-        if (navDataJson) {
-          const navData = JSON.parse(navDataJson).map((element: any) => {
-            const arrProductos: [] = element.attributes.productos.data;
-            const newProductos = arrProductos.map((producto: any) => {
-              const newProducto = {
-                id: producto.id,
-                title: producto.attributes.titulo,
-                slug: producto.attributes.slug,
-              };
-              return newProducto;
-            });
+  //       if (navDataJson) {
+  //         const navData = JSON.parse(navDataJson).map((element: any) => {
+  //           const arrProductos: [] = element.attributes.productos.data;
+  //           const newProductos = arrProductos.map((producto: any) => {
+  //             const newProducto = {
+  //               id: producto.id,
+  //               title: producto.attributes.titulo,
+  //               slug: producto.attributes.slug,
+  //             };
+  //             return newProducto;
+  //           });
 
-            const newElement = {
-              id: element.id,
-              title: element.attributes.title,
-              slug: element.attributes.slug,
-              productos: newProductos,
-            };
-            return newElement;
-          });
+  //           const newElement = {
+  //             id: element.id,
+  //             title: element.attributes.title,
+  //             slug: element.attributes.slug,
+  //             productos: newProductos,
+  //           };
+  //           return newElement;
+  //         });
 
-          setProductNav(navData);
-        } else {
-          console.error("Data not found in the response.");
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    getProductNav();
-  }, []);
+  //         setProductNav(navData);
+  //       } else {
+  //         console.error("Data not found in the response.");
+  //       }
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
+  //   getProductNav();
+  // }, []);
 
+  const productNav = Products
 
   const path = usePathname();
 

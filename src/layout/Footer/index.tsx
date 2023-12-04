@@ -15,6 +15,7 @@ import IconPhone from "@/components/Icons/IconPhone";
 import IconMail from "@/components/Icons/IconMail";
 import { usePathname } from "next/navigation";
 import IconYoutube from "@/components/Icons/IconYouTube";
+import EmailSubcribe from "@/components/EmailSubcribeFooter";
 
 export default function Footer() {
   const path = usePathname();
@@ -135,6 +136,11 @@ export default function Footer() {
             Sistemas
           </Link>
         </div>
+        <div className="subEmail">
+          <EmailSubcribe/>
+        </div>
+
+
       </div>
       <div className="footerFooter">
         <div className="legend">

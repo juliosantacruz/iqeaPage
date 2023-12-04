@@ -19,7 +19,7 @@ import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
 
 
-export default function Navbar() {
+export default function Navbar({Products}:any) {
   const [openMenu, setOpenMenu] = useState(false);
 
 
@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <header>
+
       <nav className="navbar">
         <Link href="/">
           <div className="iqeaLogo">
@@ -52,7 +52,7 @@ export default function Navbar() {
         </div>
 
         <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
-          <NavProductos />
+          <NavProductos Products={Products}/>
           <NavSistemas />
           {/* <NavProcesos /> */}
           <NavServicios />
@@ -71,6 +71,6 @@ export default function Navbar() {
 
         </ul>
       </nav>
-    </header>
+
   );
 }

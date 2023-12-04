@@ -5,6 +5,7 @@ import "./globals.scss";
 import "../sections/Hero/Hero.scss";
 import Navbar from "@/layout/Navbar/Navbar";
 import WhattsButton from "@/components/WhattsButton/WhattsButton";
+import Header from "@/layout/Navbar/Header";
 
 
 
@@ -60,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={"body"}>
-        <Navbar />
+        <Header />
         {children}
         <WhattsButton/>
         <Footer />

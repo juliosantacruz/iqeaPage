@@ -11,26 +11,28 @@
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   /* VARIABLES DE GENERALES */
-  --PrimaryBgColor: #f8f8f8;
-  --PrimaryTextColor: #2d2d2d;
-  --SecondaryBgColor: #557c83;
+  --PrimaryBgColor: #f0f0f0;
+  --SecondaryBgColor: rgb(97, 85, 131);
   --TercearyBgColor: #a2d5ac;
-  --SecondaryTextColor: #f8f8f8;
+
+
+  --PrimaryTextColor: #111111;
+  --SecondaryTextColor: #eeeeee;
 
   --TitleTextSize: 36px;
   --SubtitleTextSize: 28px;
-  --ContentTextSize: 18px;
-  --CardTextSize: 18px;
+  --ContentTextSize: 16px;
+  --CardTextSize: 16px;
 
   /* VARIABLES DE CARDS */
-  --cardBgColor: rgb(239, 248, 255);
-  --cardTextColor: #2d2d2d;
+  --cardBgColor: rgb(233, 233, 233);
+  --cardTextColor: #1f1f1f;
   --cardTitleSize: 20px;
   --cardBodySize: 16px;
 
   /* VARIABLES DE NAVBAR */
-  --navbarBgColor: #f8f8f8;
-  --navbarTextColor: #3b54bb;
+  --navbarBgColor: #f0f0f0;
+  --navbarTextColor: #5966b1;
   --navbarTextSize: 16px;
   --nav-size: 80px;
 
@@ -40,7 +42,7 @@
 
   /* VARIABLES DE FOOTER */
   --footerBgColor: #557c83;
-  --footerTextColor: #ffffff;
+  --footerTextColor: #e7e7e7;
 
   --paddingDesktop: 112px;
   @include media-down(xlg) {
@@ -105,10 +107,14 @@ a {
 h1,
 h2 {
   font-size: var(--TitleTextSize);
+  // color: var(--PrimaryTextColor);
+
 }
+
 p {
   font-size: var(--ContentTextSize);
   line-height: 28px;
+  // color: var(--PrimaryTextColor);
 }
 button:hover {
   cursor: pointer;

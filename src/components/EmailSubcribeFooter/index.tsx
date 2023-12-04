@@ -54,16 +54,12 @@ export default  function EmailSubcribe() {
 
 
   return (
-    <div className="SubcribeCard">
+    <div className="SubcribeFooter">
       <div className="SubcribeContent">
         <div className="SubcribeText">
-          <h2>
+          <h3>
             Suscríbete a nuestro canal de noticias para que estes actualizado
-          </h2>
-          <p>
-            Recibe noticias e informacion de la industria para que siempre estes
-            actualizado, es gratis .!
-          </p>
+          </h3>
         </div>
         {!success ? <form className="SubcribeInput" onSubmit={handleSubmit}>
           <input
@@ -80,9 +76,7 @@ export default  function EmailSubcribe() {
         }
 
       </div>
-      {/* <div className="SubcribeImage">
-        <Image src={vectorEmail} alt="" />
-      </div> */}
+
     </div>
   );
 }

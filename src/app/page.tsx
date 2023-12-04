@@ -22,7 +22,7 @@ export default async function Home() {
         <Stats/>
         <AboutUs/>
         <Projects projectsData={projectsData}/>
-        <Subcribe/>
+        {/* <Subcribe/> */}
         <Products/>
     </main>
   )
