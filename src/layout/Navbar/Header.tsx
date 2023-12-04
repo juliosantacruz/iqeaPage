@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { fetchProductContent } from "@/services/fetchData";
+import { fetchProductContent, fetchSTratamientoContent } from "@/services/fetchData";
 
 export default async function Header(props: any) {
   const productDataJson = await fetchProductContent();
@@ -24,10 +24,21 @@ export default async function Header(props: any) {
     return newElement;
   });
 
+  const systemsDataJson = await fetchSTratamientoContent();
+  const systemsData = JSON.parse(systemsDataJson).map((element: any) => {
+    const newElement = {
+      id: element.id,
+      title: element.attributes.titulo,
+      slug: element.attributes.slug,
+    };
+    return newElement;
+  });
+
+
 
   return (
     <header>
-      <Navbar Products={productData}/>
+      <Navbar Products={productData} Systems={systemsData}/>
     </header>
   );
 }

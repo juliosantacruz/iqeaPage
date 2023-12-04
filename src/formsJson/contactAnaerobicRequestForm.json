@@ -1,11 +1,11 @@
 {
     "formData": {
-        "title": "Anaerobic Request Form",
-        "description": "Please fill out the information below as it relates to your project requiring an Anaerobic system and we'll gladly get in touch with you.",
+        "title": "Formulario de solicitud de sistema anaeróbico",
+        "description": "Complete la información a continuación en relación con su proyecto que requiere un sistema anaeróbico y con gusto nos comunicaremos con usted.",
         "type": "object",
         "properties": {
             "contactForm": {
-                "title": "Contact Information",
+                "title": "Información del contacto",
                 "type": "object",
                 "required": [
                     "companyName",
@@ -20,70 +20,70 @@
                 "properties": {
                     "companyName": {
                         "type": "string",
-                        "title": "Company Name"
+                        "title": "Nombre de la compañia"
                     },
                     "firstName": {
                         "type": "string",
-                        "title": "First Name"
+                        "title": "Nombre"
                     },
                     "lastName": {
                         "type": "string",
-                        "title": "Last Name"
+                        "title": "Apeido"
                     },
                     "streetAddress": {
                         "type": "string",
-                        "title": "Street Address"
+                        "title": "Dirección"
                     },
                     "city": {
                         "type": "string",
-                        "title": "City"
+                        "title": "Ciudad"
                     },
                     "state": {
                         "type": "string",
-                        "title": "State / Province / Region"
+                        "title": "Estado / Provincia / Region"
                     },
                     "zip": {
                         "type": "string",
-                        "title": "Zip"
+                        "title": "Codigo Postal"
                     },
                     "country": {
                         "type": "string",
-                        "title": "Country"
+                        "title": "Pais"
                     },
                     "phone": {
                         "type": "string",
-                        "title": "Phone"
+                        "title": "Telefono"
                     },
                     "email": {
                         "type": "string",
-                        "title": "Email",
+                        "title": "Correo Electronico",
                         "format": "email"
                     }
                 }
             },
             "biologicalDetails": {
-                "title": "Biological Details",
+                "title": "Detalles biológicos",
                 "type": "object",
                 "properties": {
                     "Average": {
-                        "title": "Average",
+                        "title": "Valores Promedio",
                         "type": "object",
                         "properties": {
                             "flowDayWeek": {
                                 "type": "string",
-                                "title": "Flow (days/wk)"
+                                "title": "Flujo (dias/sem)"
                             },
                             "flowHrDay": {
                                 "type": "string",
-                                "title": "Flow (hr/day)"
+                                "title": "Flujo (hr/dia)"
                             },
                             "flowM3Day": {
                                 "type": "string",
-                                "title": "Flow (m3/day)"
+                                "title": "Flujo (m3/dia)"
                             },
                             "flowM3Hr": {
                                 "type": "string",
-                                "title": "Flow (m3/hr)"
+                                "title": "Flujo (m3/hr)"
                             },
                             "codTotal": {
                                 "type": "string",
@@ -103,19 +103,19 @@
                             },
                             "codTotalKgDay": {
                                 "type": "string",
-                                "title": "COD Total (kg/day)"
+                                "title": "COD Total (kg/dia)"
                             },
                             "codSolubleKgDay": {
                                 "type": "string",
-                                "title": "COD Soluble (kg/day)"
+                                "title": "COD Soluble (kg/dia)"
                             },
                             "bodTotalKgDay": {
                                 "type": "string",
-                                "title": "BOD Total (kg/day)"
+                                "title": "BOD Total (kg/dia)"
                             },
                             "bodSolubleKgDay": {
                                 "type": "string",
-                                "title": "BOD Soluble (kg/day)"
+                                "title": "BOD Soluble (kg/dia)"
                             },
                             "tssMgLiter": {
                                 "type": "string",
@@ -123,11 +123,11 @@
                             },
                             "tssKgDay": {
                                 "type": "string",
-                                "title": "TSS (kg/day)"
+                                "title": "TSS (kg/dia)"
                             },
                             "temperature": {
                                 "type": "string",
-                                "title": "Temperature (F)"
+                                "title": "Temperatura (F)"
                             },
                             "ph": {
                                 "type": "string",
@@ -135,7 +135,7 @@
                             },
                             "conductivity": {
                                 "type": "string",
-                                "title": "Conductivity (mS/cm)"
+                                "title": "Conductividad (mS/cm)"
                             },
                             "redox": {
                                 "type": "string",
@@ -147,7 +147,7 @@
                             },
                             "alcalinity": {
                                 "type": "string",
-                                "title": "Alcalinity (meq/l)"
+                                "title": "Alcalinidad (meq/l)"
                             },
                             "nTotal": {
                                 "type": "string",
@@ -183,53 +183,53 @@
                             },
                             "calcium": {
                                 "type": "string",
-                                "title": "Calcium (mg/l)"
+                                "title": "Calcio (mg/l)"
                             },
                             "magnesium": {
                                 "type": "string",
-                                "title": "Magnesium (mg/l)"
+                                "title": "Magnesio (mg/l)"
                             },
                             "potassium": {
                                 "type": "string",
-                                "title": "Potassium (mg/l)"
+                                "title": "Potasio (mg/l)"
                             },
                             "sodium": {
                                 "type": "string",
-                                "title": "Sodium (mg/l)"
+                                "title": "Sodio (mg/l)"
                             },
                             "chloride": {
                                 "type": "string",
-                                "title": "Chloride (mg/l)"
+                                "title": "Cloruro (mg/l)"
                             },
                             "fatOilGrease": {
                                 "type": "string",
-                                "title": "Fat/oil/grease (mg/l)"
+                                "title": "Grasa/aceite (mg/l)"
                             },
                             "toxicCompounds": {
                                 "type": "string",
-                                "title": "Toxic compounds"
+                                "title": "Compuestos tóxicos"
                             }
                         }
                     },
                     "Minimum": {
-                        "title": "Minimum",
+                        "title": "Valores Minimos",
                         "type": "object",
                         "properties": {
                             "flowDayWeek": {
                                 "type": "string",
-                                "title": "Flow (days/wk)"
+                                "title": "Flujo (dias/sem)"
                             },
                             "flowHrDay": {
                                 "type": "string",
-                                "title": "Flow (hr/day)"
+                                "title": "Flujo (hr/dia)"
                             },
                             "flowM3Day": {
                                 "type": "string",
-                                "title": "Flow (m3/day)"
+                                "title": "Flujo (m3/dia)"
                             },
                             "flowM3Hr": {
                                 "type": "string",
-                                "title": "Flow (m3/hr)"
+                                "title": "Flujo (m3/hr)"
                             },
                             "codTotal": {
                                 "type": "string",
@@ -249,19 +249,19 @@
                             },
                             "codTotalKgDay": {
                                 "type": "string",
-                                "title": "COD Total (kg/day)"
+                                "title": "COD Total (kg/dia)"
                             },
                             "codSolubleKgDay": {
                                 "type": "string",
-                                "title": "COD Soluble (kg/day)"
+                                "title": "COD Soluble (kg/dia)"
                             },
                             "bodTotalKgDay": {
                                 "type": "string",
-                                "title": "BOD Total (kg/day)"
+                                "title": "BOD Total (kg/dia)"
                             },
                             "bodSolubleKgDay": {
                                 "type": "string",
-                                "title": "BOD Soluble (kg/day)"
+                                "title": "BOD Soluble (kg/dia)"
                             },
                             "tssMgLiter": {
                                 "type": "string",
@@ -269,11 +269,11 @@
                             },
                             "tssKgDay": {
                                 "type": "string",
-                                "title": "TSS (kg/day)"
+                                "title": "TSS (kg/dia)"
                             },
                             "temperature": {
                                 "type": "string",
-                                "title": "Temperature (F)"
+                                "title": "Temperatura (F)"
                             },
                             "ph": {
                                 "type": "string",
@@ -281,7 +281,7 @@
                             },
                             "conductivity": {
                                 "type": "string",
-                                "title": "Conductivity (mS/cm)"
+                                "title": "Conductividad (mS/cm)"
                             },
                             "redox": {
                                 "type": "string",
@@ -293,7 +293,7 @@
                             },
                             "alcalinity": {
                                 "type": "string",
-                                "title": "Alcalinity (meq/l)"
+                                "title": "Alcalinidad (meq/l)"
                             },
                             "nTotal": {
                                 "type": "string",
@@ -329,53 +329,53 @@
                             },
                             "calcium": {
                                 "type": "string",
-                                "title": "Calcium (mg/l)"
+                                "title": "Calcio (mg/l)"
                             },
                             "magnesium": {
                                 "type": "string",
-                                "title": "Magnesium (mg/l)"
+                                "title": "Magnesio (mg/l)"
                             },
                             "potassium": {
                                 "type": "string",
-                                "title": "Potassium (mg/l)"
+                                "title": "Potasio (mg/l)"
                             },
                             "sodium": {
                                 "type": "string",
-                                "title": "Sodium (mg/l)"
+                                "title": "Sodio (mg/l)"
                             },
                             "chloride": {
                                 "type": "string",
-                                "title": "Chloride (mg/l)"
+                                "title": "Cloruro (mg/l)"
                             },
                             "fatOilGrease": {
                                 "type": "string",
-                                "title": "Fat/oil/grease (mg/l)"
+                                "title": "Grasa/aceite (mg/l)"
                             },
                             "toxicCompounds": {
                                 "type": "string",
-                                "title": "Toxic compounds"
+                                "title": "Compuestos tóxicos"
                             }
                         }
                     },
                     "Maximum": {
-                        "title": "Maximum",
+                        "title": "Valores Maximos",
                         "type": "object",
                         "properties": {
                             "flowDayWeek": {
                                 "type": "string",
-                                "title": "Flow (days/wk)"
+                                "title": "Flujo (dias/sem)"
                             },
                             "flowHrDay": {
                                 "type": "string",
-                                "title": "Flow (hr/day)"
+                                "title": "Flujo (hr/dia)"
                             },
                             "flowM3Day": {
                                 "type": "string",
-                                "title": "Flow (m3/day)"
+                                "title": "Flujo (m3/dia)"
                             },
                             "flowM3Hr": {
                                 "type": "string",
-                                "title": "Flow (m3/hr)"
+                                "title": "Flujo (m3/hr)"
                             },
                             "codTotal": {
                                 "type": "string",
@@ -395,19 +395,19 @@
                             },
                             "codTotalKgDay": {
                                 "type": "string",
-                                "title": "COD Total (kg/day)"
+                                "title": "COD Total (kg/dia)"
                             },
                             "codSolubleKgDay": {
                                 "type": "string",
-                                "title": "COD Soluble (kg/day)"
+                                "title": "COD Soluble (kg/dia)"
                             },
                             "bodTotalKgDay": {
                                 "type": "string",
-                                "title": "BOD Total (kg/day)"
+                                "title": "BOD Total (kg/dia)"
                             },
                             "bodSolubleKgDay": {
                                 "type": "string",
-                                "title": "BOD Soluble (kg/day)"
+                                "title": "BOD Soluble (kg/dia)"
                             },
                             "tssMgLiter": {
                                 "type": "string",
@@ -415,11 +415,11 @@
                             },
                             "tssKgDay": {
                                 "type": "string",
-                                "title": "TSS (kg/day)"
+                                "title": "TSS (kg/dia)"
                             },
                             "temperature": {
                                 "type": "string",
-                                "title": "Temperature (F)"
+                                "title": "Temperatura (F)"
                             },
                             "ph": {
                                 "type": "string",
@@ -427,7 +427,7 @@
                             },
                             "conductivity": {
                                 "type": "string",
-                                "title": "Conductivity (mS/cm)"
+                                "title": "Conductividad (mS/cm)"
                             },
                             "redox": {
                                 "type": "string",
@@ -439,7 +439,7 @@
                             },
                             "alcalinity": {
                                 "type": "string",
-                                "title": "Alcalinity (meq/l)"
+                                "title": "Alcalinidad (meq/l)"
                             },
                             "nTotal": {
                                 "type": "string",
@@ -475,43 +475,43 @@
                             },
                             "calcium": {
                                 "type": "string",
-                                "title": "Calcium (mg/l)"
+                                "title": "Calcio (mg/l)"
                             },
                             "magnesium": {
                                 "type": "string",
-                                "title": "Magnesium (mg/l)"
+                                "title": "Magnesio (mg/l)"
                             },
                             "potassium": {
                                 "type": "string",
-                                "title": "Potassium (mg/l)"
+                                "title": "Potasio (mg/l)"
                             },
                             "sodium": {
                                 "type": "string",
-                                "title": "Sodium (mg/l)"
+                                "title": "Sodio (mg/l)"
                             },
                             "chloride": {
                                 "type": "string",
-                                "title": "Chloride (mg/l)"
+                                "title": "Cloruro (mg/l)"
                             },
                             "fatOilGrease": {
                                 "type": "string",
-                                "title": "Fat/oil/grease (mg/l)"
+                                "title": "Grasa/aceite (mg/l)"
                             },
                             "toxicCompounds": {
                                 "type": "string",
-                                "title": "Toxic compounds"
+                                "title": "Compuestos tóxicos"
                             }
                         }
                     }
                 }
             },
             "additionalNotes": {
-                "title": "Additional Notes about your Project",
+                "title": " ",
                 "type": "object",
                 "properties": {
                     "powerRequirementsVolts": {
                         "type": "string",
-                        "title": "Additional Notes about your Project"
+                        "title": "Notas adicionales sobre su proyecto"
                     }
                 }
             }

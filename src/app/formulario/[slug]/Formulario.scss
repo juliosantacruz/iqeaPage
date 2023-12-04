@@ -1,5 +1,10 @@
 .formPage {
-    padding: 50px var(--paddingDesktop);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  label{
+    font-size: 12px;
+  }
     h2 {
         margin: 20px 0;
     }
@@ -57,7 +62,11 @@
 
     .btn-info{
         margin: 20px auto;
-        
+
         width: 100%;
     }
+
+    @include media-down(lg){
+    padding: 50px var(--paddingDesktop);
+}
 }

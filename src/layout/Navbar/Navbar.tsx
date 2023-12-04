@@ -19,9 +19,8 @@ import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
 
 
-export default function Navbar({Products}:any) {
+export default function Navbar({Products, Systems}:any) {
   const [openMenu, setOpenMenu] = useState(false);
-
 
   const path = usePathname();
   useEffect(() => {
@@ -52,8 +51,8 @@ export default function Navbar({Products}:any) {
         </div>
 
         <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
-          <NavProductos Products={Products}/>
-          <NavSistemas />
+          <NavProductos navData={Products}/>
+          <NavSistemas navData={Systems}/>
           {/* <NavProcesos /> */}
           <NavServicios />
 

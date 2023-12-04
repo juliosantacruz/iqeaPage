@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 
 
 
-export default function NavProductos({Products}:any) {
+export default function NavProductos({navData}:any) {
   // const [productNav, setProductNav] = useState([]);
   // console.log(productNav);
   // useEffect(() => {
@@ -52,7 +52,7 @@ export default function NavProductos({Products}:any) {
   //   getProductNav();
   // }, []);
 
-  const productNav = Products
+  const productNav = navData
 
   const path = usePathname();
 

@@ -1,203 +1,205 @@
 {
-    "formData": {
-        "title": "Settling Clarifier System",
-        "description": "Please fill out the information below as it relates to your project requiring an Anaerobic system and we'll gladly get in touch with you.",
+  "formData": {
+    "title": "Sistema clarificador de sedimentación",
+    "description": "Complete la información a continuación en relación con su proyecto que requiere un sistema anaeróbico y con gusto nos comunicaremos con usted.",
+    "type": "object",
+    "properties": {
+      "contactForm": {
+        "title": "Información del contacto",
+        "type": "object",
+        "required": [
+          "companyName",
+          "firstName",
+          "lastName",
+          "city",
+          "state",
+          "country",
+          "phone",
+          "email"
+        ],
+        "properties": {
+          "companyName": {
+            "type": "string",
+            "title": "Nombre de la compañia"
+          },
+          "firstName": {
+            "type": "string",
+            "title": "Nombre"
+          },
+          "lastName": {
+            "type": "string",
+            "title": "Apeido"
+          },
+          "streetAddress": {
+            "type": "string",
+            "title": "Dirección"
+          },
+          "city": {
+            "type": "string",
+            "title": "Ciudad"
+          },
+          "state": {
+            "type": "string",
+            "title": "Estado / Provincia / Region"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Codigo Postal"
+          },
+          "country": {
+            "type": "string",
+            "title": "Pais"
+          },
+          "phone": {
+            "type": "string",
+            "title": "Telefono"
+          },
+          "email": {
+            "type": "string",
+            "title": "Correo Electronico",
+            "format": "email"
+          }
+        }
+      },
+      "wastewaterCharacteristics": {
+        "title": "Detalles biológicos",
         "type": "object",
         "properties": {
-            "contactForm": {
-                "title": "Contact Information",
-                "type": "object",
-                "required": [
-                    "companyName",
-                    "firstName",
-                    "lastName",
-                    "city",
-                    "state",
-                    "country",
-                    "phone",
-                    "email"
-                ],
-                "properties": {
-                    "companyName": {
-                        "type": "string",
-                        "title": "Company Name"
-                    },
-                    "firstName": {
-                        "type": "string",
-                        "title": "First Name"
-                    },
-                    "lastName": {
-                        "type": "string",
-                        "title": "Last Name"
-                    },
-                    "streetAddress": {
-                        "type": "string",
-                        "title": "Street Address"
-                    },
-                    "city": {
-                        "type": "string",
-                        "title": "City"
-                    },
-                    "state": {
-                        "type": "string",
-                        "title": "State / Province / Region"
-                    },
-                    "zip": {
-                        "type": "string",
-                        "title": "Zip"
-                    },
-                    "country": {
-                        "type": "string",
-                        "title": "Country"
-                    },
-                    "phone": {
-                        "type": "string",
-                        "title": "Phone"
-                    },
-                    "email": {
-                        "type": "string",
-                        "title": "Email",
-                        "format": "email"
-                    }
-                }
-            },
-            "wastewaterCharacteristics": {
-                "title": "Biological Details",
-                "type": "object",
-                "properties": {
-                    "SourceWastewater": {
-                        "type": "string",
-                        "title": "Source of Wastewater (paint line, mining, etc.)"
-                    },
-                    "FlowRate":{
-                        "type":"object",
-                        "properties":{
-                            "FlowRateGallonsDayAvg": {
-                                "type": "string",
-                                "title": "Flow Rate (gallons per day)"
-                            },"FlowRateGallonsDayMax": {
-                                "type": "string",
-                                "title": "Flow Rate (gallons per day)"
-                            }
-                        }
-                    },
-                    "InfluentValue": {
-                        "title": "Influent Levels",
-                        "type": "object",
-                        "properties": {
-                            "totalSuspendedSolids": {
-                                "type": "string",
-                                "title": "TSS (Total Suspended Solids) - mg/l"
-                            },
-                            "totalDissolvedSolids": {
-                                "type": "string",
-                                "title": "TDS (Total Dissolved Solids) - mg/l"
-                            },
-                            "chemicalOxygenDemand": {
-                                "type": "string",
-                                "title": "COD (Chemical Oxygen Demand) - mg/l"
-                            },
-                            "biochemicalOxygenDemand": {
-                                "type": "string",
-                                "title": "BOD (Biochemical Oxygen Demand) - mg/l"
-                            },
-                            "ammoniaNitrogen": {
-                                "type": "string",
-                                "title": "Ammonia nitrogen"
-                            },
-                            "phosphates": {
-                                "type": "string",
-                                "title": "Phosphates - mg/l"
-                            },
-                            "fog": {
-                                "type": "string",
-                                "title": "FOG - mg/l"
-                            },
-                            "ph": {
-                                "type": "string",
-                                "title": "pH (range)"
-                            } 
-                        }
-                    },
-                    "Discharge Requirements": {
-                        "title": "Discharge Requirements",
-                        "type": "object",
-                        "properties": {
-                            "totalSuspendedSolids": {
-                                "type": "string",
-                                "title": "TSS (Total Suspended Solids) - mg/l"
-                            },
-                            "totalDissolvedSolids": {
-                                "type": "string",
-                                "title": "TDS (Total Dissolved Solids) - mg/l"
-                            },
-                            "chemicalOxygenDemand": {
-                                "type": "string",
-                                "title": "COD (Chemical Oxygen Demand) - mg/l"
-                            },
-                            "biochemicalOxygenDemand": {
-                                "type": "string",
-                                "title": "BOD (Biochemical Oxygen Demand) - mg/l"
-                            },
-                            "ammoniaNitrogen": {
-                                "type": "string",
-                                "title": "Ammonia nitrogen"
-                            },
-                            "phosphates": {
-                                "type": "string",
-                                "title": "Phosphates - mg/l"
-                            },
-                            "fog": {
-                                "type": "string",
-                                "title": "FOG - mg/l"
-                            },
-                            "ph": {
-                                "type": "string",
-                                "title": "pH (range)"
-                            } 
-                        }
-                    }
-                }
-            },
-            "PowerRequirements": {
-                "title": "Biological Treatment Background",
-                "type": "object",
-                "properties": {
-                    "powerRequirementsVolts": {
-                        "type": "string",
-                        "title": "Power Requirements (Volts)"
-                    },
-                    "powerRequirementsPhase": {
-                        "type": "string",
-                        "title": "Power Requirements (Phase)"
-                    },
-                    "powerRequirementsHz": {
-                        "type": "string",
-                        "title": "Power Requirements (Hz)"
-                    },
-                    "summarizeNatureProject": {
-                        "type": "string",
-                        "title": "Please briefly summarize the nature of the project"
-                    }
-                }
-            },
-            "additionalNotes": {
-                "title": "Additional Notes about your Project",
-                "type": "object",
-                "properties": {
-                    "powerRequirementsVolts": {
-                        "type": "string",
-                        "title": "Additional Notes about your Project"
-                    }
-                }
+          "FlowRate": {
+            "title":"",
+            "type": "object",
+            "properties": {
+              "SourceWastewater": {
+                "type": "string",
+                "title": "Fuente de aguas residuales (línea de pintura, minería, etc.)"
+              },
+              "FlowRateGallonsDayAvg": {
+                "type": "string",
+                "title": "Tasa de flujo (galones por dia)"
+              },
+              "FlowRateGallonsDayMax": {
+                "type": "string",
+                "title": "Tasa de flujo maximo (galones por dia)"
+              }
             }
+          },
+          "InfluentValue": {
+            "title": "Niveles influyentes",
+            "type": "object",
+            "properties": {
+              "totalSuspendedSolids": {
+                "type": "string",
+                "title": "TSS (Sólidos Suspendidos Totales) - mg/l"
+              },
+              "totalDissolvedSolids": {
+                "type": "string",
+                "title": "TDS (Sólidos Disueltos Totales) - mg/l"
+              },
+              "chemicalOxygenDemand": {
+                "type": "string",
+                "title": "COD (Demanda de Oxígeno químico) - mg/l"
+              },
+              "biochemicalOxygenDemand": {
+                "type": "string",
+                "title": "BOD (Demanda de Oxígeno bioquímico) - mg/l"
+              },
+              "ammoniaNitrogen": {
+                "type": "string",
+                "title": "Nitrógeno amoniacal"
+              },
+              "phosphates": {
+                "type": "string",
+                "title": "Fosfatos - mg/l"
+              },
+              "fog": {
+                "type": "string",
+                "title": "FOG - mg/l"
+              },
+              "ph": {
+                "type": "string",
+                "title": "pH (range)"
+              }
+            }
+          },
+          "DischargeRequirements": {
+            "title": "Requisitos de alta",
+            "type": "object",
+            "properties": {
+              "totalSuspendedSolids": {
+                "type": "string",
+                "title": "TSS (Solidos Suspendidos Totales) - mg/l"
+              },
+              "totalDissolvedSolids": {
+                "type": "string",
+                "title": "TDS (Sólidos Disueltos Totales) - mg/l"
+              },
+              "chemicalOxygenDemand": {
+                "type": "string",
+                "title": "COD (Demanda de Oxígeno químico) - mg/l"
+              },
+              "biochemicalOxygenDemand": {
+                "type": "string",
+                "title": "BOD (Demanda de Oxígeno bioquímico) - mg/l"
+              },
+              "ammoniaNitrogen": {
+                "type": "string",
+                "title": "Nitrógeno amoniacal"
+              },
+              "phosphates": {
+                "type": "string",
+                "title": "Fosfatos - mg/l"
+              },
+              "fog": {
+                "type": "string",
+                "title": "FOG - mg/l"
+              },
+              "ph": {
+                "type": "string",
+                "title": "pH (range)"
+              }
+            }
+          }
         }
-    },
-    "uiSchema": {
-        "ui:title": "",
-        "contactForm": {
-            "companyName": {},
-            "describeYourProject": {}
+      },
+      "PowerRequirements": {
+        "title": "Biological Treatment Background",
+        "type": "object",
+        "properties": {
+          "powerRequirementsVolts": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Volts)"
+          },
+          "powerRequirementsPhase": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Phase)"
+          },
+          "powerRequirementsHz": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Hz)"
+          },
+          "summarizeNatureProject": {
+            "type": "string",
+            "title": "Por favor resuma brevemente la naturaleza del proyecto."
+          }
         }
+      },
+      "additionalNotes": {
+        "title": "",
+        "type": "object",
+        "properties": {
+          "powerRequirementsVolts": {
+            "type": "string",
+            "title": "Notas adicionales sobre su proyecto"
+          }
+        }
+      }
     }
+  },
+  "uiSchema": {
+    "ui:title": "",
+    "contactForm": {
+      "companyName": {},
+      "describeYourProject": {}
+    }
+  }
 }

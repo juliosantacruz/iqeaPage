@@ -9,7 +9,7 @@ export default function CardStats({ arrData }: any) {
   return (
     <article className="statsCard">
       <div className="image">
-        <Image src={image} alt="" height={120} width={120} />
+        <Image src={image} alt="stats" height={120} width={120} />
       </div>
       <Slideshow autoplay={true} controls={false}   transitionTime={3000} >
         {arrData &&

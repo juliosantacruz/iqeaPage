@@ -1,0 +1,334 @@
+{
+  "formData": {
+    "title": "Reactor de biopelícula de lecho móvil Formulario de solicitud",
+    "description": "Complete la información a continuación en relación con su proyecto que requiere un sistema MBBR y con gusto nos comunicaremos con usted.",
+    "type": "object",
+    "properties": {
+      "contactForm": {
+        "title": "Información del contacto",
+        "type": "object",
+        "required": [
+          "companyName",
+          "firstName",
+          "lastName",
+          "city",
+          "state",
+          "country",
+          "phone",
+          "email"
+        ],
+        "properties": {
+          "companyName": {
+            "type": "string",
+            "title": "Nombre de la compañia"
+          },
+          "firstName": {
+            "type": "string",
+            "title": "Nombre"
+          },
+          "lastName": {
+            "type": "string",
+            "title": "Apeido"
+          },
+          "streetAddress": {
+            "type": "string",
+            "title": "Dirección"
+          },
+          "city": {
+            "type": "string",
+            "title": "Ciudad"
+          },
+          "state": {
+            "type": "string",
+            "title": "Estado / Provincia / Region"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Codigo Postal"
+          },
+          "country": {
+            "type": "string",
+            "title": "Pais"
+          },
+          "phone": {
+            "type": "string",
+            "title": "Telefono"
+          },
+          "email": {
+            "type": "string",
+            "title": "Correo Electronico",
+            "format": "email"
+          }
+        }
+      },
+      "WastewaterParameters": {
+        "title": "Parámetros de aguas residuales",
+        "type": "object",
+        "properties": {
+          "InfluentValue": {
+            "title": "Valor influyente",
+            "type": "object",
+            "properties": {
+              "FlowRate": {
+                "type": "string",
+                "title": "Tasa de flujo - m3/d"
+              },
+              "WastewaterDesignTemperature": {
+                "type": "string",
+                "title": "Temperatura de diseño de aguas residuales - °C"
+              },
+              "pH": {
+                "type": "string",
+                "title": "pH"
+              },
+              "BOD5": {
+                "type": "string",
+                "title": "BOD5 - mg/l"
+              },
+              "COD": {
+                "type": "string",
+                "title": "COD - mg/l"
+              },
+              "TSS": {
+                "type": "string",
+                "title": "TSS - mg/l"
+              },
+              "TotalAmmoniumN": {
+                "type": "string",
+                "title": "NH4-n (Total Nitrato de Amonio) - mg/l"
+              },
+              "TKN": {
+                "type": "string",
+                "title": "TKN (Total Kjeldahl N) - mg/l"
+              },
+              "TN": {
+                "type": "string",
+                "title": "TN (Total N) - mg/l"
+              },
+              "FOG": {
+                "type": "string",
+                "title": "Grasas y Aceites (FOG)"
+              }
+            }
+          },
+          "EffluentValue": {
+            "title": "Effluent Value (Required Quality)",
+            "type": "object",
+            "properties": {
+              "FlowRate": {
+                "type": "string",
+                "title": "Tasa de flujo - m3/d"
+              },
+              "WastewaterDesignTemperature": {
+                "type": "string",
+                "title": "Temperatura de diseño de aguas residuales - °C"
+              },
+              "pH": {
+                "type": "string",
+                "title": "pH"
+              },
+              "BOD5": {
+                "type": "string",
+                "title": "BOD5 - mg/l"
+              },
+              "COD": {
+                "type": "string",
+                "title": "COD - mg/l"
+              },
+              "TSS": {
+                "type": "string",
+                "title": "TSS - mg/l"
+              },
+              "TotalAmmoniumN": {
+                "type": "string",
+                "title": "NH4-n (Total Nitrato de Amonio) - mg/l"
+              },
+              "TKN": {
+                "type": "string",
+                "title": "TKN (Total Kjeldahl N) - mg/l"
+              },
+              "TN": {
+                "type": "string",
+                "title": "TN (Total N) - mg/l"
+              },
+              "FOG": {
+                "type": "string",
+                "title": "Grasas y Aceites (FOG)"
+              }
+            }
+          },
+          "IndustryData": {
+            "title": "",
+            "type": "object",
+            "properties": {
+              "IndustryType": {
+                "type": "string",
+                "title": "Industry Type"
+              },
+              "TypeOfWastewater": {
+                "type": "string",
+                "title": "Type of Wastewater",
+                "oneOf": [
+                  {
+                    "const": "Industrial",
+                    "title": "Industrial"
+                  },
+                  {
+                    "const": "Municipal",
+                    "title": "Municipal"
+                  }
+                ]
+              },
+              "ExistingPretreatmentStage": {
+                "type": "boolean",
+                "title": "Is there an existing pre-treatment stage / foreseen?"
+              },
+              "TypeOfPretreatment": {
+                "type": "string",
+                "title": "Type of Pre-Treatment"
+              },
+              "InfluentParameters": {
+                "type": "string",
+                "title": "The influent parameters above refer to",
+                "oneOf": [
+                  {
+                    "const": "The raw wastewater (i.e. upstream of any pre-treatment stage)",
+                    "title": "The raw wastewater (i.e. upstream of any pre-treatment stage)"
+                  },
+                  {
+                    "const": "The pre-treated wastewater or influent delivered direct to the MBBR",
+                    "title": "The pre-treated wastewater or influent delivered direct to the MBBR"
+                  }
+                ]
+              },
+              "WaterLevelForeseen": {
+                "type": "string",
+                "title": "Water level which is foreseen / required / existing in the tank"
+              },
+              "PreferredTankShape": {
+                "type": "string",
+                "title": "PreferredTankShape",
+                "oneOf": [
+                  {
+                    "const": "Circular",
+                    "title": "Circular"
+                  },
+                  {
+                    "const": "Rectangular",
+                    "title": "Rectangular"
+                  }
+                ]
+              },
+              "SiteElevation": {
+                "type": "string",
+                "title": "Site elevation, if known"
+              },
+              "SpaceLimitationSite": {
+                "type": "string",
+                "title": "Is there any space limitation on site? If yes, please explain below"
+              }
+            }
+          },
+          "OtherConsiderations": {
+            "title": "What are the most crucial considerations for this project?",
+            "type": "object",
+            "properties": {
+              "SmallFootprint": {
+                "type": "string",
+                "title": "Type of Wastewater",
+                "oneOf": [
+                  {
+                    "const": "Important",
+                    "title": "Important"
+                  },
+                  {
+                    "const": "Moderately Important",
+                    "title": "Moderately Important"
+                  },
+                  {
+                    "const": "Not Important",
+                    "title": "Not Important"
+                  }
+                ]
+              },
+              "LowInvestmentCosts": {
+                "type": "string",
+                "title": "Type of Wastewater",
+                "oneOf": [
+                  {
+                    "const": "Important",
+                    "title": "Important"
+                  },
+                  {
+                    "const": "Moderately Important",
+                    "title": "Moderately Important"
+                  },
+                  {
+                    "const": "Not Important",
+                    "title": "Not Important"
+                  }
+                ]
+              },
+              "LowOperationalCosts": {
+                "type": "string",
+                "title": "Type of Wastewater",
+                "oneOf": [
+                  {
+                    "const": "Important",
+                    "title": "Important"
+                  },
+                  {
+                    "const": "Moderately Important",
+                    "title": "Moderately Important"
+                  },
+                  {
+                    "const": "Not Important",
+                    "title": "Not Important"
+                  }
+                ]
+              },
+              "AdditionalNotes": {
+                "type": "string",
+                "title": "Additional Notes about your Project"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "uiSchema": {
+    "ui:title": "",
+    "contactForm": {
+      "companyName": {},
+      "describeYourProject": {}
+    },
+    "WastewaterParameters": {
+      "IndustryData": {
+        "TypeOfWastewater": {
+          "ui:widget": "radio"
+        },
+        "ExistingPretreatmentStage": {
+          "ui:widget": "radio"
+        },
+        "InfluentParameters": {
+          "ui:widget": "radio"
+        },
+        "PreferredTankShape": {
+          "ui:widget": "radio"
+        }
+      },
+      "OtherConsiderations": {
+        "SmallFootprint": {
+          "ui:widget": "radio"
+        },
+        "LowInvestmentCosts": {
+          "ui:widget": "radio"
+        },
+        "LowOperationalCosts": {
+          "ui:widget": "radio"
+        }
+      }
+    }
+  }
+}

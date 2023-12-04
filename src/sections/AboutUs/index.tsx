@@ -23,7 +23,7 @@ export default function AboutUs() {
         </ButtonStyle>
       </div>
       <div className="carrusel  ">
-        <Image src={imgSample} alt="" />
+        <Image src={imgSample} alt="equipo IQEA" />
       </div>
     </section>
   );

@@ -1,220 +1,216 @@
 {
-    "formData": {
-        "title": "Biological Treatment Background Form",
-        "description": "If you're interested in any of our biological treatment systems, like the Zeo-Clear, Bio-Clear, or Integrated Bio-Reactor, please fill out as much of the following information as possible and we'll be happy to discuss your project needs.",
+  "formData": {
+    "title": "Formulario de antecedentes de tratamiento biológico",
+    "description": "Si está interesado en alguno de nuestros sistemas de tratamiento biológico, como Zeo-Clear, Bio-Clear o Integrated Bio-Reactor, complete la mayor cantidad posible de la siguiente información y estaremos encantados de analizar su proyecto. necesidades.",
+    "type": "object",
+    "properties": {
+      "contactForm": {
+        "title": "Información del contacto",
+        "type": "object",
+        "required": [
+          "companyName",
+          "firstName",
+          "lastName",
+          "city",
+          "state",
+          "country",
+          "phone",
+          "email"
+        ],
+        "properties": {
+          "companyName": {
+            "type": "string",
+            "title": "Nombre de la compañia"
+          },
+          "firstName": {
+            "type": "string",
+            "title": "Nombre"
+          },
+          "lastName": {
+            "type": "string",
+            "title": "Apeido"
+          },
+          "streetAddress": {
+            "type": "string",
+            "title": "Dirección"
+          },
+          "city": {
+            "type": "string",
+            "title": "Ciudad"
+          },
+          "state": {
+            "type": "string",
+            "title": "Estado / Provincia / Region"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Codigo Postal"
+          },
+          "country": {
+            "type": "string",
+            "title": "Pais"
+          },
+          "phone": {
+            "type": "string",
+            "title": "Telefono"
+          },
+          "email": {
+            "type": "string",
+            "title": "Correo Electronico",
+            "format": "email"
+          }
+        }
+      },
+      "biologicalTreatment": {
+        "title": "Tratamiento Biologico",
         "type": "object",
         "properties": {
-            "contactForm": {
-                "title": "Contact Information",
-                "type": "object",
-                "required": [
-                    "companyName",
-                    "firstName",
-                    "lastName",
-                    "city",
-                    "state",
-                    "country",
-                    "phone",
-                    "email"
-                ],
-                "properties": {
-                    "companyName": {
-                        "type": "string",
-                        "title": "Company Name"
-                    },
-                    "firstName": {
-                        "type": "string",
-                        "title": "First Name"
-                    },
-                    "lastName": {
-                        "type": "string",
-                        "title": "Last Name"
-                    },
-                    "streetAddress": {
-                        "type": "string",
-                        "title": "Street Address"
-                    },
-                    "city": {
-                        "type": "string",
-                        "title": "City"
-                    },
-                    "state": {
-                        "type": "string",
-                        "title": "State / Province / Region"
-                    },
-                    "zip": {
-                        "type": "string",
-                        "title": "Zip"
-                    },
-                    "country": {
-                        "type": "string",
-                        "title": "Country"
-                    },
-                    "phone": {
-                        "type": "string",
-                        "title": "Phone"
-                    },
-                    "email": {
-                        "type": "string",
-                        "title": "Email",
-                        "format": "email"
-                    },
-                    "describeYourProject": {
-                        "type": "string",
-                        "title": "Please briefly describe your project"
-                    }
-                }
-            },
-            "biologicalTreatment": {
-                "title": "Biological Treatment",
-                "type": "object",
-                "properties": {
-                    "InfluentLevels": {
-                        "title": "Influent Levels",
-                        "type": "object",
-                        "properties": {
-                            "flowGPD": {
-                                "type": "string",
-                                "title": "Flow - gpd"
-                            },
-                            "temperature": {
-                                "type": "string",
-                                "title": "Temperature"
-                            },
-                            "ph": {
-                                "type": "string",
-                                "title": "pH"
-                            },
-                            "dissolvedOxygen": {
-                                "type": "string",
-                                "title": "Dissolved Oxygen - mg/L"
-                            },
-                            "biologicalOxygenDemand": {
-                                "type": "string",
-                                "title": "BOD - Biological Oxygen Demand - mg/L"
-                            },
-                            "totalSuspendedSolids": {
-                                "type": "string",
-                                "title": "TSS - Total Suspended Solids - mg/L"
-                            },
-                            "nitrogenAmmonia": {
-                                "type": "string",
-                                "title": "Total Kjeldahl Nitrogen (TKN) Ammonia (NH3)+Organic Nitrogen"
-                            },
-                            "totalNitrogen": {
-                                "type": "string",
-                                "title": "TN - Total Nitrogen - mg/L"
-                            },
-                            "totalPhosphorus": {
-                                "type": "string",
-                                "title": "TP - Total Phosphorus - mg/L"
-                            },
-                            "fatOilGrease": {
-                                "type": "string",
-                                "title": "FOG - Fat, Oil & Grease - mg/L"
-                            },
-                            "totalPetroleumHydrocarbons": {
-                                "type": "string",
-                                "title": "TPH - Total Petroleum Hydrocarbons - mg/L"
-                            }
-                        }
-                    },
-                    "EffluentRequirement": {
-                        "title": "Effluent Requirement",
-                        "type": "object",
-                        "properties": {
-                            "flowGPD": {
-                                "type": "string",
-                                "title": "Flow - gpd"
-                            },
-                            "temperature": {
-                                "type": "string",
-                                "title": "Temperature"
-                            },
-                            "ph": {
-                                "type": "string",
-                                "title": "pH"
-                            },
-                            "dissolvedOxygen": {
-                                "type": "string",
-                                "title": "Dissolved Oxygen - mg/L"
-                            },
-                            "biologicalOxygenDemand": {
-                                "type": "string",
-                                "title": "BOD - Biological Oxygen Demand - mg/L"
-                            },
-                            "totalSuspendedSolids": {
-                                "type": "string",
-                                "title": "TSS - Total Suspended Solids - mg/L"
-                            },
-                            "nitrogenAmmonia": {
-                                "type": "string",
-                                "title": "Total Kjeldahl Nitrogen (TKN) Ammonia (NH3)+Organic Nitrogen"
-                            },
-                            "totalNitrogen": {
-                                "type": "string",
-                                "title": "TN - Total Nitrogen - mg/L"
-                            },
-                            "totalPhosphorus": {
-                                "type": "string",
-                                "title": "TP - Total Phosphorus - mg/L"
-                            },
-                            "fatOilGrease": {
-                                "type": "string",
-                                "title": "FOG - Fat, Oil & Grease - mg/L"
-                            },
-                            "totalPetroleumHydrocarbons": {
-                                "type": "string",
-                                "title": "TPH - Total Petroleum Hydrocarbons - mg/L"
-                            }
-                        }
-                    }
-                }
-            },
-            "PowerRequirements": {
-                "title": "Biological Treatment Background",
-                "type": "object",
-                "properties": {
-                    "powerRequirementsVolts": {
-                        "type": "string",
-                        "title": "Power Requirements (Volts)"
-                    },
-                    "powerRequirementsPhase": {
-                        "type": "string",
-                        "title": "Power Requirements (Phase)"
-                    },
-                    "powerRequirementsHz": {
-                        "type": "string",
-                        "title": "Power Requirements (Hz)"
-                    },
-                    "summarizeNatureProject": {
-                        "type": "string",
-                        "title": "Please briefly summarize the nature of the project"
-                    }
-                }
+          "InfluentLevels": {
+            "title": "Niveles influyentes",
+            "type": "object",
+            "properties": {
+              "flowGPD": {
+                "type": "string",
+                "title": "Flujo - gpd"
+              },
+              "temperature": {
+                "type": "string",
+                "title": "Temperatura"
+              },
+              "ph": {
+                "type": "string",
+                "title": "pH"
+              },
+              "dissolvedOxygen": {
+                "type": "string",
+                "title": "Oxígeno disuelto - mg/L"
+              },
+              "biologicalOxygenDemand": {
+                "type": "string",
+                "title": "BOD - Demanda biológica de oxígeno - mg/L"
+              },
+              "totalSuspendedSolids": {
+                "type": "string",
+                "title": "TSS - Solidos totalmente suspendidos - mg/L"
+              },
+              "nitrogenAmmonia": {
+                "type": "string",
+                "title": "Nitrógeno Kjeldahl total (TKN) Amoniaco (NH3)+Nitrógeno orgánico"
+              },
+              "totalNitrogen": {
+                "type": "string",
+                "title": "TN - Nitrógeno total - mg/L"
+              },
+              "totalPhosphorus": {
+                "type": "string",
+                "title": "TP - Fósforo total - mg/L"
+              },
+              "fatOilGrease": {
+                "type": "string",
+                "title": "FOG - Grasa y aceite - mg/L"
+              },
+              "totalPetroleumHydrocarbons": {
+                "type": "string",
+                "title": "TPH - Hidrocarburos totales de petróleo - mg/L"
+              }
             }
-        }
-    },
-    "uiSchema": {
-        "ui:title": "",
-        "contactForm": {
-            "companyName": {},
-            "describeYourProject": {}
-        },
-        "biologicalTreatment": {
-            "ui:title": "",
-            "InfluentLevels": {
-                "ui:classNames": "InfluentLevelsColumn"
-            },
-            "EffluentRequirement": {
-                "ui:classNames": "EffluentRequirementColumn"
+          },
+          "EffluentRequirement": {
+            "title": "Requisito de efluentes",
+            "type": "object",
+            "properties": {
+              "flowGPD": {
+                "type": "string",
+                "title": "Flujo - gpd"
+              },
+              "temperature": {
+                "type": "string",
+                "title": "Temperatura"
+              },
+              "ph": {
+                "type": "string",
+                "title": "pH"
+              },
+              "dissolvedOxygen": {
+                "type": "string",
+                "title": "Oxígeno disuelto - mg/L"
+              },
+              "biologicalOxygenDemand": {
+                "type": "string",
+                "title": "BOD - Demanda biológica de oxígeno - mg/L"
+              },
+              "totalSuspendedSolids": {
+                "type": "string",
+                "title": "TSS - Solidos totalmente suspendidos - mg/L"
+              },
+              "nitrogenAmmonia": {
+                "type": "string",
+                "title": "Nitrógeno Kjeldahl total (TKN) Amoniaco (NH3)+Nitrógeno orgánico"
+              },
+              "totalNitrogen": {
+                "type": "string",
+                "title": "TN - Nitrógeno total - mg/L"
+              },
+              "totalPhosphorus": {
+                "type": "string",
+                "title": "TP - Fósforo total - mg/L"
+              },
+              "fatOilGrease": {
+                "type": "string",
+                "title": "FOG - Grasa y aceite - mg/L"
+              },
+              "totalPetroleumHydrocarbons": {
+                "type": "string",
+                "title": "TPH - Hidrocarburos totales de petróleo - mg/L"
+              }
             }
-        },
-        "ui:submitButtonOptions": {
-            "props": {
-                "className": "btn-submit"
-            },
-            "submitText": "Enviar"
+          }
         }
+      },
+      "PowerRequirements": {
+        "title": "Antecedentes del tratamiento biológico",
+        "type": "object",
+        "properties": {
+          "powerRequirementsVolts": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Volts)"
+          },
+          "powerRequirementsPhase": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Phase)"
+          },
+          "powerRequirementsHz": {
+            "type": "string",
+            "title": "Requerimientos de Energía (Hz)"
+          },
+          "summarizeNatureProject": {
+            "type": "string",
+            "title": "Por favor resuma brevemente la naturaleza del proyecto."
+          }
+        }
+      }
     }
+  },
+  "uiSchema": {
+    "ui:title": "",
+    "contactForm": {
+      "companyName": {},
+      "describeYourProject": {}
+    },
+    "biologicalTreatment": {
+      "ui:title": "",
+      "InfluentLevels": {
+        "ui:classNames": "InfluentLevelsColumn"
+      },
+      "EffluentRequirement": {
+        "ui:classNames": "EffluentRequirementColumn"
+      }
+    },
+    "ui:submitButtonOptions": {
+      "props": {
+        "className": "btn-submit"
+      },
+      "submitText": "Enviar"
+    }
+  }
 }
