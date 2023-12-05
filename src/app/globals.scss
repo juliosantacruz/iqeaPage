@@ -12,6 +12,7 @@
 
   /* VARIABLES DE GENERALES */
   --PrimaryBgColor: #000000;
+  --AccentBgColor: #262626;
   --SecondaryBgColor: #005272;
   --TercearyBgColor: #a2d5ac;
 
@@ -29,8 +30,8 @@
   --CardTextSize: 16px;
 
   /* VARIABLES DE CARDS */
-  --cardBgColor: a2d5ac;
-  --cardTextColor: #f8f8f8;
+  --cardBgColor: #f7f7f7;
+  --cardTextColor: #131313;
   --cardTitleSize: 20px;
   --cardBodySize: 16px;
 
@@ -39,7 +40,7 @@
   --navbarTextColor: #ffffff;
   --navbarTextSize: 16px;
   --nav-size: 80px;
-  --box-shadow-navbar:0px 3px 3px 0px rgba(255, 255, 255, 0.459);
+  --box-shadow-navbar:0px 3px 3px 0px rgba(0, 0, 0, 0.767);
 
   /* VARIABLES DE FOOTER */
   --footerBgColor: #005272;
@@ -102,6 +103,7 @@ body {
   margin: 0 auto;
 
   font-family: var(--font-mono);
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -170,6 +172,7 @@ button {
   color: white;
   background: var(--PrimaryBtnColor) !important;
   font-weight: 600;
+  font-size: var(--ContentTextSize);
 }
 
 table, form,label{

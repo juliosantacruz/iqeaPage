@@ -1,127 +1,162 @@
-.serviciosIqea{
+.serviciosIqea {
+  width: 100%;
+  height: 100%;
+  // padding: 20px var(--paddingDesktop);
+  background: var(--PrimaryBgColor);
 
-    width: 100%;
-    // height: 100%;
-    // padding: 20px var(--paddingDesktop);
-    background: var(--PrimaryBgColor);
+  margin: 0 auto;
+  max-width: var(--max-width);
 
-
+  .serviciosAccent {
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    margin: 50px 0;
 
-    margin: 0 auto;
-    max-width: var(--max-width);
+    // max-height: 80vh;
+    height: 100%;
 
-    .serviciosHeader{
-        height: 25%;
-        width: 80%;
-        margin: 50px auto;
+    background: var(--AccentBgColor);
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .serviciosHeader {
+      height: 25%;
+      width: 100%;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
-        text-align: center;
-
-        h2{
-            margin: 0 0 20px 0;
-        }
-
+      h2 {
+      }
+      margin: 0 0 20px 0;
     }
-    .serviciosBody{
-        height: 60%;
+    .serviciosBody {
+      height: 70%;
+      display: flex;
+      flex-direction: row;
+      margin: 0 0 50px 0;
+
+      .serviciosLeft {
+        width: 50%;
+        height: 100%;
+        max-height: 600px;
+
+        padding: 0 50px 0 0;
+        .servicio {
+          margin: 20px 0;
+          // height: 30%;
+
+          display: flex;
+          flex-direction: column;
+          .servicioIcon {
+            img {
+              background-color: rgb(255, 255, 255);
+              width: 50px;
+              height: 50px;
+              border-radius: 10px;
+            }
+          }
+          .servicioContent {
+            height: 50%;
+
+            h3 {
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+
+      .serviciosRight {
+        width: 50%;
+        height: 100%;
+        max-height: 600px;
 
         display: flex;
         flex-direction: row;
-        margin: 0 0 50px 0;
+        gap: 10px;
 
-        .serviciosLeft{
-            width: 50%;
-            height: fit-content;
-
-            padding: 0 50px;
-            .servicio{
-                margin: 40px 0 ;
-                .servicioIcon{
-                  width: 100%;
-                  img{
-                    background-color: white;
-                    border-radius: 14px;
-height: 100%;
-                  }
-                }
-                h3{
-                    margin: 10px 0;
-                }
-            }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
+        .galleryColumn {
+          width: 50%;
+          max-width: 300px;
+          // height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
 
-        .serviciosRight{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            gap:20px;
-
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-
-            }
-            .galleryColumn{
-                width: 50%;
-                max-width: 300px;
-                // height: 100%;
-                display: flex;
-                flex-direction: column;
-                gap:20px;
-
-                .imageA{
-                    width: 100%;
-                    height: 35%;
-                    background: #d65959;
-                    // margin: 20px;
-                    border-radius: var(--border-radius-lg);
-                    overflow: hidden;
-                }
-                .imageB{
-                    width: 100%;
-                    height: 65%;
-                    background: #c159d6;
-                    // margin: 20px;
-                    border-radius: var(--border-radius-lg);
-                    overflow: hidden;
-
-
-
-                }
-            }
+          .imageA {
+            width: 100%;
+            height: 35%;
+            background: #d65959;
+            // margin: 20px;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+          }
+          .imageB {
+            width: 100%;
+            height: 60%;
+            background: #c159d6;
+            // margin: 20px;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+          }
         }
+      }
     }
-    @include media-down(lg){
+  }
+  @include media-down(lg) {
     padding: 20px var(--paddingDesktop);
 
-    }
-
-    @include media-down(sm){
-        .serviciosHeader{
-            width: 100%;
-            margin: 20px 0;
+    .serviciosAccent {
+      max-height: none;
+      .serviciosBody {
+        .serviciosRight {
+          height: auto;
+          max-height: none;
         }
-        .serviciosBody{
-            flex-direction: column-reverse;
-
-            .serviciosLeft{
-                width: 100%;
-                padding: 0;
-            }
-            .serviciosRight{
-                width: 100%;
-
-            }
-        }
+      }
     }
+  }
+
+  @include media-down(md) {
+    .serviciosAccent {
+      max-height: none;
+
+      .serviciosHeader {
+        width: 100%;
+        margin: 20px 0;
+      }
+      .serviciosBody {
+        flex-direction: column-reverse;
+
+        .serviciosLeft {
+          width: 100%;
+          padding: 0;
+        }
+        .serviciosRight {
+          width: 100%;
+          max-height: 400px;
+        }
+      }
+    }
+  }
+  @include media-down(sm) {
+    .serviciosAccent {
+      padding: 10px;
+
+      .serviciosBody {
+
+        .serviciosLeft {
+          max-height: none;
+        }
+
+      }
+    }
+  }
 }

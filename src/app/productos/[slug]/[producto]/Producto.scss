@@ -2,6 +2,7 @@
   // padding: 0 var(--paddingDesktop);
   margin: auto;
   max-width: var(--max-width);
+  color: var(--PrimaryTextColor);
 
 
   .breadcrums{
@@ -42,8 +43,8 @@
       width: 100%;
       height: auto;
     }
-    figure{
-      .table{
+    .table{
+      table{
         overflow-x: scroll;
       }
     }
@@ -68,14 +69,16 @@
         }
       .table{
         table{
+        overflow-x: scroll;
+
           border-collapse: collapse;
           thead{
-            background-color: rgb(197, 201, 255);
+            background-color: rgb(0, 125, 141)
           }
           tbody{
-            tr:nth-child(even) {background-color: #c2edff;}
+            tr:nth-child(even) {background-color: #004563;}
             tr{
-            background-color: #dbffa8;
+            background-color: rgb(51, 87, 0);
 
               td{
                 padding: 6px !important;
@@ -87,5 +90,10 @@
         }
       }
     }
+  }
+
+  @include media-down(lg){
+      padding: 0 var(--paddingDesktop);
+
   }
 }

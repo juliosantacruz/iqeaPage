@@ -71,7 +71,15 @@
       }
     }
   }
-
+  @include media-down(lg){
+    .categoryProducts{
+      .categoryList{
+        li{
+          margin:5px 0
+        }
+      }
+    }
+  }
   @include media-down(sm){
     flex-direction: column;
 

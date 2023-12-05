@@ -4,40 +4,45 @@
 
   background: var(--PrimaryBgColor);
 
-  margin: 40px auto;
+  margin: 50px auto;
   max-width: var(--max-width);
 
-  .headerProjects {
-    margin: 50px 0;
-    h2 {
-      margin: 0 0 20px 0;
+  .projectsAccent{
+    padding: 20px;
+    background: var(--AccentBgColor);
+
+    .headerProjects {
+      margin: 20px 0;
+      h2 {
+        margin: 0 0 20px 0;
+      }
+      p {
+        width: 100%;
+      }
     }
-    p {
+
+    .bodyProjects {
+      height: 460px;
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .buttonProjects {
+      max-width: 350px;
       width: 100%;
-    }
-  }
-
-  .bodyProjects {
-    height: 460px;
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .buttonProjects {
-    max-width: 350px;
-    width: 100%;
-    margin: 30px auto 50px;
-    background: var(--PrimaryBtnColor);
-    button {
-      width: 100%;
+      margin: 30px auto 50px;
+      background: var(--PrimaryBtnColor);
+      button {
+        width: 100%;
+      }
     }
   }
 
