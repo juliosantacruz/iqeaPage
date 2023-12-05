@@ -2,71 +2,71 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  label{
+  label {
     font-size: 12px;
   }
-    h2 {
-        margin: 20px 0;
-    }
+  h2 {
+    margin: 20px 0;
+  }
 
-    .InfluentLevelsColumn {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: 60%;
+  .InfluentLevelsColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60%;
 
-        fieldset {
-            flex-direction: column;
-            legend {
-                width: 100%;
-                text-align: right;
-                padding: 0 40px 0 0;
-            }
-            .field {
-                width: 100%;
-                flex-direction: row;
-                height: 36px;
-
-                input {
-                    width: 50%;
-                }
-                label {
-                    width: 50%;
-                }
-            }
-        }
-    }
-    .EffluentRequirementColumn {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: 30%;
-        fieldset {
-            flex-direction: column;
-
-            legend {
-                width: 100%;
-            }
-
-            .field {
-                height: 36px;
-                input {
-                    width: 100%;
-                }
-                label {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .btn-info{
-        margin: 20px auto;
-
+    fieldset {
+      flex-direction: column;
+      legend {
         width: 100%;
-    }
+        text-align: right;
+        padding: 0 40px 0 0;
+      }
+      .field {
+        width: 100%;
+        flex-direction: row;
+        height: 36px;
 
-    @include media-down(lg){
+        input {
+          width: 50%;
+        }
+        label {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .EffluentRequirementColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 30%;
+    fieldset {
+      flex-direction: column;
+
+      legend {
+        width: 100%;
+      }
+
+      .field {
+        height: 36px;
+        input {
+          width: 100%;
+        }
+        label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .btn-info {
+    margin: 20px auto;
+
+    width: 100%;
+  }
+
+  @include media-down(lg) {
     padding: 50px var(--paddingDesktop);
-}
+  }
 }

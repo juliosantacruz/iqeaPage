@@ -83,7 +83,7 @@ export default function Projects({ projectsData }: any) {
           href={"/proyectos"}
           style={{ maxWidth: "350px", margin: "30px 0" }}
         >
-          Ver Mas...
+          Ver mas...
         </Link>
       </ButtonStyle>
     </section>

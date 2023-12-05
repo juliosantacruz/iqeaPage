@@ -26,12 +26,13 @@
 
     .productsGroup{
       height: 100%;
-        margin: 40px 0;
+        margin: 30px 0 ;
 
     }
     .buttonProducts{
         height: 15%;
-        margin: 40px 0;
+        margin: 30px 0 0;
+        padding: 10px;
     }
 
     @include media-down(lg){

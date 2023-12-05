@@ -2,9 +2,9 @@
   max-width: 320px;
   // width: 33%;
   height: 380px;
-  border-radius: var(--border-radius-lg);
-  background-color: var(--cardBgColor);
-  color: var(--cardTextColor);
+  border-radius: 0;
+  background-color: var(--cardBgColor) !important;
+
   fill: var(--cardTextColor);
 
   display: flex;
@@ -12,7 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--box-shadow-primary);
-
+  h3 {
+    color: var(--cardTextColor) !important;
+  }
   .cardImage {
     display: flex;
     flex-direction: column;
@@ -27,22 +29,22 @@
       height: 100%;
       transform: scale(1.2);
     }
-
   }
-    .cardTitle{
-      text-align: center;
-      padding: 5px 10px;
-    }
-
-
-
+  .cardTitle {
+    text-align: center;
+    padding: 5px 10px;
+  }
 
   .cardFooter {
-    margin: 15px auto;
-    button {
-      background: var(--SecondaryBgColor);
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+
+    .btnGeneral {
+      border-radius: 0;
+      margin: 0;
+      height: 50px;
+      // background: var(--SecondaryBgColor);
     }
   }
-
-
 }

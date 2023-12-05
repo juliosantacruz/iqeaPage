@@ -11,13 +11,17 @@
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   /* VARIABLES DE GENERALES */
-  --PrimaryBgColor: #ffffff;
-  --SecondaryBgColor: rgb(97, 85, 131);
+  --PrimaryBgColor: #000000;
+  --SecondaryBgColor: #005272;
   --TercearyBgColor: #a2d5ac;
 
 
-  --PrimaryTextColor: #111111;
+  --PrimaryTextColor: #ffffff;
   --SecondaryTextColor: #eeeeee;
+
+  --PrimaryBtnColor:#C921E4;
+  --SecondaryBtnColor:#16da6e;
+
 
   --TitleTextSize: 36px;
   --SubtitleTextSize: 28px;
@@ -25,24 +29,26 @@
   --CardTextSize: 16px;
 
   /* VARIABLES DE CARDS */
-  --cardBgColor: rgb(233, 233, 233);
-  --cardTextColor: #1f1f1f;
+  --cardBgColor: a2d5ac;
+  --cardTextColor: #f8f8f8;
   --cardTitleSize: 20px;
   --cardBodySize: 16px;
 
   /* VARIABLES DE NAVBAR */
-  --navbarBgColor: #ffffff;
-  --navbarTextColor: #5966b1;
+  --navbarBgColor: #005272;
+  --navbarTextColor: #ffffff;
   --navbarTextSize: 16px;
   --nav-size: 80px;
-
-  --box-shadow-primary: 0px 2px 4px 0px rgba(0, 0, 0, 0.74),
-    0px 6px 12px 0px rgba(0, 0, 0, 0.08);
-  --box-shadow-navbar:0px 3px 3px 0px rgba(0, 0, 0, 0.459);
+  --box-shadow-navbar:0px 3px 3px 0px rgba(255, 255, 255, 0.459);
 
   /* VARIABLES DE FOOTER */
-  --footerBgColor: #557c83;
+  --footerBgColor: #005272;
   --footerTextColor: #e7e7e7;
+
+
+
+  --box-shadow-primary: 0px 2px 4px 0px rgba(0, 0, 0, 0.74),
+      0px 6px 12px 0px rgba(0, 0, 0, 0.08);
 
   --paddingDesktop: 112px;
   @include media-down(xlg) {
@@ -116,6 +122,10 @@ p {
   line-height: 28px;
   // color: var(--PrimaryTextColor);
 }
+h1,h2,h3,h4,h5,p{
+  color: var(--PrimaryTextColor);
+
+}
 button:hover {
   cursor: pointer;
   transform: translateY(2px);
@@ -123,7 +133,6 @@ button:hover {
 .btnGeneral {
   padding: 10px 20px;
   border: none;
-  background: #018abd;
   color: #f8f8f8;
   fill: #f8f8f8;
   font-weight: bold;
@@ -131,6 +140,8 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--PrimaryBtnColor) !important;
+
 }
 
 .centerDiv {
@@ -157,4 +168,10 @@ button {
   border: none;
   background: var(--SecondaryBgColor);
   color: white;
+  background: var(--PrimaryBtnColor) !important;
+  font-weight: 600;
+}
+
+table, form,label{
+  color: var(--PrimaryTextColor);
 }

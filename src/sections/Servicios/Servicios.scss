@@ -43,6 +43,14 @@
             padding: 0 50px;
             .servicio{
                 margin: 40px 0 ;
+                .servicioIcon{
+                  width: 100%;
+                  img{
+                    background-color: white;
+                    border-radius: 14px;
+height: 100%;
+                  }
+                }
                 h3{
                     margin: 10px 0;
                 }

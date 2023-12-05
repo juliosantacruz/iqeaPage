@@ -3,6 +3,7 @@ import "./Products.scss";
 import ButtonStyle from "@/components/ButtonStyle";
 import { getCatProductos } from "@/services/fetchData";
 import SlideProducts from "@/components/SlideProducts/SlideProducts";
+import Link from "next/link";
 
 
   const random_array=(arr:any)=>{
@@ -61,7 +62,7 @@ export default async function Products() {
 
       </div>
       <ButtonStyle>
-        <button style={{ margin: "20px 0", width: "300px" }}>Ver Mas</button>
+        <Link href={'/productos'} style={{ margin: "30px 0", width: "300px" }}>Ver mas...</Link>
       </ButtonStyle>
     </section>
   );

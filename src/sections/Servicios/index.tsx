@@ -28,6 +28,7 @@ export default function Servicios() {
           <div className="servicio">
             <div className="servicioIcon">
               <Image src={aguaPotableIcon} alt="icon" />
+
             </div>
             <div className="servicioContent">
               <h3>Tratamiento de Agura Potable</h3>
@@ -71,17 +72,17 @@ export default function Servicios() {
             </div>
             <div className="imageB">
             <Image src={imgV1} alt="galleryImage" />
-              
+
             </div>
           </div>
           <div className="galleryColumn">
             <div className="imageB">
             <Image src={imgH2} alt="galleryImage" />
-              
+
             </div>
             <div className="imageA">
             <Image src={imgV2} alt="galleryImage" />
-              
+
             </div>
           </div>
         </div>

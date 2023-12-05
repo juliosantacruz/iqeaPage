@@ -12,7 +12,8 @@
       0px 6px 12px 0px rgba(0, 0, 0, 0.08);
     outline: none;
     border: none;
-    background: var(--SecondaryBgColor);
+    background: var(--PrimaryBtnColor);
+
     color: white;
   }
 
@@ -28,7 +29,7 @@
       0px 6px 12px 0px rgba(0, 0, 0, 0.08);
     outline: none;
     border: none;
-    background: var(--SecondaryBgColor);
+    background: var(--PrimaryBtnColor);
     color: white;
   }
   @include media-down(md) {

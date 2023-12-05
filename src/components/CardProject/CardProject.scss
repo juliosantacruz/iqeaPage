@@ -3,12 +3,15 @@
   height: 450px;
   box-shadow:var(--box-shadow-primary);
   border-radius: var(--border-radius-sm);
-
+  background-color: var(--cardBgColor);
   overflow: hidden;
 
   display: flex;
   flex-direction: column;
 
+  h3,p{
+    color: var(--cardTextColor) !important;
+  }
   .CardProjectImage {
     height: 55%;
     overflow: hidden;
