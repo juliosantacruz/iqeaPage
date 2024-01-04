@@ -12,6 +12,20 @@ const PUBLIC_API_URL_STRAPI = isDev? NEXT_PUBLIC_API_URL_STRAPI_DEV:NEXT_PUBLIC_
 
 
 const nextConfig = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4|webm)$/, // Agrega aquí todas las extensiones de vídeo que necesitas manejar
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next',
+          name: 'static/media/[name].[hash].[ext]',
+        },
+      },
+    });
+
+    return config;
+  },
   sassOptions: {
     additionalData: `@import "src/styles/mixins.scss";`,
   },
@@ -30,7 +44,30 @@ const nextConfig = {
     ],
   },
   // typedRoutes: true,
+
 };
 
 module.exports = nextConfig;
 
+
+// const withVideos = require('next-videos')
+// module.exports = withVideos()
+
+
+
+// module.exports = {
+//   webpack: (config) => {
+//     config.module.rules.push({
+//       test: /\.(mp4|webm)$/, // Agrega aquí todas las extensiones de vídeo que necesitas manejar
+//       use: {
+//         loader: 'file-loader',
+//         options: {
+//           publicPath: '/_next',
+//           name: 'static/media/[name].[hash].[ext]',
+//         },
+//       },
+//     });
+
+//     return config;
+//   },
+// };

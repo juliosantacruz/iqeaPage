@@ -18,11 +18,7 @@ export default function Projects({ projectsData }: any) {
         <div className="headerProjects centerDiv">
           <h2>PROYECTOS IQEA</h2>
           <p>
-            Minim deserunt occaecat veniam anim eiusmod eu cupidatat anim
-            eiusmod excepteur. Quis proident fugiat enim incididunt ut quis
-            velit sint non non veniam eiusmod reprehenderit. Aliqua ipsum
-            incididunt aliquip laboris sint deserunt elit tempor officia ex
-            elit. Ullamco sit est in elit aliquip sit veniam quis veniam.
+          Cada proyecto se adapta a las necesidades específicas de la región y se ejecuta con una visión de sostenibilidad a largo plazo. Nuestra experiencia abarca desde tecnologías avanzadas de filtración hasta métodos de tratamiento de última generación, asegurando que cada solución sea eficiente, efectiva y respetuosa con el medio ambiente.
           </p>
         </div>
 

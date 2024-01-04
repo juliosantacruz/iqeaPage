@@ -8,6 +8,7 @@ import Products from '@/sections/Products'
 import Subcribe from '@/sections/Subcribe'
 import './home.scss'
 import { getProjectsGalery } from '@/services/fetchData'
+import HeroVideo from '@/sections/HeroVideo/HeroVideo'
 
 
 
@@ -17,7 +18,8 @@ export default async function Home() {
 
   return (
     <main className='main'>
-        <Hero/>
+      <HeroVideo/>
+        {/* <Hero/> */}
         <Servicios/>
         <Stats/>
         <AboutUs/>

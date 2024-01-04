@@ -1,23 +1,20 @@
-.serviciosPage{
+.serviciosPage {
   // padding: 0 var(--paddingDesktop);
   margin: auto;
   max-width: var(--max-width);
   color: var(--PrimaryTextColor);
 
-
-
-  .serviciosPageTitle{
+  .serviciosPageTitle {
     margin: 30px 0;
   }
 
-.servicioList{
-  display: flex;
-  flex-wrap: wrap;
-justify-content: center;
-  gap: 20px;
-}
-  @include media-down(lg){
-  padding: 0 var(--paddingDesktop);
-
+  .servicioList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  @include media-down(lg) {
+    padding: 0 var(--paddingDesktop);
   }
 }

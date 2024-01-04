@@ -4,7 +4,7 @@ import { fetchProductContent, fetchSTratamientoContent } from "@/services/fetchD
 
 export default async function Header(props: any) {
   const productDataJson = await fetchProductContent();
-  const productData = JSON.parse(productDataJson).map((element: any) => {
+  const productData =productDataJson? JSON.parse(productDataJson).map((element: any) => {
     const arrProductos: [] = element.attributes.productos.data;
     const newProductos = arrProductos.map((producto: any) => {
       const newProducto = {
@@ -22,17 +22,17 @@ export default async function Header(props: any) {
       productos: newProductos,
     };
     return newElement;
-  });
+  }):'';
 
   const systemsDataJson = await fetchSTratamientoContent();
-  const systemsData = JSON.parse(systemsDataJson).map((element: any) => {
+  const systemsData =systemsDataJson? JSON.parse(systemsDataJson).map((element: any) => {
     const newElement = {
       id: element.id,
       title: element.attributes.titulo,
       slug: element.attributes.slug,
     };
     return newElement;
-  });
+  }):'';
 
 
 
