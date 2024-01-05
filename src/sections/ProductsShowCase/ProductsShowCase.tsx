@@ -21,6 +21,8 @@ type productType = {
   altCover: string;
 };
 
+
+
 export default function ProductsShowCase(props: any) {
   const [leCategory, setCategory] = useState<categoryType>();
   const { productCatArray } = props;
@@ -35,13 +37,16 @@ export default function ProductsShowCase(props: any) {
     }
   };
 
+  const defaultValue = productCatArray[0]
+
   return (
     <div className="ProductsShowCase">
       <div className="categoryProducts">
         <h3>Categorias</h3>
         <ul className="categoryList">
           {productCatArray &&
-            productCatArray.map((category: categoryType) => {
+            productCatArray.map((category: categoryType, ) => {
+
               return (
                 <li
                   key={category.id}
@@ -56,7 +61,7 @@ export default function ProductsShowCase(props: any) {
       </div>
 
       <div className="categoryDetailsSection">
-        {leCategory ? <CategoryDetail data={leCategory} /> : null}
+        {leCategory ? <CategoryDetail data={leCategory} /> : <CategoryDetail data={defaultValue} />}
       </div>
     </div>
   );
@@ -65,7 +70,7 @@ export default function ProductsShowCase(props: any) {
 const CategoryDetail = (props: any) => {
   const { data } = props;
   return (
-    <article className="categoryDetails">
+    <section className="categoryDetails">
       <h3>{data.title}</h3>
       {data.description && (
         <div
@@ -94,6 +99,6 @@ const CategoryDetail = (props: any) => {
             );
           })}
       </div>
-    </article>
+    </section>
   );
 };
