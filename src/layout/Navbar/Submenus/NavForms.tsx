@@ -20,7 +20,7 @@ export default function NavForms() {
     return `navLink ${value === path ? "active" : ""}`;
   };
   return (
-    <NavItem title="Cotiza!" href={"#"} className={isActiveLink("/formulario")}>
+    <NavItem title="Cotiza!" href={"/cotiza"} className={isActiveLink("/cotiza")}>
       <DropdownMenu>
         <DropdownGroup nameGroup="main">
           {FORM_ROUTER &&
@@ -28,7 +28,7 @@ export default function NavForms() {
               return (
                 <DropdownItem
                   key={(element as any).id}
-                  href={`/formulario/${(element as any).slug}`}
+                  href={`/cotiza/${(element as any).slug}`}
                   goToMenu={element.productos ? element.slug : ""}
 
                 >

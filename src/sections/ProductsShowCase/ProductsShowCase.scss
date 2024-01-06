@@ -58,7 +58,9 @@
           img{
             // border-radius: 50%;
             width: 100%;
+            object-fit: cover;
           }
+
           .productTitle{
             padding: 0 8px;
             text-align: center;
@@ -67,6 +69,11 @@
               font-size: 16px;
             }
           }
+        }
+        .productCard:hover{
+
+            transform: scale(1.2);
+
         }
       }
     }

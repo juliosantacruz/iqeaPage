@@ -10,13 +10,17 @@ export default function ContactoPage() {
     <main className="mainContacto">
       <section className="contactLocation">
         <div className="infoContainer">
-          <div className="leftTitle ">
-            <div className="headerLeft">
+
+
+          {/* <div className="leftTitle "></div> */}
+
+
+          <div className="HeaderContactPage">
+            <div className="ContactTitle">
               <h1>Nuestras Oficinas</h1>
               <hr />
             </div>
           </div>
-          <div className="rightTitle "></div>
 
           <div className=" leftStyle">
             <div className="LocationLeft ">
@@ -101,7 +105,6 @@ export default function ContactoPage() {
               ></iframe>
             </div>
           </div>
-
         </div>
       </section>
       <section className="contactFrase">
