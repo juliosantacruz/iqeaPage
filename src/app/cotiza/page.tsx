@@ -3,6 +3,7 @@ import { FORM_ROUTER } from "@/services/routers";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import "./Cotiza.scss";
 import Link from "next/link";
+import ButtonStyle from "@/components/ButtonStyle";
 
 export default function page() {
 

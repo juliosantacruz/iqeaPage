@@ -54,7 +54,7 @@ export default function Navbar({Products, Systems}:any) {
           <NavProductos navData={Products}/>
           <NavSistemas navData={Systems}/>
           {/* <NavProcesos /> */}
-          <NavServicios />
+          {/* <NavServicios /> */}
 
           {/* <li>
             <Link href="/proyectos" className={isActiveLink("/proyectos")}>

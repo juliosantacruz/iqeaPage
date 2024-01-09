@@ -11,14 +11,17 @@ export default function ContactoPage() {
       <section className="contactLocation">
         <div className="infoContainer">
 
-
-          {/* <div className="leftTitle "></div> */}
-
-
           <div className="HeaderContactPage">
             <div className="ContactTitle">
-              <h1>Nuestras Oficinas</h1>
+              <h1>Contacto IQEA</h1>
               <hr />
+              <p>
+                Nuestra mision es ofrecerte Ingeniería de Proyecto, Construcción
+                de Calidad así como los suministros y mantenimiento de tus
+                sistemas de tratamiento de agua, con una{" "}
+                <strong>Solución de Respuesta Rápida</strong> de acuerdo a tus
+                necesidades y al mejor precio.
+              </p>
             </div>
           </div>
 

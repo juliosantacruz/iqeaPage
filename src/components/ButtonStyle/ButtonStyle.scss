@@ -6,7 +6,7 @@
     width: 100%;
     align-items: center;
     padding: 10px 16.595px 9.5px 16.795px;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow:
       0px 2px 4px 0px rgba(0, 0, 0, 0.08),
       0px 6px 12px 0px rgba(0, 0, 0, 0.08);
@@ -16,6 +16,12 @@
 
     color: white;
   }
+  button:hover{
+    transform: translateY(1px);
+    box-shadow:
+      0px 2px 4px 0px rgb(255, 255, 255),
+      0px 6px 12px 0px rgb(255, 255, 255);
+  }
 
   a {
     width: 100%;
@@ -23,7 +29,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 16.595px 9.5px 16.795px;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow:
       0px 2px 4px 0px rgba(0, 0, 0, 0.08),
       0px 6px 12px 0px rgba(0, 0, 0, 0.08);
@@ -31,6 +37,12 @@
     border: none;
     background: var(--PrimaryBtnColor);
     color: white;
+  }
+  a:hover{
+    transform: translateY(1px);
+    box-shadow:
+    0px 2px 4px 0px rgba(0, 0, 0, 0.603),
+    0px 6px 12px 0px rgba(0, 0, 0, 0.616);
   }
   @include media-down(md) {
   }

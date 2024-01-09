@@ -3,6 +3,7 @@ import "./AboutUs.scss";
 import Image from "next/image";
 import imgSample from "@/assets/servicios/ImgVt1.jpeg";
 import ButtonStyle from "@/components/ButtonStyle";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -18,7 +19,7 @@ export default function AboutUs() {
           diseñador, suministrador ejecutor de obra.
         </p>
         <ButtonStyle >
-          <button type="button" >Cotiza tu Proyecto</button>
+          <Link href={'cotiza'} >Cotiza tu Proyecto</Link>
 
         </ButtonStyle>
       </div>

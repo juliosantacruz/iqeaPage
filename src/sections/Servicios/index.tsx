@@ -19,7 +19,7 @@ export default function Servicios() {
           <p>
             La principal especialidad de IQEA dentro del área de servicios son
             los proyectos “llave en mano” para el tratamiento de agua o aguas
-            residuales. Para ello utilizamos combinaciones de tecnologías en la
+            residuales y diseño de sistemas de mecanicas de fluidos. Para ello utilizamos combinaciones de tecnologías y alianzas comerciales de especificaciones de equipos de la mas alta eficiencia para la
             realización de proyectos maestros en conjunto para tratar el agua.
           </p>
         </div>
