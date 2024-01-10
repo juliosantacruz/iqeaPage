@@ -5,35 +5,41 @@ import CallToActionBanner from "@/components/CallToActionBanner";
 import Image from "next/image";
 import SlideGallery from "@/components/SlideGallery/SlideGallery";
 
-
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const data = await getProyectosBySlug(params.slug);
   const project = {
     title: data.attributes.titulo,
     description: data.attributes.descripcion,
-    cover: data.attributes.cover?.data.attributes.url
+    cover: data.attributes.cover?.data.attributes.url,
   };
 
-  return{
-    title:project.title,
+  return {
+    title: project.title,
     description: data.attributes.descripcion,
-    openGraph:{
-      title:project.title,
-      description:'Iqea es una compania mexicana que desarrolla sistemas de purificacion y tratamiento de agua, haciendo uso de metodos de ultima generacion como Osmosis inversa o Electrocuagulacion garantizamos la calidad de su proyecto',
-      url:'/',
-      siteName:'IQEA Ingenieria Quimica Electromicanica Ambiental',
-      images:[{
-        url:project.cover?`${project.cover}`:'/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdqhvp0atv%2Fimage%2Fupload%2Fv1700861892%2F2_41ea60e311.jpg&w=2048&q=75',
-        width:1280,
-        height:800
-      }],
-      locale:'es-MX',
-      type:'website'
-    }
-  }
+    openGraph: {
+      title: project.title,
+      description:
+        "Iqea es una compania mexicana que desarrolla sistemas de purificacion y tratamiento de agua, haciendo uso de metodos de ultima generacion como Osmosis inversa o Electrocuagulacion garantizamos la calidad de su proyecto",
+      url: "/",
+      siteName: "IQEA Ingenieria Quimica Electromicanica Ambiental",
+      images: [
+        {
+          url: project.cover
+            ? `${project.cover}`
+            : "/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdqhvp0atv%2Fimage%2Fupload%2Fv1700861892%2F2_41ea60e311.jpg&w=2048&q=75",
+          width: 1280,
+          height: 800,
+        },
+      ],
+      locale: "es-MX",
+      type: "website",
+    },
+  };
 }
-
-
 
 export default async function page({ params }: { params: { slug: string } }) {
   const data = await getProyectosBySlug(params.slug);
@@ -50,8 +56,8 @@ export default async function page({ params }: { params: { slug: string } }) {
     location: data.attributes.ubicacion,
     description: data.attributes.descripcion,
     galery: data.attributes.galeria?.data,
+    cover: data.attributes.cover?.data,
   };
-  // console.log(project)
 
   return (
     <section className="projectDetailPage">
@@ -63,14 +69,26 @@ export default async function page({ params }: { params: { slug: string } }) {
           ayudando a preservar este recurso vital para las generaciones futuras.
         </p>
       </div>
-      {project.galery && (
+      {project.galery ? (
         <>
           <hr className="projectSeparator" />
           <div className="galeria">
-          <SlideGallery imageArr={project.galery} />
-
+            <SlideGallery imageArr={project.galery} />
           </div>
-
+        </>
+      ) : (
+        <>
+          <hr className="projectSeparator" />
+          <div className="coverImage">
+            <img
+              src={project.cover.attributes.url}
+              alt={
+                project.cover.attributes.alternativeText
+                  ? project.cover.attributes.alternativeText
+                  : "imagen de proyecto"
+              }
+            />
+          </div>
         </>
       )}
       <div className="projectTitle">

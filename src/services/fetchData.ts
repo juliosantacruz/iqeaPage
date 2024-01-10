@@ -1,11 +1,10 @@
 import axios from "axios";
 
-const isDEV = true
+const isDEV = true;
 const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD;
 const API_URL_STRAPI_DEV = process.env.API_URL_STRAPI_DEV;
-const API_URL_STRAPI = isDEV? API_URL_STRAPI_DEV:API_URL_STRAPI_PROD
-const PUBLIC_API_URL_STRAPI  = process.env.PUBLIC_API_URL_STRAPI
-
+const API_URL_STRAPI = isDEV ? API_URL_STRAPI_DEV : API_URL_STRAPI_PROD;
+const PUBLIC_API_URL_STRAPI = process.env.PUBLIC_API_URL_STRAPI;
 
 // console.log('DEV', API_URL_STRAPI_DEV);
 // console.log('PROD',API_URL_STRAPI_PROD);
@@ -123,7 +122,7 @@ export async function getServicios() {
   return data;
 }
 
-export async function getServiciosBySlug(slug:string) {
+export async function getServiciosBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/servicios/${slug}`);
 
   if (!res.ok) {
@@ -133,39 +132,61 @@ export async function getServiciosBySlug(slug:string) {
   return data;
 }
 
+export async function getVisitasPortafolioBySlug(slug: string) {
+  try {
+    const res = await fetch(`${API_URL_STRAPI}/visitas-portafolios/${slug}`);
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    // Aquí puedes manejar el error de la manera que prefieras
+    console.error("Error fetching data:", error);
+    // Puedes lanzar el error nuevamente si lo deseas
+    throw error;
+  }
+}
+
 export async function getProjectsGalery() {
-  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=alcance&populate[cover][fields][3]=*&populate[tags][fields][4]=*`);
+  const res = await fetch(
+    `${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=alcance&fields[3]=isPublic&populate[cover][fields][4]=*&populate[tags][fields][5]=*`
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
   const { data } = await res.json();
   // console.log(data)
-  const projectsData = data.map((project:any)=>{
+  const projectsData = data.map((project: any) => {
     const { titulo, slug, cover, alcance, tags } = project.attributes;
-    const coverImage = cover.data?.attributes.url
+    const coverImage = cover.data?.attributes.url;
 
     // const arrTags = tags.data?.map((tag:any)=>{
     //   const newTag = tag.attributes.tag
     //   return newTag
     // })
 
-    const newProject={
-      id:project.id,
-      title:titulo,
-      slug:slug,
-      cover:coverImage,
-      scope:alcance,
-      altText:cover.data?.attributes.alternativeText,
-      tags:tags.data
-    }
-    return newProject
-  })
+    const newProject = {
+      id: project.id,
+      title: titulo,
+      slug: slug,
+      cover: coverImage,
+      scope: alcance,
+      altText: cover.data?.attributes.alternativeText,
+      tags: tags.data,
+    };
+    return newProject;
+  });
   return projectsData;
 }
 
 export async function getProyectos() {
-  const res = await fetch(`${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&populate[cover][fields][2]=*&populate[tags][fields][3]=*`);
+  const res = await fetch(
+    `${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=isPublic&populate[cover][fields][3]=*&populate[tags][fields][4]=*`
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -174,7 +195,7 @@ export async function getProyectos() {
   return data;
 }
 
-export async function getProyectosBySlug(slug:string) {
+export async function getProyectosBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/proyectos/${slug}`);
 
   if (!res.ok) {
@@ -185,7 +206,9 @@ export async function getProyectosBySlug(slug:string) {
 }
 
 export async function getCatProductos() {
-  const res = await fetch(`${API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&fields[2]=descripcion&populate[cover][fields][3]=*&populate[productos][fields][4]=titulo&populate[productos][fields][5]=slug&populate[productos][populate][cover]=*`);
+  const res = await fetch(
+    `${API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&fields[2]=descripcion&populate[cover][fields][3]=*&populate[productos][fields][4]=titulo&populate[productos][fields][5]=slug&populate[productos][populate][cover]=*`
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -194,8 +217,10 @@ export async function getCatProductos() {
   return data;
 }
 
-export async function getCatProductosBySlug(slug:string) {
-  const res = await fetch(`${API_URL_STRAPI}/categoria-productos/${slug}?populate=*`);
+export async function getCatProductosBySlug(slug: string) {
+  const res = await fetch(
+    `${API_URL_STRAPI}/categoria-productos/${slug}?populate=*`
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -214,7 +239,7 @@ export async function getProductos() {
   return data;
 }
 
-export async function getProductosBySlug(slug:string) {
+export async function getProductosBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/productos/${slug}`);
 
   if (!res.ok) {
@@ -235,7 +260,7 @@ export async function getProcesos() {
   return data;
 }
 
-export async function getProcesosBySlug(slug:string) {
+export async function getProcesosBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/tipo-procesos/${slug}?populate=*`);
 
   if (!res.ok) {
@@ -245,7 +270,7 @@ export async function getProcesosBySlug(slug:string) {
   return data;
 }
 
-export async function getFormularioBySlug(slug:string) {
+export async function getFormularioBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/formularios-contactos/${slug}`);
 
   if (!res.ok) {
@@ -255,7 +280,7 @@ export async function getFormularioBySlug(slug:string) {
   return data;
 }
 
-export async function getContactForm(API_URL:string) {
+export async function getContactForm(API_URL: string) {
   const res = await fetch(`${API_URL}/formularios-contactos`);
 
   if (!res.ok) {
@@ -275,7 +300,7 @@ export async function getSistemasTratamiento() {
   return data;
 }
 
-export async function getSistemasTratamientoBySlug(slug:string) {
+export async function getSistemasTratamientoBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/sistemas-tratamientos/${slug}`);
 
   if (!res.ok) {
@@ -284,4 +309,3 @@ export async function getSistemasTratamientoBySlug(slug:string) {
   const { data } = await res.json();
   return data;
 }
-

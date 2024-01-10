@@ -1,38 +1,36 @@
-import { getProyectos } from "@/services/fetchData";
-import Link from "next/link";
-import React from "react";
-import "./Proyectos.scss";
-import CallToActionBanner from "@/components/CallToActionBanner";
-import Image from "next/image";
+import { getProyectos, getVisitasPortafolioBySlug } from '@/services/fetchData'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react'
+import './Portafolio.scss'
 
-export default async function page() {
-  const data = await getProyectos();
-  const projectData = data.map((project: any) => {
-    const { titulo, slug, cover, isPublic } = project.attributes;
+export  default async function Portafolio() {
+  const data = await getVisitasPortafolioBySlug('sam-prevencion-2024')
+  const proyectos = await getProyectos();
+
+  const projectData = proyectos.map((project: any) => {
+    const { titulo, slug, cover } = project.attributes;
     const coverImage = cover.data?.attributes.url;
 
     const newProject = {
       id: project.id,
       title: titulo,
       slug: slug,
-      isPublic:isPublic,
       cover: coverImage,
       altText: cover.data?.attributes.alternativeText,
       tags: [],
     };
-
-      return newProject;
-
-
-  }).filter((project:any) => !!project.isPublic)
+    return newProject;
+  });
 
   return (
-    <section className="ProyectosPage">
+    <section className='PortafolioIqea'>
+
       <div className="pageTitle">
-        <h1>Proyectos IQEA</h1>
+      <h1>Portafolio Iqea</h1>
       </div>
 
-      <div className="projectGroup">
+      <div className="portafolioGroup">
         {projectData.map((proyecto: any) => {
           return (
             <article className="proyectCard" key={proyecto.id}>
@@ -51,7 +49,6 @@ export default async function page() {
           );
         })}
       </div>
-      <CallToActionBanner />
     </section>
-  );
+  )
 }

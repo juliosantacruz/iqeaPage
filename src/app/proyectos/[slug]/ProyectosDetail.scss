@@ -25,6 +25,20 @@
     flex-direction: row;
     overflow: hidden;
   }
+  .coverImage{
+    width: 100%;
+    height: 440px;
+    margin: 50px auto;
+    box-shadow: var(--box-shadow-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: auto;
+      height: 100%;
+    }
+  }
   .projectTitle {
     width: 100%;
     min-height: 80px;
