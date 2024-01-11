@@ -1,4 +1,3 @@
-'use client'
 import LogClients from '@/components/LogClients/LogClients'
 import { getVisitasPortafolioBySlug } from '@/services/fetchData'
 import React from 'react'
