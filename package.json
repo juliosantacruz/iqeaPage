@@ -24,7 +24,8 @@
     "sass": "^1.69.3",
     "sharp": "^0.32.6",
     "swiper": "^11.0.5",
-    "webpack": "^5.89.0"
+    "webpack": "^5.89.0",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.0",

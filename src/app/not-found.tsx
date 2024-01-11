@@ -13,7 +13,10 @@ export default function NotFound() {
  }
   return (
     <div className='notFound'>
-      <Image src={notFoundImg} alt='' width={300}/>
+      <div className="imageRobot">
+      <Image src={notFoundImg} alt='robot 404 pagina no encontrada' width={300}/>
+
+      </div>
       <h2>Pagina no encontrada</h2>
       <p>Lo sentimos, la pagina a la que quieres acceder no existe o no tienes acceso
         <br/> Haz click para regresar a la pagina principal

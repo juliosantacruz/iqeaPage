@@ -3,9 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import './Portafolio.scss'
+import CheckAuth from '@/components/CheckAuth/CheckAuth';
+
+
 
 export  default async function Portafolio() {
-  const data = await getVisitasPortafolioBySlug('sam-prevencion-2024')
+
   const proyectos = await getProyectos();
 
   const projectData = proyectos.map((project: any) => {
@@ -24,17 +27,19 @@ export  default async function Portafolio() {
   });
 
   return (
+    <>
+
     <section className='PortafolioIqea'>
 
       <div className="pageTitle">
-      <h1>Portafolio Iqea</h1>
+      <h1>Portafolio IQEA Ingenieria <CheckAuth/></h1>
       </div>
 
       <div className="portafolioGroup">
         {projectData.map((proyecto: any) => {
           return (
             <article className="proyectCard" key={proyecto.id}>
-              <Link href={`proyectos/${proyecto.slug}`}>
+              <Link href={`/proyectos/${proyecto.slug}`}>
                 {proyecto.cover && (
                   <Image
                     src={proyecto.cover}
@@ -50,5 +55,6 @@ export  default async function Portafolio() {
         })}
       </div>
     </section>
+    </>
   )
 }

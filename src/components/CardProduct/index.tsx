@@ -12,7 +12,7 @@ export default function ProductCard({productData}:any) {
   return (
     <article className="cardProduct">
         <div className="cardImage">
-          <Image src={productData.cover||ImageNotFound} alt={productData.cover_alt} width={200} height={200} className="productImage" />
+          <Image src={productData.cover||ImageNotFound} alt={productData.cover_alt||'imagen de producto'} width={200} height={200} className="productImage" />
         </div>
       <div className="cardTitle">
         <h3>

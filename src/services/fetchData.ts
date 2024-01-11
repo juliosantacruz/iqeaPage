@@ -4,13 +4,51 @@ const isDEV = true;
 const API_URL_STRAPI_PROD = process.env.API_URL_STRAPI_PROD;
 const API_URL_STRAPI_DEV = process.env.API_URL_STRAPI_DEV;
 const API_URL_STRAPI = isDEV ? API_URL_STRAPI_DEV : API_URL_STRAPI_PROD;
-const PUBLIC_API_URL_STRAPI = process.env.PUBLIC_API_URL_STRAPI;
+const CLIENT_API_URL_STRAPI = process.env.CLIENT_API_URL_STRAPI;
 
-// console.log('DEV', API_URL_STRAPI_DEV);
-// console.log('PROD',API_URL_STRAPI_PROD);
+// console.log('DEV', CLIENT_API_URL_STRAPI);
+// console.log('PROD',CLIENT_API_URL_STRAPI);
 // console.log('lol',API_URL_STRAPI);
 // http://localhost:1337/api/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug
 // http://localhost:1337/api/navigation?populate[navigationPanel][populate][link][populate]=*&populate[navigationPanel][populate][sections][populate]=*
+
+// export async function getVisitasPortafolioBySlug(slug: string) {
+//   try {
+//     const res = await fetch(`${API_URL_STRAPI}/visitas-portafolios/${slug}`);
+
+//     if (!res.ok) {
+//       throw new Error("Failed to fetch data");
+//     }
+
+//     const { data } = await res.json();
+//     return data;
+//   } catch (error) {
+//     // Aquí puedes manejar el error de la manera que prefieras
+//     console.error("Error fetching data:", error);
+//     // Puedes lanzar el error nuevamente si lo deseas
+//     throw error;
+//   }
+// }
+
+export async function getVisitasPortafolioBySlug(slug: string) {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: `${CLIENT_API_URL_STRAPI}/visitas-portafolios/${slug}`,
+    headers: {},
+  };
+
+  const data: any = axios
+    .request(config)
+    .then((response) => {
+      return JSON.stringify(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return data;
+}
 
 export async function fetchNavContent() {
   let config = {
@@ -36,7 +74,7 @@ export async function fetchProductContent() {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${PUBLIC_API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug`,
+    url: `${CLIENT_API_URL_STRAPI}/categoria-productos?fields[0]=title&fields[1]=slug&populate[productos][fields][2]=titulo&populate[productos][fields][3]=slug`,
     headers: {},
   };
 
@@ -56,7 +94,7 @@ export async function fetchProcesosContent() {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${PUBLIC_API_URL_STRAPI}/tipo-procesos?fields[0]=titulo&fields[1]=slug&populate[procesos][fields][2]=titulo&populate[procesos][fields][3]=slug`,
+    url: `${CLIENT_API_URL_STRAPI}/tipo-procesos?fields[0]=titulo&fields[1]=slug&populate[procesos][fields][2]=titulo&populate[procesos][fields][3]=slug`,
     headers: {},
   };
 
@@ -76,7 +114,7 @@ export async function fetchServiciosContent() {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${PUBLIC_API_URL_STRAPI}/servicios?fields[0]=titulo&fields[1]=slug`,
+    url: `${CLIENT_API_URL_STRAPI}/servicios?fields[0]=titulo&fields[1]=slug`,
     headers: {},
   };
 
@@ -96,7 +134,7 @@ export async function fetchSTratamientoContent() {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${PUBLIC_API_URL_STRAPI}/sistemas-tratamientos?fields[0]=titulo&fields[1]=slug`,
+    url: `${CLIENT_API_URL_STRAPI}/sistemas-tratamientos?fields[0]=titulo&fields[1]=slug`,
     headers: {},
   };
 
@@ -130,24 +168,6 @@ export async function getServiciosBySlug(slug: string) {
   }
   const { data } = await res.json();
   return data;
-}
-
-export async function getVisitasPortafolioBySlug(slug: string) {
-  try {
-    const res = await fetch(`${API_URL_STRAPI}/visitas-portafolios/${slug}`);
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const { data } = await res.json();
-    return data;
-  } catch (error) {
-    // Aquí puedes manejar el error de la manera que prefieras
-    console.error("Error fetching data:", error);
-    // Puedes lanzar el error nuevamente si lo deseas
-    throw error;
-  }
 }
 
 export async function getProjectsGalery() {
