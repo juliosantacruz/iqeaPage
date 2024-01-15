@@ -25,6 +25,8 @@ export default async function page() {
 
 
   }).filter((project:any) => !!project.isPublic)
+  .sort((a:any, b:any)=> a.id - b.id)
+
 
   return (
     <section className="ProyectosPage">

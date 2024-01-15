@@ -142,7 +142,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--PrimaryBtnColor) !important;
+  background: var(--PrimaryBtnColor) ;
 
 }
 
@@ -168,9 +168,9 @@ button {
     0px 6px 12px 0px rgba(0, 0, 0, 0.08);
   outline: none;
   border: none;
-  background: var(--SecondaryBgColor);
+  // background: var(--SecondaryBgColor);
   color: white;
-  background: var(--PrimaryBtnColor) !important;
+  // background: var(--PrimaryBtnColor) !important;
   font-weight: 600;
   font-size: var(--ContentTextSize);
 }

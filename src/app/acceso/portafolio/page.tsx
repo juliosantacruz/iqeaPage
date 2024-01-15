@@ -25,7 +25,7 @@ export  default async function Portafolio() {
       tags: [],
     };
     return newProject;
-  });
+  }).sort((a:any, b:any)=> a.id - b.id)
 
   return (
     <>
@@ -40,7 +40,7 @@ export  default async function Portafolio() {
         {projectData.map((proyecto: any) => {
           return (
             <article className="proyectCard" key={proyecto.id}>
-              <Link href={`/proyectos/${proyecto.slug}`}>
+              <Link href={`/acceso/portafolio/${proyecto.slug}`}>
                 {proyecto.cover && (
                   <Image
                     src={proyecto.cover}

@@ -215,6 +215,25 @@ export async function getProyectos() {
   return data;
 }
 
+export async function getProyectosNavigator() {
+  try {
+    const res = await fetch(
+      `${CLIENT_API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=isPublic`
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    // Aquí puedes manejar el error de la manera que prefieras
+    console.error("Error fetching data:", error);
+    // Puedes lanzar el error nuevamente si lo deseas
+    throw error;
+  }
+}
+
 export async function getProyectosBySlug(slug: string) {
   const res = await fetch(`${API_URL_STRAPI}/proyectos/${slug}`);
 

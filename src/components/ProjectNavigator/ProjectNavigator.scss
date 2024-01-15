@@ -1,0 +1,48 @@
+.proyectNavigation {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  color: white;
+
+  .navButton {
+    background: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+
+    font-size: var(--SubtitleTextSize);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .btnTitle {
+      display: flex;
+      align-items: center;
+      img {
+        margin: 0 10px;
+        height: 35px;
+      }
+    }
+    .btnSubtitle{
+      font-size: var(--ContentTextSize);
+      margin-top: 10px;
+    }
+  }
+  .left {
+    align-items: flex-end;
+    .btnSubtitle {
+      text-align: right;
+    }
+  }
+  .right {
+    align-items: flex-start;
+    .btnSubtitle {
+      text-align: left;
+    }
+  }
+
+  @include media-down(sm) {
+   gap: 15px;
+  }
+}
