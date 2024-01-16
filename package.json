@@ -14,6 +14,7 @@
     "@rjsf/utils": "^5.13.6",
     "@rjsf/validator-ajv8": "^5.13.6",
     "@types/react-transition-group": "^4.4.9",
+    "@types/three": "^0.160.0",
     "axios": "^1.6.0",
     "chokidar": "^3.5.3",
     "next": "^14.0.1",
@@ -24,6 +25,7 @@
     "sass": "^1.69.3",
     "sharp": "^0.32.6",
     "swiper": "^11.0.5",
+    "three": "^0.160.0",
     "webpack": "^5.89.0",
     "zustand": "^4.4.7"
   },

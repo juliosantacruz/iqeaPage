@@ -71,47 +71,43 @@
             "properties": {
               "flowGPD": {
                 "type": "string",
-                "title": "Flujo - gpd"
+                "title": "Flujo - m3/d"
               },
               "temperature": {
                 "type": "string",
-                "title": "Temperatura"
+                "title": "Temperatura - C"
               },
               "ph": {
                 "type": "string",
                 "title": "pH"
               },
-              "dissolvedOxygen": {
-                "type": "string",
-                "title": "Oxígeno disuelto - mg/L"
-              },
               "biologicalOxygenDemand": {
                 "type": "string",
-                "title": "BOD - Demanda biológica de oxígeno - mg/L"
+                "title": "DQO - Demanda quimica de oxígeno - mg/L"
               },
               "totalSuspendedSolids": {
                 "type": "string",
-                "title": "TSS - Solidos totalmente suspendidos - mg/L"
+                "title": "SST - Solidos suspendidos totales - mg/L"
               },
               "nitrogenAmmonia": {
                 "type": "string",
-                "title": "Nitrógeno Kjeldahl total (TKN) Amoniaco (NH3)+Nitrógeno orgánico"
+                "title": "TKN - Nitrógeno Kjeldahl total"
               },
               "totalNitrogen": {
                 "type": "string",
-                "title": "TN - Nitrógeno total - mg/L"
+                "title": "NT - Nitrógeno total - mg/L"
               },
               "totalPhosphorus": {
                 "type": "string",
-                "title": "TP - Fósforo total - mg/L"
+                "title": "PT - Fósforo total - mg/L"
               },
               "fatOilGrease": {
                 "type": "string",
-                "title": "FOG - Grasa y aceite - mg/L"
+                "title": "G&A - Grasas y aceites - mg/L"
               },
               "totalPetroleumHydrocarbons": {
                 "type": "string",
-                "title": "TPH - Hidrocarburos totales de petróleo - mg/L"
+                "title": "Alcalinidad - mg/L"
               }
             }
           },
