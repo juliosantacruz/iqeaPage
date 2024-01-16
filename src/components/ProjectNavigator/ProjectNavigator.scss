@@ -16,6 +16,7 @@
     align-items: center;
     flex-direction: column;
 
+    width: 50%;
     .btnTitle {
       display: flex;
       align-items: center;
@@ -24,7 +25,7 @@
         height: 35px;
       }
     }
-    .btnSubtitle{
+    .btnSubtitle {
       font-size: var(--ContentTextSize);
       margin-top: 10px;
     }
@@ -43,6 +44,14 @@
   }
 
   @include media-down(sm) {
-   gap: 15px;
+    gap: 40px;
+    flex-direction: column;
+
+    .navButton{
+      width: 100%;
+      .btnSubtitle{
+        margin-top: 0;
+      }
+    }
   }
 }

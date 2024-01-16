@@ -82,6 +82,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           <hr className="projectSeparator" />
           <div className="coverImage">
             <img
+            className="leCover"
               src={project.cover.attributes.url}
               alt={
                 project.cover.attributes.alternativeText
