@@ -21,14 +21,13 @@ export default function RevitModel(ModelTest: any) {
     camara.position.x = 1;
     camara.position.y =5;
     camara.position.z = 25;
-    // camara.lookAt(0, 1000000, 0);
-0
+
     const renderer = new THREE.WebGL1Renderer();
     renderer.setSize(width, height);
 
     currentRef?.appendChild(renderer.domElement);
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshPhongMaterial({ color: "green" });
+    // const geometry = new THREE.BoxGeometry(1, 1, 1);
+    // const material = new THREE.MeshPhongMaterial({ color: "green" });
 
     // // Grid
     // const gridHelper = new THREE.GridHelper(40, 40, "#858585");

@@ -18,17 +18,14 @@ type ProjectIndex = {
   next?: ProjectNavType;
   prev?: ProjectNavType;
 };
-export default function ProjectNavigator() {
-  // const [projectsNavigator, setProjectsNavigator] = useState<ProjectNavType[]>(
-  //   []
-  // );
+export default function ProjectNavigator({data}:any) {
   const [projectIndex, setProjectIndex] = useState<ProjectIndex>();
   const pathname = usePathname();
 
   useEffect(() => {
     const fetchProyects = async () => {
       const setPublic = pathname.split("/")[1] === "acceso" ? true : false;
-      const data = await getProyectosNavigator();
+      // const data = await getProyectosNavigator();
       if (setPublic) {
         const projectsList = data
           .map((project: any) => {

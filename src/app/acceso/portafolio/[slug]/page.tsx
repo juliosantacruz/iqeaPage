@@ -1,4 +1,4 @@
-import { getProyectosBySlug } from "@/services/fetchData";
+import { getProyectosBySlug, getProyectosNavigator } from "@/services/fetchData";
 import React from "react";
 import "./ProyectosDetail.scss";
 import CallToActionBanner from "@/components/CallToActionBanner";
@@ -43,6 +43,8 @@ export async function generateMetadata({
 }
 
 export default async function page({ params }: { params: { slug: string } }) {
+  const dataNavigator = await getProyectosNavigator()
+
   const data = await getProyectosBySlug(params.slug);
   const project = {
     id: data.id,
@@ -144,7 +146,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-      <ProjectNavigator/>
+      <ProjectNavigator data={dataNavigator}/>
       <CallToActionBanner />
     </section>
   );
