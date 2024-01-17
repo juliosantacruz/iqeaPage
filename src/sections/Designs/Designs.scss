@@ -39,4 +39,17 @@
       width: 50%;
     }
   }
+  @include media-down(md) {
+
+    .ModelAccents{
+      flex-direction: column;
+
+      .textContent{
+        width: 100%;
+      }
+      .modelContent{
+        width: 100%;
+      }
+    }
+  }
 }

@@ -14,7 +14,7 @@ export default function RevitModel(ModelTest: any) {
     const { clientWidth: width, clientHeight: height } = currentRef as any;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#efefef");
+    scene.background = new THREE.Color("#262626");
     const camara = new THREE.PerspectiveCamera(25, width / height, 0.01, 10000);
 
     scene.add(camara);
