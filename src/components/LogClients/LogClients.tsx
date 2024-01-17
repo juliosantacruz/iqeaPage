@@ -51,7 +51,7 @@ export default function LogClients() {
     <div className="Welcome">
       <div className="WelcomeForm">
         <form onSubmit={(event)=>onSubmit(event)} >
-          <h2>Bienvenidos {name||'lol'}</h2>
+          <h2>Bienvenidos {name||''}</h2>
           <InputField
           name="password"
           label="Contraseña"
@@ -63,7 +63,7 @@ export default function LogClients() {
             <label htmlFor="">Contraseña</label>
             <input name="password" type="text" />
           </div> */}
-          <button type="submit">Entrar</button>
+          <button type="submit" >Entrar</button>
 
           {error &&
           <h4>La contraseña no es valida..</h4>}
