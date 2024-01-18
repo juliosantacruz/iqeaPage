@@ -88,8 +88,8 @@ const CategoryDetail = (props: any) => {
                   <Image
                     src={product.cover || ImageNotFound}
                     alt={product.altCover ? product.altCover : "galeria"}
-                    width={120}
-                    height={120}
+                    width={200}
+                    height={200}
                   />
                   <div className="productTitle">
                     <p>{product.title}</p>
