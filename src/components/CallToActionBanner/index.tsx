@@ -8,7 +8,7 @@ export default function CallToActionBanner() {
       <Link href={'/contacto'}>
           Contactanos
         </Link>
-        <Link href={'/formulario/biological-treatment-background'}>
+        <Link href={'/cotiza/biological-treatment-background'}>
           Cotiza tu Proyecto
         </Link>
 
