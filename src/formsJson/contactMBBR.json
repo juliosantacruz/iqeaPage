@@ -58,6 +58,14 @@
             "type": "string",
             "title": "Correo Electronico",
             "format": "email"
+          },
+          "linkedin": {
+            "type": "string",
+            "title": "perfil de LinkedIn"
+          },
+          "urlEmpresa": {
+            "type": "string",
+            "title": "Pagina web de tu Empresa"
           }
         }
       },

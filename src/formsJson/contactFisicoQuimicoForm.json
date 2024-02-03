@@ -1,7 +1,7 @@
 {
   "formData": {
     "title": "Formulario de antecedentes de tratamiento biológico",
-    "description": "Si está interesado en alguno de nuestros sistemas de tratamiento biológico, complete la mayor cantidad posible de la siguiente información y estaremos encantados de analizar su proyecto. necesidades.",
+    "description": "Si está interesado en alguno de nuestros sistemas de tratamiento Fisico - Quimico, complete la mayor cantidad posible de la siguiente información y estaremos encantados de analizar su proyecto. necesidades.",
     "type": "object",
     "properties": {
       "contactForm": {
@@ -74,7 +74,7 @@
         "type": "object",
         "properties": {
           "InfluentLevels": {
-            "title": "Niveles influentes",
+            "title": "Niveles influyentes",
             "type": "object",
             "properties": {
               "flowGPD": {
@@ -105,21 +105,17 @@
                 "type": "string",
                 "title": "TKN - Nitrógeno Kjeldahl total"
               },
-              "totalNitrogen": {
-                "type": "string",
-                "title": "NT - Nitrógeno total - mg/L"
-              },
-              "totalPhosphorus": {
-                "type": "string",
-                "title": "PT - Fósforo total - mg/L"
-              },
               "fatOilGrease": {
                 "type": "string",
                 "title": "G&A - Grasas y aceites - mg/L"
               },
-              "totalPetroleumHydrocarbons": {
+              "solidosTotales": {
                 "type": "string",
-                "title": "Alcalinidad - mg/L"
+                "title": "solidos totals TDS - mL/L"
+              },
+              "conductividad": {
+                "type": "string",
+                "title": "Conductividad - μ℧"
               }
             }
           },
@@ -155,21 +151,17 @@
                 "type": "string",
                 "title": "Nitrógeno Kjeldahl total (TKN) Amoniaco (NH3)+Nitrógeno orgánico"
               },
-              "totalNitrogen": {
-                "type": "string",
-                "title": "TN - Nitrógeno total - mg/L"
-              },
-              "totalPhosphorus": {
-                "type": "string",
-                "title": "TP - Fósforo total - mg/L"
-              },
               "fatOilGrease": {
                 "type": "string",
                 "title": "FOG - Grasa y aceite - mg/L"
               },
-              "totalPetroleumHydrocarbons": {
+              "solidosTotales": {
                 "type": "string",
-                "title": "TPH - Hidrocarburos totales de petróleo - mg/L"
+                "title": "solidos totals TDS - mL/L"
+              },
+              "conductividad": {
+                "type": "string",
+                "title": "Conductividad - μ℧"
               }
             }
           }

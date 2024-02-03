@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   border-radius: var(--border-radius-lg);
   // background: var(--TercearyBgColor);
   overflow: hidden;
@@ -20,12 +20,17 @@
     }
 
     .SubcribeInput {
+      height: 44px;
+
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       gap: 16px;
       .SubcribeInputElement {
+        height: 44px;
+
         width: 70%;
         display: flex;
         padding: 10px 8px 10px 12px;
@@ -35,6 +40,7 @@
         border: 1px solid rgb(139, 139, 139);
       }
       .SubcribeBtn {
+        height: 44px;
         width: 30%;
         display: flex;
         padding: 10px 20px;
@@ -42,7 +48,7 @@
         align-items: center;
         border-radius: 5px;
         color: white;
-        background: var(--SecondaryBgColor);
+        background: var(--PrimaryBtnColor);
         border: none;
         font-weight: 600;
         font-size: var(--ContentTextSize);
@@ -70,6 +76,7 @@
       margin: 20px auto;
       z-index: 5;
       .SubcribeInput {
+        height: 100%;
         width: 100%;
         flex-direction: column;
         .SubcribeInputElement{

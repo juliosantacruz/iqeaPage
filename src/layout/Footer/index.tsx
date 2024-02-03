@@ -146,12 +146,12 @@ export default function Footer() {
         <div className="legend">
           <p>© 2023 Todos los derechos reservados IQEA </p>
         </div>
-        <div className="develop">
+        {/* <div className="develop">
           <p>sitio desarrollado por </p>
           <Link href={"https://juliosantacruz.dev"} target="_blank">
             <Image src={logoJSdev} alt="logoJSdev" className="jsdevLogo" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -55,6 +55,14 @@
             "title": "Email",
             "format": "email"
         },
+        "linkedin": {
+          "type": "string",
+          "title": "perfil de LinkedIn"
+        },
+        "urlEmpresa": {
+          "type": "string",
+          "title": "Pagina web de tu Empresa"
+        },
         "describeYourProject": {
             "type": "string",
             "title": "Please briefly describe your project"
