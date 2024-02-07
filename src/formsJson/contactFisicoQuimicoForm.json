@@ -74,7 +74,7 @@
         "type": "object",
         "properties": {
           "InfluentLevels": {
-            "title": "Niveles influyentes",
+            "title": "Niveles influentes",
             "type": "object",
             "properties": {
               "flowGPD": {
@@ -116,6 +116,42 @@
               "conductividad": {
                 "type": "string",
                 "title": "Conductividad - μ℧"
+              },
+              "arsenico": {
+                "type": "string",
+                "title": "Arsenico - mg/L"
+              },
+              "cadmio": {
+                "type": "string",
+                "title": "Cadmio - mg/L"
+              },
+              "cianuro": {
+                "type": "string",
+                "title": "Cianuro - mg/L"
+              },
+              "cobre": {
+                "type": "string",
+                "title": "Cobre - mg/L"
+              },
+              "cromo": {
+                "type": "string",
+                "title": "Cromo - mg/L"
+              },
+              "mercurio": {
+                "type": "string",
+                "title": "Mercurio - mg/L"
+              },
+              "niquel": {
+                "type": "string",
+                "title": "Niquel - mg/L"
+              },
+              "plomo": {
+                "type": "string",
+                "title": "Plomo - mg/L"
+              },
+              "zinc": {
+                "type": "string",
+                "title": "Zinc - mg/L"
               }
             }
           },
@@ -162,6 +198,42 @@
               "conductividad": {
                 "type": "string",
                 "title": "Conductividad - μ℧"
+              },
+              "arsenico": {
+                "type": "string",
+                "title": "Arsenico - mg/L"
+              },
+              "cadmio": {
+                "type": "string",
+                "title": "Cadmio - mg/L"
+              },
+              "cianuro": {
+                "type": "string",
+                "title": "Cianuro - mg/L"
+              },
+              "cobre": {
+                "type": "string",
+                "title": "Cobre - mg/L"
+              },
+              "cromo": {
+                "type": "string",
+                "title": "Cromo - mg/L"
+              },
+              "mercurio": {
+                "type": "string",
+                "title": "Mercurio - mg/L"
+              },
+              "niquel": {
+                "type": "string",
+                "title": "Niquel - mg/L"
+              },
+              "plomo": {
+                "type": "string",
+                "title": "Plomo - mg/L"
+              },
+              "zinc": {
+                "type": "string",
+                "title": "Zinc - mg/L"
               }
             }
           }
