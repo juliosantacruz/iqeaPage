@@ -20,7 +20,7 @@
     .logoIqea {
       width: 120px;
       height: auto;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0);
       padding: 10px;
       border-radius: var(--border-radius-logo);
     }
@@ -41,7 +41,6 @@
               stroke: #4e66f8;
               // border: solid 2px rgba(0, 0, 0, 0.418);
               border-radius: 5px;
-
             }
             .instagram:hover {
               color: white;
@@ -61,7 +60,6 @@
               background-color: #ff0000;
               // border: solid 2px rgba(0, 0, 0, 0.418);
               border-radius: 5px;
-
             }
             .socialMediaIcon {
               width: 32px;
@@ -76,6 +74,7 @@
   .footerSeparator {
     margin: 0 auto;
     max-width: var(--max-width);
+    border-color: var(--footerTextColor);
   }
   .footerBody {
     display: flex;
@@ -89,6 +88,10 @@
       h4 {
         font-size: 24px;
         margin: 20px 0;
+        color: var(--footerTextColor);
+      }
+      p {
+        color: var(--footerTextColor);
       }
       .direccion,
       .telefono,
@@ -117,7 +120,7 @@
       width: 30%;
       max-width: 235px;
       .active {
-        border-bottom: 2px solid var(--PrimaryBgColor);
+        border-bottom: 2px solid var(--footerTextColor);
       }
       .footerNav {
         max-height: 40px;
@@ -125,7 +128,7 @@
         padding: 15px 0;
       }
     }
-    .subEmail{
+    .subEmail {
       width: 35%;
       height: 80%;
     }
@@ -138,7 +141,12 @@
     height: 10%;
     margin: 0 auto;
     max-width: var(--max-width);
+    .legend {
+      p{
 
+        color: var(--footerTextColor);
+      }
+    }
     .develop {
       display: flex;
       flex-direction: column;
@@ -203,9 +211,8 @@
 
         margin: 10px 0;
       }
-      .subEmail{
+      .subEmail {
         width: 100%;
-
       }
     }
 

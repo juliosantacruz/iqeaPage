@@ -11,14 +11,15 @@
     "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   /* VARIABLES DE GENERALES */
-  --PrimaryBgColor: #000000;
-  --AccentBgColor: #262626;
+
+  --PrimaryBgColor: #ffffff;
+  --AccentBgColor: #e4e4e4;
   --SecondaryBgColor: #005272;
   --TercearyBgColor: #a2d5ac;
 
 
-  --PrimaryTextColor: #ffffff;
-  --SecondaryTextColor: #eeeeee;
+  --PrimaryTextColor: #0f0f0f;
+  --SecondaryTextColor: #0f0f0f;
 
   --PrimaryBtnColor:rgb(65,31,164);
 
@@ -37,15 +38,15 @@
   --cardBodySize: 16px;
 
   /* VARIABLES DE NAVBAR */
-  --navbarBgColor: #005272;
+  --navbarBgColor: #452D61;
   --navbarTextColor: #ffffff;
   --navbarTextSize: 16px;
   --nav-size: 80px;
   --box-shadow-navbar:0px 3px 3px 0px rgba(0, 0, 0, 0.767);
 
   /* VARIABLES DE FOOTER */
-  --footerBgColor: #005272;
-  --footerTextColor: #e7e7e7;
+  --footerBgColor: #452D61;
+  --footerTextColor: #ffffff;
 
 
 
@@ -87,6 +88,47 @@
     --cardBodySize: 16px;
 
     --paddingDesktop: 24px;
+  }
+
+
+  &.dark{
+    /* VARIABLES DE GENERALES */
+    --PrimaryBgColor: #000000;
+    --AccentBgColor: #262626;
+    --SecondaryBgColor: #005272;
+    --TercearyBgColor: #a2d5ac;
+
+
+    --PrimaryTextColor: #ffffff;
+    --SecondaryTextColor: #eeeeee;
+
+    --PrimaryBtnColor:rgb(65,31,164);
+
+    --SecondaryBtnColor:#16da6e;
+
+
+
+
+    /* VARIABLES DE CARDS */
+    --cardBgColor: #f7f7f7;
+    --cardTextColor: #131313;
+
+
+    /* VARIABLES DE NAVBAR */
+    --navbarBgColor: #005272;
+    --navbarTextColor: #ffffff;
+
+    --box-shadow-navbar:0px 3px 3px 0px rgba(0, 0, 0, 0.767);
+
+    /* VARIABLES DE FOOTER */
+    --footerBgColor: #005272;
+    --footerTextColor: #e7e7e7;
+
+
+
+    --box-shadow-primary: 0px 2px 4px 0px rgba(0, 0, 0, 0.74),
+        0px 6px 12px 0px rgba(0, 0, 0, 0.08);
+
   }
 }
 

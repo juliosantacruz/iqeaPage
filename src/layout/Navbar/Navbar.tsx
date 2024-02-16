@@ -67,9 +67,37 @@ export default function Navbar({Products, Systems}:any) {
             </Link>
           </li>
           <NavForms/>
+          <li>
+            <DarkBtn/>
+          </li>
 
         </ul>
       </nav>
 
   );
+}
+
+
+import sunIcon from '@/assets/icons/bx-sun.svg'
+import moonIcon from '@/assets/icons/bx-moon.svg'
+
+
+const DarkBtn=()=>{
+  const [isDarkMode, setDarkMode]=useState(false)
+
+  const handleChange=()=>{
+    setDarkMode(!isDarkMode)
+    document.documentElement.classList.toggle('dark')
+    console.log(isDarkMode)
+  }
+
+  return(
+    <>
+    {isDarkMode?
+    <button style={{backgroundColor:'white'}} onClick={handleChange}><img src={moonIcon.src} alt="icon" /></button>
+    :
+    <button style={{backgroundColor:'white'}} onClick={handleChange}><img src={sunIcon.src} alt="icon" /></button>
+    }
+    </>
+  )
 }
