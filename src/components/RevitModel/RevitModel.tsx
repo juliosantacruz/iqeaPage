@@ -22,57 +22,10 @@ export default function RevitModel(ModelTest: any) {
     camara.position.y =5;
     camara.position.z = 25;
 
-    const renderer = new THREE.WebGL1Renderer();
+    const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
 
     currentRef?.appendChild(renderer.domElement);
-    // const geometry = new THREE.BoxGeometry(1, 1, 1);
-    // const material = new THREE.MeshPhongMaterial({ color: "green" });
-
-    // // Grid
-    // const gridHelper = new THREE.GridHelper(40, 40, "#858585");
-    // scene.add(gridHelper);
-    // // Line Grid Axis X
-    // // Line Color
-    // const LineMaterialAxisX = new THREE.LineBasicMaterial({ color: 0x0000ff });
-    // // Line Vector points
-    // const pointsAxisX = [];
-    // pointsAxisX.push(new THREE.Vector3(-100, 0, 0));
-    // pointsAxisX.push(new THREE.Vector3(100, 0, 0));
-    // // set line
-    // const geometryLine = new THREE.BufferGeometry().setFromPoints(pointsAxisX);
-    // // create line
-    // const lineAxisX = new THREE.Line(geometryLine, LineMaterialAxisX);
-    // scene.add(lineAxisX);
-
-    // // Line Grid Axis Y
-    // // Line Color
-    // const LineMaterialAxisY = new THREE.LineBasicMaterial({ color: 0x00ffff });
-    // // Line Vector points
-    // const pointsAxisY = [];
-    // pointsAxisY.push(new THREE.Vector3(0, -100, 0));
-    // pointsAxisY.push(new THREE.Vector3(0, 100, 0));
-    // // set line
-    // const geometryLineY = new THREE.BufferGeometry().setFromPoints(pointsAxisY);
-    // // create line
-    // const lineAxisY = new THREE.Line(geometryLineY, LineMaterialAxisY);
-    // scene.add(lineAxisY);
-    // // Line Grid Axis Z
-    // // Line Color
-    // const LineMaterialAxisZ = new THREE.LineBasicMaterial({ color: 0xf560ff });
-    // // Line Vector points
-    // const pointsAxisZ = [];
-    // pointsAxisZ.push(new THREE.Vector3(0, 0, -100));
-    // pointsAxisZ.push(new THREE.Vector3(0, 0, 100));
-    // // set line
-    // const geometryLineZ = new THREE.BufferGeometry().setFromPoints(pointsAxisZ);
-    // // create line
-    // const lineAxisZ = new THREE.Line(geometryLineZ, LineMaterialAxisZ);
-    // scene.add(lineAxisZ);
-    // Cubo
-    // const cube = new THREE.Mesh(geometry, material);
-    // scene.add(cube);
-    // camara.lookAt(cube.position);
 
     // Modelo 3D
 
@@ -123,7 +76,7 @@ export default function RevitModel(ModelTest: any) {
     const clock = new THREE.Clock();
 
     const animate = () => {
-      const elapsedTIme = clock.getElapsedTime();
+      //const elapsedTIme = clock.getElapsedTime();
       // cube.rotation.x = elapsedTIme;
       // cube.rotation.y = elapsedTIme;
       // cube.rotation.z = elapsedTIme;
