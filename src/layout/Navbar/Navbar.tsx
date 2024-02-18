@@ -17,6 +17,7 @@ import NavSistemas from "./Submenus/NavSistemas";
 import NavProcesos from "./Submenus/NavProcesos";
 import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
+import { DarkBtn } from "@/components/DarkModeBtn/DarkModeBtn";
 
 
 export default function Navbar({Products, Systems}:any) {
@@ -78,26 +79,3 @@ export default function Navbar({Products, Systems}:any) {
 }
 
 
-import sunIcon from '@/assets/icons/bx-sun.svg'
-import moonIcon from '@/assets/icons/bx-moon.svg'
-
-
-const DarkBtn=()=>{
-  const [isDarkMode, setDarkMode]=useState(false)
-
-  const handleChange=()=>{
-    setDarkMode(!isDarkMode)
-    document.documentElement.classList.toggle('dark')
-    console.log(isDarkMode)
-  }
-
-  return(
-    <>
-    {isDarkMode?
-    <button style={{backgroundColor:'white'}} onClick={handleChange}><img src={moonIcon.src} alt="icon" /></button>
-    :
-    <button style={{backgroundColor:'white'}} onClick={handleChange}><img src={sunIcon.src} alt="icon" /></button>
-    }
-    </>
-  )
-}
