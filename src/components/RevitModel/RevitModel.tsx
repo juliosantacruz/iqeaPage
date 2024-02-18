@@ -71,18 +71,11 @@ export default function RevitModel(ModelTest: any) {
 
 
     const controls = new OrbitControls(camara, renderer.domElement);
-    controls.enableDamping = true;
+    // controls.enableDamping = true;
 
-    const clock = new THREE.Clock();
+
 
     const animate = () => {
-      //const elapsedTIme = clock.getElapsedTime();
-      // cube.rotation.x = elapsedTIme;
-      // cube.rotation.y = elapsedTIme;
-      // cube.rotation.z = elapsedTIme;
-      // cube.position.y = Math.sin(elapsedTIme*.7);
-      // cube.position.x = Math.sin(elapsedTIme*.7);
-
       controls.update();
       renderer.render(scene, camara);
 
