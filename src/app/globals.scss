@@ -14,7 +14,7 @@
 
   --PrimaryBgColor: #ffffff;
   --AccentBgColor: #e4e4e4;
-  --SecondaryBgColor: #005272;
+  --SecondaryBgColor: #a59eff;
   --TercearyBgColor: #a2d5ac;
 
 
@@ -60,7 +60,6 @@
   @include media-down(lg) {
     --paddingDesktop: 48px;
   }
-
   @include media-down(md) {
     --border-radius-sm: 0;
 

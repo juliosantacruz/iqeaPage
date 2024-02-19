@@ -1,0 +1,197 @@
+.heroSection {
+  --color-primary: var(--navbarBgColor);
+  --color-secundary: #051524;
+  --color-terciary: #8fc642;
+  --text-color: white;
+
+  width: 100vw;
+  height: calc(100vh - var(--nav-size));
+  position: relative;
+  background-size: cover;
+
+  .sandwich {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(
+      -50%
+    ); /* Centramos verticalmente el contenedor .sandwich */
+    width: 100%;
+    height: 100%;
+  }
+
+  .diagonalSup1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    // clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 100% 0, 100% 05%, 05% 100%, 0 100%);
+
+    background-color: var(--color-terciary);
+    z-index: 3;
+  }
+  .diagonalSup2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background-color: var(--color-secundary);
+    z-index: 4;
+  }
+  .diagonalSup3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 0 90%, 90% 0);
+    background-color: var(--color-primary);
+    z-index: 5;
+  }
+  .diagonalInf1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(100% 70%, 70% 100%, 100% 100%);
+    background-color: var(--color-terciary);
+    z-index: 4;
+  }
+  .diagonalInf2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(100% 60%, 60% 100%, 100% 100%);
+
+    background-color: var(--color-secundary);
+    z-index: 3;
+  }
+  .diagonalInf3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(100% 75%, 75% 100%, 100% 100%);
+
+    background-color: var(--color-primary);
+    z-index: 5;
+  }
+
+
+  .heroCopy {
+    position: relative;
+    z-index: 7;
+    // width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 150px 0;
+
+    max-width: var(--max-width);
+    //
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: flex-start;
+
+    h1 {
+      color: var(--text-color);
+      font-size: 70px;
+    }
+    p {
+      color: var(--text-color);
+      font-size: 24px;
+    }
+  }
+
+  @include media-down(xlg) {
+    .heroCopy {
+      width: 60%;
+      margin: 0;
+      padding: 200px var(--paddingDesktop);
+      h1 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 20px;
+        width: 60%;
+      }
+    }
+  }
+  @include media-down(lg) {
+    .heroCopy {
+      // width: 60%;
+      // margin: 0;
+      padding: 100px var(--paddingDesktop);
+      // h1 {
+      //   font-size: 60px;
+      // }
+      // p {
+      //   font-size: 20px;
+      //   width: 60%;
+      // }
+    }
+  }
+  @include media-down(md) {
+    .heroCopy {
+      width: 80%;
+      margin: 0;
+      padding: 100px var(--paddingDesktop);
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+        width: 60%;
+      }
+    }
+  }
+  @include media-down(sm) {
+  background-size: cover;
+  background-position: 700px;
+
+    .heroCopy {
+      width: 90%;
+      margin: 0;
+      padding: 50px var(--paddingDesktop);
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+        width: 70%;
+      }
+    }
+  }
+  // .diagonalSup1,
+  // .diagonalSup2,
+  // .diagonalSup3 {
+  //   position: absolute;
+  //   width: 100%; /* Ajustamos el ancho al 100% para cubrir toda la sección */
+  //   height: 100%; /* Ajustamos la altura al 100% para cubrir toda la sección */
+  //   transform-origin: top left; /* Establecemos el origen de la transformación en la esquina superior izquierda */
+  // }
+
+  // .diagonalSup1 {
+  //   background-color: rgb(43, 194, 76);
+  //   transform: skewY(-45deg); /* Aplicamos una inclinación hacia la izquierda */
+  // z-index: 3;}
+
+  // .diagonalSup2 {
+  //   background-color: rgb(66, 43, 194);
+  //   transform: skewY(-45deg); /* Aplicamos una inclinación hacia la izquierda con mayor ángulo */
+  // z-index: 4;}
+
+  // .diagonalSup3 {
+  //   background-color: rgb(181, 43, 194);
+  //   transform: skewY(-45deg); /* Aplicamos una inclinación hacia la izquierda con mayor ángulo */
+  // z-index: 5;}
+}

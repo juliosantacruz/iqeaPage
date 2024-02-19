@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.scss";
 import Image from "next/image";
-import imgSample from "@/assets/servicios/ImgVt1.jpeg";
+import imgSample from "@/assets/samples/Sample4.jpeg";
 import ButtonStyle from "@/components/ButtonStyle";
 import Link from "next/link";
 

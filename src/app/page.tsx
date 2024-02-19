@@ -9,18 +9,20 @@ import "./home.scss";
 import { getProjectsGalery } from "@/services/fetchData";
 import HeroVideo from "@/sections/HeroVideo/HeroVideo";
 import Designs from "@/sections/Designs/Designs";
+import HeroDiagonal from "@/sections/HeroDiagonal";
 
 export default async function Home() {
   const projectsData = await getProjectsGalery();
 
   return (
     <main className="main">
-      <HeroVideo />
+      {/* <HeroVideo /> */}
       {/* <Hero/> */}
+      <HeroDiagonal/>
       <Servicios />
       <Stats />
       <AboutUs />
-      <Designs />
+      {/* <Designs /> */}
       <Projects projectsData={projectsData} />
       {/* <Subcribe/> */}
       <Products />

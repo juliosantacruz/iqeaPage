@@ -7,7 +7,7 @@ import Image from "next/image";
 
 import imgH1 from "@/assets/servicios/ImgHt1.jpg";
 import imgH2 from "@/assets/servicios/ImgHt2.jpg";
-import imgV1 from "@/assets/servicios/ImgVt1.jpeg";
+import imgV1 from "@/assets/samples/Sample3.jpeg";
 import imgV2 from "@/assets/servicios/ImgVt2.jpg";
 
 export default function Servicios() {
