@@ -18,6 +18,7 @@ import NavProcesos from "./Submenus/NavProcesos";
 import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
 import { DarkBtn } from "@/components/DarkModeBtn/DarkModeBtn";
+import LocaleSwitch from "@/components/LocaleSwitch/LocaleSwitch";
 
 
 export default function Navbar({Products, Systems}:any) {
@@ -70,6 +71,9 @@ export default function Navbar({Products, Systems}:any) {
           <NavForms/>
           <li>
             <DarkBtn/>
+          </li>
+          <li>
+            <LocaleSwitch/>
           </li>
 
         </ul>

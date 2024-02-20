@@ -1,7 +1,7 @@
 import RevitModel from "@/components/RevitModel/RevitModel";
 import React, { Suspense } from "react";
 import "./Designs.scss";
-import Loading from "@/app/loading";
+import Loading from "@/components/RevitModel/loading";
 
 export default function Designs() {
   return (

@@ -1,0 +1,43 @@
+{ "Index": {
+  "title": "Hola Mundo!"
+},
+  "NavLinks": {
+    "Home": "Inicio",
+    "AboutUs": "Quienes Somos",
+    "Services": "Servicios",
+    "Products": "Productos",
+    "Projects": "Proyectos",
+    "Contact": "Contacto",
+    "Systems": "Sistemas",
+    "Cotiza": "Cotiza!"
+  },
+  "Footer": {
+    "ContactoTitle": "Contacto",
+    "ContactRightsReserved": "2023 Todos los derechos reservados IQEA ",
+    "ContactSubscriptionTitle": "Conozca los procesos más innovadores a nivel mundial en nuestros artículos de tratamiento de agua.",
+    "ContactSubscriptionBtn": "Subscribete",
+    "ContactSubscriptionPlaceHolder": "tu_correo@email.com",
+    "ContactSubscriptionMessage": "Gracias por suscribirte :D<"
+  },
+  "Home": {
+    "HeroTitle": "Diseño de sistema inteligente de tratamiento de agua.",
+    "HeroParagraph": "Realiza tus procesos con la pureza que requieren",
+    "ServiciosTitle": "Nuestros sistemas de Tratamiento",
+    "ServiciosParagraph": "La principal especialidad de IQEA dentro del área de servicios son los proyectos “llave en mano” para el tratamiento de agua o aguas residuales y diseño de sistemas de mecanicas de fluidos. Para ello utilizamos combinaciones de tecnologías y alianzas comerciales de especificaciones de equipos de la mas alta eficiencia para la realización de proyectos maestros en conjunto para tratar el agua.",
+    "ServiciosCard1Title": "Tratamiento de Agura Potable",
+    "ServiciosCard1Content": "Potabilización, Purificación, Filtración fina, Ultrafiltración, Nanofiltración, Osmosis inversa.",
+    "ServiciosCard2Title": "Tratamiento Agua Residual",
+    "ServiciosCard2Content": "Biofiltración, Lodos activados, Electrocoagulación, Tratamiento fisicoquímico, agua pluvial y terciario.",
+    "ServiciosCard3Title": "Estudio de Ingenieria",
+    "ServiciosCard3Content": "Riesgo e impacto ambiental, Uso de suelo, Tramites de conexión y descargade agua, Optimización de recursos, Eficiencia de procesos",
+    "AboutUsTitle": "IQEA Calidad y Compromiso",
+    "AboutUsContent": "IQEA surge tras la visión de un grupo de especialistas en el área de Tratamiento de Aguas al ver las necesidades de estas áreas en crecimiento acelerado de los sectores Industrial, habitacional y comercial de la región, formando un grupo de disciplinas a ofrecer de paquete completo, para que el cliente tenga el trato directo con el diseñador, suministrador ejecutor de obra.",
+    "AboutUsBtn": "Cotiza tu Proyecto",
+    "ProjectsTitle": "Proyectos IQEA",
+    "ProjectsContent": "Cada proyecto se adapta a las necesidades específicas de la región y se ejecuta con una visión de sostenibilidad a largo plazo. Nuestra experiencia abarca desde tecnologías avanzadas de filtración hasta métodos de tratamiento de última generación, asegurando que cada solución sea eficiente, efectiva y respetuosa con el medio ambiente.",
+    "ProjectsBtn": "Ver mas...",
+    "ProductsTitle": "Nuestros Productos",
+    "ProductsContent": "Somos orgullosos distribuidores de distintas de marcas proveedoras de insumos para tu sistema de tratamiento de agua, contamos con filtros, quimicos, solventes, equipo de bombeo y mas...",
+    "ProductsBtn": "Ver mas..."
+  }
+}

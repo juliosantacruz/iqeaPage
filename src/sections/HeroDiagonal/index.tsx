@@ -1,8 +1,11 @@
 import React from "react";
 import "./HeroDiagonal.scss";
 import imgBackground from "@/assets/samples/Sample3.jpeg";
+import {useTranslations} from 'next-intl';
+
 
 export default function HeroDiagonal() {
+  const t = useTranslations('Home');
   const bgImage = {
     backgroundImage: `url(${imgBackground.src})`,
     backgroundAttachment: "fixed",
@@ -11,8 +14,8 @@ export default function HeroDiagonal() {
     <section className="heroSection" style={bgImage}>
       <div className="sandwich">
           <div className="heroCopy">
-            <h1>Design of intelligent water treatment systems</h1>
-            <p>Carry out your processes with the purity they require</p>
+            <h1>{t('HeroTitle')}</h1>
+            <p>{t('HeroParagraph')}</p>
           </div>
         <div className="diagonalSup3">
         </div>

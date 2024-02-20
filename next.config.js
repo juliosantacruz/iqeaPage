@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require('next-intl/plugin');
+const withNextIntl = createNextIntlPlugin();
+
 
 const {
   API_URL_STRAPI_DEV,
@@ -51,7 +54,7 @@ const nextConfig = {
   // typedRoutes: true,
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);
 
 // const withVideos = require('next-videos')
 // module.exports = withVideos()
