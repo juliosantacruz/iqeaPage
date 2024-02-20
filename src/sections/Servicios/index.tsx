@@ -1,7 +1,8 @@
 import React from "react";
 import "./Servicios.scss";
 import aguaPotableIcon from "@/assets/icons/tratamientoAguaPotable.svg";
-import aguaResidualIcon from "@/assets/icons/tratamientoAguaResidual.svg";
+// import AguaResidualIcon from "@/assets/icons/wastewater.svg";
+import Wastewater from '@/assets/icons/wastewater'
 import estudiosIcon from "@/assets/icons/estudiosIngenieria.svg";
 import Image from "next/image";
 
@@ -9,6 +10,8 @@ import imgH1 from "@/assets/servicios/ImgHt1.jpg";
 import imgH2 from "@/assets/servicios/ImgHt2.jpg";
 import imgV1 from "@/assets/samples/Sample3.jpeg";
 import imgV2 from "@/assets/servicios/ImgVt2.jpg";
+import Drinkingwater from "@/assets/icons/drinkingwater";
+import Engineeringstudys from "@/assets/icons/engineeringstudys";
 
 export default function Servicios() {
   return (
@@ -27,7 +30,8 @@ export default function Servicios() {
           <div className="serviciosLeft">
             <div className="servicio">
               <div className="servicioIcon">
-                <Image src={aguaPotableIcon} alt="icon" />
+                {/* <Image src={aguaPotableIcon} alt="icon" /> */}
+                <Drinkingwater className="servicioIcon" />
               </div>
               <div className="servicioContent">
                 <h3>Tratamiento de Agura Potable</h3>
@@ -39,7 +43,8 @@ export default function Servicios() {
             </div>
             <div className="servicio">
               <div className="servicioIcon">
-                <Image src={aguaResidualIcon} alt="icon" />
+                {/* <Image src={aguaResidualIcon} alt="icon" /> */}
+                <Wastewater className="servicioIcon"/>
               </div>
               <div className="servicioContent">
                 <h3>Tratamiento Agua Residual</h3>
@@ -51,7 +56,8 @@ export default function Servicios() {
             </div>
             <div className="servicio">
               <div className="servicioIcon">
-                <Image src={estudiosIcon} alt="icon" />
+                {/* <Image src={estudiosIcon} alt="icon" /> */}
+              <Engineeringstudys className='servicioIcon' />
               </div>
               <div className="servicioContent">
                 <h3>Estudio de Ingenieria</h3>
