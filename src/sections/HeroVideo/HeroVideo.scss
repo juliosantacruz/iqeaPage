@@ -19,7 +19,6 @@
 //     flex-direction: column;
 //     justify-content: center;
 
-
 //     .title {
 //       display: flex;
 //       margin: 0 auto;
@@ -91,7 +90,7 @@
 // }
 
 .HeroVideo {
-  --FontSizeTitle:50px;
+  --FontSizeTitle: 50px;
   width: 100%;
   height: auto;
 
@@ -119,16 +118,17 @@
       display: flex;
       margin: 0 auto;
       align-items: center;
+      // margin-top: 300px;
       gap: 20px;
 
       .imgHero {
         width: auto;
         height: var(--FontSizeTitle);
       }
-      h2 {
+      h1 {
         font-size: var(--FontSizeTitle);
-      color: rgb(255, 255, 255);
-      margin: 0;
+        color: rgb(255, 255, 255);
+        margin: 0;
       }
     }
     p {
@@ -149,13 +149,13 @@
     object-fit: cover;
   }
 
-  @include media-down(md){
-    --FontSizeTitle:40px;
+  @include media-down(md) {
+    --FontSizeTitle: 40px;
   }
-  @include media-down(sm){
-    --FontSizeTitle:30px;
-    .heroData{
-      p{
+  @include media-down(sm) {
+    --FontSizeTitle: 30px;
+    .heroData {
+      p {
         line-height: 30px;
         width: 90%;
       }
