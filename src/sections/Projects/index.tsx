@@ -8,18 +8,19 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ImageNotFound from "@/assets/Image-not-found.png";
-import Image from "next/image";
+import {useTranslations} from 'next-intl';
+
 
 export default function Projects({ projectsData }: any) {
   // console.log(projectsData)
+  const t = useTranslations('Home');
+
   return (
     <section className="projectsIqea">
       <div className="projectsAccent">
         <div className="headerProjects centerDiv">
-          <h2>PROYECTOS IQEA</h2>
-          <p>
-          Cada proyecto se adapta a las necesidades específicas de la región y se ejecuta con una visión de sostenibilidad a largo plazo. Nuestra experiencia abarca desde tecnologías avanzadas de filtración hasta métodos de tratamiento de última generación, asegurando que cada solución sea eficiente, efectiva y respetuosa con el medio ambiente.
-          </p>
+          <h2>{t('ProjectsTitle')}</h2>
+          <p>{t('ProjectsContent')}</p>
         </div>
 
         <div className="bodyProjects ">
@@ -80,7 +81,7 @@ export default function Projects({ projectsData }: any) {
             href={"/proyectos"}
             style={{ maxWidth: "200px", margin: "30px 0" }}
           >
-            Ver mas...
+           {t('ProjectsBtn')}
           </Link>
         </ButtonStyle>
       </div>
