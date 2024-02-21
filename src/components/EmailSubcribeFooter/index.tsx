@@ -5,12 +5,15 @@ import Image from "next/image";
 import "./EmailSubcribe.scss";
 import { API_URL_STRAPI } from "@/config";
 import axios from "axios";
+import {useTranslations} from 'next-intl';
 
 
 
 
 
 export default  function EmailSubcribe() {
+  const t = useTranslations('Footer');
+
   const [success, segSuccess]=useState(false)
 
 
@@ -57,22 +60,20 @@ export default  function EmailSubcribe() {
     <div className="SubcribeFooter">
       <div className="SubcribeContent">
         <div className="SubcribeText">
-          <h3>
-            Suscríbete a nuestro canal de noticias para que estes actualizado
-          </h3>
+          <h3>{t('ContactSubscriptionTitle')}</h3>
         </div>
         {!success ? <form className="SubcribeInput" onSubmit={handleSubmit}>
           <input
             className="SubcribeInputElement"
             type="email"
-            placeholder="Tu Correo Electronico"
+            placeholder={t('ContactSubscriptionPlaceHolder')}
           />
 
           <button className="SubcribeBtn" type="submit" >
-            Suscribete
+          {t('ContactSubscriptionBtn')}
           </button>
         </form>:
-        <h3>Gracias por suscribirte :D</h3>
+        <h3>{t('ContactSubscriptionMessage')}</h3>
         }
 
       </div>

@@ -16,8 +16,11 @@ import IconMail from "@/components/Icons/IconMail";
 import { usePathname } from "next/navigation";
 import IconYoutube from "@/components/Icons/IconYouTube";
 import EmailSubcribe from "@/components/EmailSubcribeFooter";
+import {useTranslations} from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations();
+
   const path = usePathname();
 
   const isActiveLink = (value: string) => {
@@ -69,7 +72,7 @@ export default function Footer() {
       <hr className="footerSeparator" />
       <div className="footerBody">
         <div className="contact">
-          <h4>Contacto</h4>
+          <h4>{t('Footer.ContactoTitle')}</h4>
           <div className="direccion ">
             <IconPin className="footerIcon" />
             <Link
@@ -105,35 +108,41 @@ export default function Footer() {
         </div>
         <div className="navbar">
           <Link href={"/"} className={isActiveLink("/")}>
-            Inicio
+            {t('NavLinks.Home')}
           </Link>
           <Link
             href={"/quienes-somos"}
             className={isActiveLink("/quienes-somos")}
           >
-            Quienes Somos
+                        {t('NavLinks.AboutUs')}
+
           </Link>
           <Link href={"/servicios"} className={isActiveLink("/servicios")}>
-            Servicios
+          {t('NavLinks.Services')}
+
           </Link>
           <Link href={"/productos"} className={isActiveLink("/productos")}>
-            Productos
+          {t('NavLinks.Products')}
+
           </Link>
           {/* <Link href={"/procesos"} className={isActiveLink("/procesos")}>
             Procesos
           </Link> */}
 
           <Link href={"/proyectos"} className={isActiveLink("/proyectos")}>
-            Proyectos
+          {t('NavLinks.Projects')}
+
           </Link>
           <Link href={"/contacto"} className={isActiveLink("/contacto")}>
-            Contacto
+          {t('NavLinks.Contact')}
+
           </Link>
           <Link
             href={"/sistemas-de-tratamiento"}
             className={isActiveLink("/sistemas-de-tratamiento")}
           >
-            Sistemas
+                      {t('NavLinks.Systems')}
+
           </Link>
         </div>
         <div className="subEmail">
@@ -144,7 +153,7 @@ export default function Footer() {
       </div>
       <div className="footerFooter">
         <div className="legend">
-          <p>© 2023 Todos los derechos reservados IQEA </p>
+          <p>© {t('Footer.ContactRightsReserved')} </p>
         </div>
         {/* <div className="develop">
           <p>sitio desarrollado por </p>
