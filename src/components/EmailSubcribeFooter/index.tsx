@@ -5,6 +5,7 @@ import Image from "next/image";
 import "./EmailSubcribe.scss";
 import { API_URL_STRAPI } from "@/config";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -12,6 +13,7 @@ import axios from "axios";
 
 export default  function EmailSubcribe() {
   const [success, segSuccess]=useState(false)
+  const { t } = useTranslation();
 
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>)=>{
@@ -57,22 +59,20 @@ export default  function EmailSubcribe() {
     <div className="SubcribeFooter">
       <div className="SubcribeContent">
         <div className="SubcribeText">
-          <h3>
-            Suscríbete a nuestro canal de noticias para que estes actualizado
-          </h3>
+          <h3>{t('common:ContactSubscriptionTitle')}</h3>
         </div>
         {!success ? <form className="SubcribeInput" onSubmit={handleSubmit}>
           <input
             className="SubcribeInputElement"
             type="email"
-            placeholder="Tu Correo Electronico"
+            placeholder={t('common:ContactSubscriptionPlaceHolder')}
           />
 
           <button className="SubcribeBtn" type="submit" >
-            Suscribete
+          {t('common:ContactSubscriptionBtn')}
           </button>
         </form>:
-        <h3>Gracias por suscribirte :D</h3>
+        <h3>{t('common:ContactSubscriptionMessage')}</h3>
         }
 
       </div>

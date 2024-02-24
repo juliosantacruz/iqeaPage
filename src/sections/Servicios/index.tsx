@@ -15,7 +15,6 @@ import Engineeringstudys from "@/assets/icons/engineeringstudys";
 import initTranslations from "@/app/i18n";
 
 export default async function Servicios({t}:any) {
-  // const { t } = await initTranslations(locale, ['home'] )
 
   return (
     <section className="serviciosIqea">

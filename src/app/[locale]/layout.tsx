@@ -56,7 +56,7 @@ export default async function RootLayout({
   params: { locale: string }
 }) {
 
-  const { t, resources } = await initTranslations(locale, ["home"]);
+  const { t, resources } = await initTranslations(locale, ["home","common"]);
 
 
   return (

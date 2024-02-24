@@ -7,11 +7,6 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logoIqea from "@/assets/iqea_logo.png";
 import IconMenu from "@/components/Icons/IconMenu";
-import DropDown, { DropDownItem } from "@/components/DropDown";
-// import { API_URL_STRAPI } from "@/config";
-import { fetchProductContent, getContactForm } from "@/services/fetchData";
-import { FORM_ROUTER } from "@/services/routers";
-
 import NavProductos from "./Submenus/NavProductos";
 import NavSistemas from "./Submenus/NavSistemas";
 import NavProcesos from "./Submenus/NavProcesos";
@@ -19,10 +14,12 @@ import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
 import { DarkBtn } from "@/components/DarkModeBtn/DarkModeBtn";
 import SelectLocale from "@/components/SelectLocale/SelectLocale";
+import {useTranslation} from 'react-i18next'
 
 
 export default function Navbar({Products, Systems}:any) {
   const [openMenu, setOpenMenu] = useState(false);
+  const {t}=useTranslation()
 
   const path = usePathname();
   useEffect(() => {
@@ -65,7 +62,7 @@ export default function Navbar({Products, Systems}:any) {
           </li> */}
           <li className="nav-item">
             <Link href="/contacto" className={isActiveLink("/contacto")}>
-              Contacto
+            {t('Contact')}
             </Link>
           </li>
           <NavForms/>

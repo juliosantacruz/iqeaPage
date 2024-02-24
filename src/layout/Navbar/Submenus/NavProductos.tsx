@@ -9,48 +9,13 @@ import {
   NavItem,
 } from "@/components/DropDownMultiLevel/DropDown";
 import { usePathname } from "next/navigation";
+import {useTranslation} from 'react-i18next'
 
 
 
 export default function NavProductos({navData}:any) {
-  // const [productNav, setProductNav] = useState([]);
-  // console.log(productNav);
-  // useEffect(() => {
-  //   const getProductNav = async () => {
-  //     try {
-  //       const navDataJson = await fetchProductContent();
+  const {t}=useTranslation()
 
-  //       if (navDataJson) {
-  //         const navData = JSON.parse(navDataJson).map((element: any) => {
-  //           const arrProductos: [] = element.attributes.productos.data;
-  //           const newProductos = arrProductos.map((producto: any) => {
-  //             const newProducto = {
-  //               id: producto.id,
-  //               title: producto.attributes.titulo,
-  //               slug: producto.attributes.slug,
-  //             };
-  //             return newProducto;
-  //           });
-
-  //           const newElement = {
-  //             id: element.id,
-  //             title: element.attributes.title,
-  //             slug: element.attributes.slug,
-  //             productos: newProductos,
-  //           };
-  //           return newElement;
-  //         });
-
-  //         setProductNav(navData);
-  //       } else {
-  //         console.error("Data not found in the response.");
-  //       }
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-  //   getProductNav();
-  // }, []);
 
   const productNav = navData
 
@@ -62,7 +27,7 @@ export default function NavProductos({navData}:any) {
 
 
   return (
-    <NavItem title="Productos" href={"/productos"} className={isActiveLink("/productos")}>
+    <NavItem title={t('common:Products')} href={"/productos"} className={isActiveLink("/productos")}>
             <DropdownMenu>
               <DropdownGroup nameGroup="main">
                 {productNav &&

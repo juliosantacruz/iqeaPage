@@ -16,7 +16,7 @@ const random_array = (arr: any) => {
   return primerosCincoObjetos;
 };
 
-export default async function Products() {
+export default async function Products({ t }: any) {
   const data = await getCatProductos();
 
   const category_productArray = data.flatMap((element: any) => {
@@ -42,12 +42,8 @@ export default async function Products() {
     <section className="productsIqea">
       <div className="productsAccent">
         <div className="productsHeaders">
-          <h2>Nuestros Productos</h2>
-          <p>
-            Somos orgullosos distribuidores de distintas de marcas proveedoras
-            de insumos para tu sistema de tratamiento de agua, contamos con
-            filtros, quimicos, solventes, equipo de bombeo y mas...
-          </p>
+          <h2>{t("ProjectsTitle")}</h2>
+          <p>{t("ProjectsContent")}</p>
         </div>
 
         <div className="productsGroup">
@@ -58,7 +54,7 @@ export default async function Products() {
             href={"/productos"}
             style={{ margin: "10px 0", width: "200px" }}
           >
-            Ver mas...
+            {t("ProjectsBtn")}
           </Link>
         </ButtonStyle>
       </div>

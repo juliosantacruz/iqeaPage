@@ -29,10 +29,10 @@ export default async function Home({
         <Servicios t={t} />
         <Stats />
         <AboutUs t={t}/>
-        <Designs t={t}/>
+        {/* <Designs t={t}/> */}
         <Projects t={t} projectsData={projectsData} />
         {/* <Subcribe/> */}
-        <Products />
+        <Products t={t} />
       </main>
   );
 }
