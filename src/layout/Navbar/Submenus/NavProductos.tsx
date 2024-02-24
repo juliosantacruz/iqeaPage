@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { fetchProductContent } from "@/services/fetchData";
+import React from "react";
 import {
   DropdownGroup,
   DropdownItem,

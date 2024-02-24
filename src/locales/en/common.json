@@ -12,5 +12,9 @@
   "ContactSubscriptionTitle": "Learn about the most innovative processes worldwide in our water treatment articles.",
   "ContactSubscriptionBtn": "Subscribe",
   "ContactSubscriptionPlaceHolder": "your_email@email.com",
-  "ContactSubscriptionMessage": "Thanks for subscribing :D"
+  "ContactSubscriptionMessage": "Thanks for subscribing :D",
+  "LogIn":"Log In",
+  "Welcome":"Welcome",
+  "Password":"Password",
+  "ErrorPassMessage":"wrong password or valid"
 }

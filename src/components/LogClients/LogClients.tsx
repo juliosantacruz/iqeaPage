@@ -5,6 +5,7 @@ import { getVisitasPortafolioBySlug } from "@/services/fetchData";
 import { useUserStore } from "@/store/portfolioStore";
 import { useRouter } from 'next/navigation'
 import InputField from "../InputField/InputField";
+import { useTranslation } from "react-i18next";
 
 
 export default function LogClients() {
@@ -12,6 +13,8 @@ export default function LogClients() {
   const [error, setError]=useState(false)
   const {setUser, name, isAuth} = useUserStore()
   const router = useRouter()
+  const {t}=useTranslation()
+
 
   useEffect(()=>{
     if(isAuth){
@@ -51,10 +54,10 @@ export default function LogClients() {
     <div className="Welcome">
       <div className="WelcomeForm">
         <form onSubmit={(event)=>onSubmit(event)} >
-          <h2>Bienvenidos {name||''}</h2>
+          <h2>{t('common:Welcome')} {name||''}</h2>
           <InputField
           name="password"
-          label="Contraseña"
+          label={t('common:Password')}
           type="password"
           value={password}
           inputChange={(event: any) => handleChange(event)}
@@ -63,10 +66,10 @@ export default function LogClients() {
             <label htmlFor="">Contraseña</label>
             <input name="password" type="text" />
           </div> */}
-          <button type="submit" >Entrar</button>
+          <button type="submit" >{t('common:LogIn')}</button>
 
           {error &&
-          <h4>La contraseña no es valida..</h4>}
+          <h4>{t('common:ErrorPassMessage')}</h4>}
         </form>
       </div>
     </div>

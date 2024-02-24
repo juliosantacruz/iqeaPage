@@ -14,12 +14,11 @@ import NavServicios from "./Submenus/NavServicios";
 import NavForms from "./Submenus/NavForms";
 import { DarkBtn } from "@/components/DarkModeBtn/DarkModeBtn";
 import SelectLocale from "@/components/SelectLocale/SelectLocale";
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
-
-export default function Navbar({Products, Systems}:any) {
+export default function Navbar({ Products, Systems }: any) {
   const [openMenu, setOpenMenu] = useState(false);
-  const {t}=useTranslation()
+  const { t } = useTranslation();
 
   const path = usePathname();
   useEffect(() => {
@@ -36,47 +35,42 @@ export default function Navbar({Products, Systems}:any) {
   };
 
   return (
-
-      <nav className="navbar">
-        <Link href="/">
-          <div className="iqeaLogo">
-            <Image src={logoIqea} alt="logo" className="logoIqea" />
-          </div>
-        </Link>
-        <div className="movilMenu">
-          <button onClick={handlerMenu} className="buttonMenu">
-            <IconMenu className="hamburger" />
-          </button>
+    <nav className="navbar">
+      <Link href="/">
+        <div className="iqeaLogo">
+          <Image src={logoIqea} alt="logo" className="logoIqea" />
         </div>
+      </Link>
+      <div className="movilMenu">
+        <button onClick={handlerMenu} className="buttonMenu">
+          <IconMenu className="hamburger" />
+        </button>
+      </div>
 
-        <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
-          <NavProductos navData={Products}/>
-          <NavSistemas navData={Systems}/>
-          {/* <NavProcesos /> */}
-          {/* <NavServicios /> */}
+      <ul className={`navLinks ${openMenu ? "openMenu" : ""}`}>
+        <NavProductos navData={Products} />
+        {/* <NavSistemas navData={Systems}/> */}
+        {/* <NavProcesos /> */}
+        {/* <NavServicios /> */}
 
-          {/* <li>
+        {/* <li>
             <Link href="/proyectos" className={isActiveLink("/proyectos")}>
               Proyectos
             </Link>
           </li> */}
-          <li className="nav-item">
-            <Link href="/contacto" className={isActiveLink("/contacto")}>
-            {t('Contact')}
-            </Link>
-          </li>
-          <NavForms/>
-          <li>
-            <DarkBtn/>
-          </li>
-          <li>
-            <SelectLocale/>
-          </li>
-
-        </ul>
-      </nav>
-
+        <li className="nav-item">
+          <Link href="/contacto" className={isActiveLink("/contacto")}>
+            {t("Contact")}
+          </Link>
+        </li>
+        <NavForms />
+        <li>
+          <DarkBtn />
+        </li>
+        <li>
+          <SelectLocale />
+        </li>
+      </ul>
+    </nav>
   );
 }
-
-

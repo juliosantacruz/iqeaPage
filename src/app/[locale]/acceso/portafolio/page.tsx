@@ -5,10 +5,16 @@ import Link from 'next/link';
 import React from 'react'
 import './Portafolio.scss'
 import CheckAuth from '@/components/CheckAuth/CheckAuth';
+import initTranslations from '@/app/i18n';
 
 
 
-export  default async function Portafolio() {
+export  default async function Portafolio({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const { t } = await initTranslations(locale, ["projects"]);
 
   const proyectos = await getProyectos();
 
@@ -33,7 +39,7 @@ export  default async function Portafolio() {
     <section className='PortafolioIqea'>
 
       <div className="pageTitle">
-      <h1>Portafolio IQEA Ingenieria <CheckAuth/></h1>
+      <h1>{t('PortfolioTitle')} <CheckAuth/></h1>
       </div>
 
       <div className="portafolioGroup">
