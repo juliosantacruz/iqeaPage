@@ -12,24 +12,27 @@ import Designs from "@/sections/Designs/Designs";
 import HeroDiagonal from "@/sections/HeroDiagonal";
 import initTranslations from "../i18n";
 
-export default async function Home({params:{locale}}:{params:{locale:string}}) {
-  const { t } = await initTranslations(locale, ['home'], )
+export default async function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const { t } = await initTranslations(locale, ["home"]);
 
   const projectsData = await getProjectsGalery();
 
   return (
-    <main className="main">
-      <h1>{t('test')}</h1>
-      {/* <HeroVideo /> */}
-      {/* <Hero/> */}
-      <HeroDiagonal/>
-      <Servicios />
-      <Stats />
-      <AboutUs />
-      {/* <Designs /> */}
-      <Projects projectsData={projectsData} />
-      {/* <Subcribe/> */}
-      <Products />
-    </main>
+      <main className="main">
+        <HeroVideo />
+        {/* <Hero/> */}
+        {/* <HeroDiagonal/> */}
+        <Servicios t={t} />
+        <Stats />
+        <AboutUs t={t}/>
+        <Designs t={t}/>
+        <Projects t={t} projectsData={projectsData} />
+        {/* <Subcribe/> */}
+        <Products />
+      </main>
   );
 }

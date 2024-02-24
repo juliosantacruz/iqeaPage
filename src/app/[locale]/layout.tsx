@@ -6,8 +6,8 @@ import "@/sections/Hero/Hero.scss";
 import Navbar from "@/layout/Navbar/Navbar";
 import WhattsButton from "@/components/WhattsButton/WhattsButton";
 import Header from "@/layout/Navbar/Header";
-
-
+import initTranslations from "../i18n";
+import TranslationsProvider from "../TranslationsProvider";
 
 // import { Inter } from 'next/font/google'
 
@@ -49,22 +49,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children,params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string }
 }) {
 
-
+  const { t, resources } = await initTranslations(locale, ["home"]);
 
 
   return (
     <html lang="es">
+
       <body className={"body"}>
+    <TranslationsProvider resources={resources} locale={locale} namespaces={['home']}>
         <Header />
         {children}
         <WhattsButton/>
         <Footer />
+    </TranslationsProvider>
+
       </body>
 
 

@@ -12,19 +12,17 @@ import imgV1 from "@/assets/samples/Sample3.jpeg";
 import imgV2 from "@/assets/servicios/ImgVt2.jpg";
 import Drinkingwater from "@/assets/icons/drinkingwater";
 import Engineeringstudys from "@/assets/icons/engineeringstudys";
+import initTranslations from "@/app/i18n";
 
-export default function Servicios() {
+export default async function Servicios({t}:any) {
+  // const { t } = await initTranslations(locale, ['home'] )
+
   return (
     <section className="serviciosIqea">
       <div className="serviciosAccent">
         <div className="serviciosHeader">
-          <h2>NUESTROS SISTEMAS DE TRATAMIENTO</h2>
-          <p>
-            La principal especialidad de IQEA dentro del área de servicios son
-            los proyectos “llave en mano” para el tratamiento de agua o aguas
-            residuales y diseño de sistemas de mecanicas de fluidos. Para ello utilizamos combinaciones de tecnologías y alianzas comerciales de especificaciones de equipos de la mas alta eficiencia para la
-            realización de proyectos maestros en conjunto para tratar el agua.
-          </p>
+          <h2>{t('ServiciosTitle')}</h2>
+          <p>{t('ServiciosParagraph')}</p>
         </div>
         <div className="serviciosBody">
           <div className="serviciosLeft">
@@ -34,11 +32,8 @@ export default function Servicios() {
                 <Drinkingwater className="servicioIcon" />
               </div>
               <div className="servicioContent">
-                <h3>Tratamiento de Agura Potable</h3>
-                <p>
-                  Potabilización, Purificación, Filtración fina,
-                  Ultrafiltración, Nanofiltración, Osmosis inversa.
-                </p>
+                <h3>{t('ServiciosCard1Title')}</h3>
+                <p>{t('ServiciosCard1Content')}</p>
               </div>
             </div>
             <div className="servicio">
@@ -47,11 +42,8 @@ export default function Servicios() {
                 <Wastewater className="servicioIcon"/>
               </div>
               <div className="servicioContent">
-                <h3>Tratamiento Agua Residual</h3>
-                <p>
-                  Biofiltración, Lodos activados, Electrocoagulación,
-                  Tratamiento fisicoquímico, agua pluvial y terciario.
-                </p>
+                <h3>{t('ServiciosCard2Title')}</h3>
+                <p>{t('ServiciosCard2Content')}</p>
               </div>
             </div>
             <div className="servicio">
@@ -60,12 +52,8 @@ export default function Servicios() {
               <Engineeringstudys className='servicioIcon' />
               </div>
               <div className="servicioContent">
-                <h3>Estudio de Ingenieria</h3>
-                <p>
-                  Riesgo e impacto ambiental, Uso de suelo, Tramites de conexión
-                  y descargade agua, Optimización de recursos, Eficiencia de
-                  procesos
-                </p>
+                <h3>{t('ServiciosCard3Title')}</h3>
+                <p>{t('ServiciosCard3Content')}</p>
               </div>
             </div>
           </div>

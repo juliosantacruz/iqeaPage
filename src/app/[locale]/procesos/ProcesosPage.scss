@@ -1,0 +1,16 @@
+.ProcesosPage{
+  padding: 0 var(--paddingDesktop);
+  margin: auto;
+  max-width: 1200px;
+
+  border: 1px solid black;
+
+
+  .ProcesosGroup{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+}

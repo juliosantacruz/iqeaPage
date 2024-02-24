@@ -205,7 +205,7 @@ export async function getProjectsGalery() {
 
 export async function getProyectos() {
   const res = await fetch(
-    `${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=isPublic&populate[cover][fields][3]=*&populate[tags][fields][4]=*`
+    `${API_URL_STRAPI}/proyectos?pagination[page]=1&pagination[pageSize]=50&fields[0]=titulo&fields[1]=slug&fields[2]=isPublic&populate[cover][fields][3]=*&populate[tags][fields][4]=*`
   );
 
   if (!res.ok) {
