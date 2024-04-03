@@ -8,7 +8,7 @@ export default function WhattsButton() {
 
 
     //whattsApp Config
-const phoneNumber = "526642171518";
+const phoneNumber = "526641219842";
 const accountName = "IQEA";
 const statusMessage = "Tiempo de respuesta: 15 min.";
 const chatMessage = "Hola 😃 \n como te puedo ayudar? ";
