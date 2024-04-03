@@ -42,28 +42,15 @@ export default function SlideGallery({ imageArr }: any) {
       // onSwiper={(swiper) => console.log(swiper)}
     >
       {imageArr?.map((image:any) => {
-        const [error, setError]=useState(false)
-          const handleImageError = (e:any) => {
-            console.error(`Error loading image: ${e}`);
-            setError( true)
-          };
 
-        const setUrl = (src:string, error:boolean)=>{
-          if(!error){
-            return src
-          }
-          if(error){
-            return ImageNotFound
-          }
-        }
 
         return(
         <SwiperSlide key={image.id}>
           <div className="imgGallery">
             <Image
-              src={setUrl(image.attributes.url, error) as string}
+              src={ image.attributes.url}
               layout="fill"
-              onError={handleImageError}
+
               alt={
                 image.attributes.alternativeText
                   ? image.attributes.alternativeText

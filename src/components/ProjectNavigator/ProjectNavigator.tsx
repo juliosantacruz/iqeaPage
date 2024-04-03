@@ -87,6 +87,7 @@ export default function ProjectNavigator({data}:any) {
       // setProjectsNavigator(projectsList);
     };
     fetchProyects();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const pageSlug = pathname.split("/")[1] === "acceso" ? 'acceso/portafolio' : 'proyectos'

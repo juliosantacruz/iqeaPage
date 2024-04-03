@@ -10,6 +10,7 @@
     "lint:fix": "next lint--fix"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.4",
     "@rjsf/core": "^5.13.6",
     "@rjsf/utils": "^5.13.6",
     "@rjsf/validator-ajv8": "^5.13.6",

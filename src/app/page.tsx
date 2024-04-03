@@ -16,9 +16,9 @@ export default async function Home() {
 
   return (
     <main className="main">
-      {/* <HeroVideo /> */}
+      <HeroVideo />
       {/* <Hero/> */}
-      <HeroDiagonal/>
+      {/* <HeroDiagonal/> */}
       <Servicios />
       <Stats />
       <AboutUs />

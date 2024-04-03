@@ -7,6 +7,7 @@ import Navbar from "@/layout/Navbar/Navbar";
 import WhattsButton from "@/components/WhattsButton/WhattsButton";
 import Header from "@/layout/Navbar/Header";
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 
 // import { Inter } from 'next/font/google'
@@ -66,7 +67,7 @@ export default function RootLayout({
         <WhattsButton/>
         <Footer />
       </body>
-
+      <GoogleAnalytics gaId="G-SLFXCNT39L" />
 
     </html>
   );

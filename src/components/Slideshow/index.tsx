@@ -117,6 +117,7 @@ const Slideshow = (props: SlideshowProps) => {
         }, transitionTime);
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoplay, transitionTime, animationTime]);
 
   // Esta propiedad me permite ajustar el ancho de contenedor visible del slide para ver mas objetos
