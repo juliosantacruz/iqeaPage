@@ -80,11 +80,11 @@ const CategoryDetail = (props: any) => {
       )}
 
       <div className="productsList">
-        {data.products &&
-          data.products.map((product: any) => {
+        {data?.products &&
+          data?.products.map((product: any) => {
             return (
               <article key={product.id} className="productCard">
-                <Link href={`productos/${data.slug}/${product.slug}`}>
+                <Link href={`productos/${data?.slug}/${product.slug}`}>
                   <Image
                     src={product.cover || ImageNotFound}
                     alt={product.altCover ? product.altCover : "galeria"}
@@ -92,7 +92,7 @@ const CategoryDetail = (props: any) => {
                     height={200}
                   />
                   <div className="productTitle">
-                    <p>{product.title}</p>
+                    <p>{product?.title}</p>
                   </div>
                 </Link>
               </article>
