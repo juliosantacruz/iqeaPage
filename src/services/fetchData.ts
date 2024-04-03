@@ -38,16 +38,21 @@ export async function getVisitasPortafolioBySlug(slug: string) {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 
-  return data;
+  return
 }
 
 export async function fetchNavContent() {
@@ -58,16 +63,21 @@ export async function fetchNavContent() {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 
-  return data;
+  return
 }
 
 export async function fetchProductContent() {
@@ -78,16 +88,22 @@ export async function fetchProductContent() {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
 
-  return data;
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+
+  return
 }
 
 export async function fetchProcesosContent() {
@@ -98,16 +114,21 @@ export async function fetchProcesosContent() {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 
-  return data;
+  return
 }
 
 export async function fetchServiciosContent() {
@@ -118,16 +139,21 @@ export async function fetchServiciosContent() {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 
-  return data;
+  return;
 }
 
 export async function fetchSTratamientoContent() {
@@ -138,16 +164,22 @@ export async function fetchSTratamientoContent() {
     headers: {},
   };
 
-  const data: any = axios
-    .request(config)
-    .then((response) => {
-      return JSON.stringify(response.data.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
 
-  return data;
+  try {
+    const data: any = axios
+      .request(config)
+      .then((response) => {
+        return JSON.stringify(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+
+  return
 }
 
 export async function getServicios() {
@@ -179,15 +211,10 @@ export async function getProjectsGalery() {
     throw new Error("Failed to fetch data");
   }
   const { data } = await res.json();
-  // console.log(data)
+
   const projectsData = data.map((project: any) => {
     const { titulo, slug, cover, alcance, tags } = project.attributes;
     const coverImage = cover.data?.attributes.url;
-
-    // const arrTags = tags.data?.map((tag:any)=>{
-    //   const newTag = tag.attributes.tag
-    //   return newTag
-    // })
 
     const newProject = {
       id: project.id,
@@ -205,7 +232,7 @@ export async function getProjectsGalery() {
 
 export async function getProyectos() {
   const res = await fetch(
-    `${API_URL_STRAPI}/proyectos?fields[0]=titulo&fields[1]=slug&fields[2]=isPublic&populate[cover][fields][3]=*&populate[tags][fields][4]=*`
+    `${API_URL_STRAPI}/proyectos?pagination[page]=1&pagination[pageSize]=50&fields[0]=titulo&fields[1]=slug&fields[2]=isPublic&populate[cover][fields][3]=*&populate[tags][fields][4]=*`
   );
 
   if (!res.ok) {
