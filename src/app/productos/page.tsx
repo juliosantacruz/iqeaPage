@@ -39,19 +39,10 @@ export default async function page() {
 
       <div className="productCategoryGroup">
 
-      {/* {productCatArray.sort((a:any,b:any)=>a.title.localeCompare(b.title)).map((productCategory: any) => {
-        const { id, title, slug } = productCategory;
-        return (
-          <ProductCardList
-            title={title}
-            href={`/productos/${slug}`}
-            key={id}
-          />
-        );
-      })} */}
+
       </div>
 
-      <ProductsShowCase productCatArray={productCatArray}/>
+      {/* <ProductsShowCase productCatArray={productCatArray}/> */}
 
       <CallToActionBanner/>
     </section>
