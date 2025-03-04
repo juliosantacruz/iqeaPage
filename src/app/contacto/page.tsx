@@ -28,7 +28,7 @@ export default function ContactoPage() {
           <div className=" leftStyle">
             <div className="LocationLeft ">
               <div className="LocationAdress">
-                <h4>Oficina Principal</h4>
+
 
                 <p>
                   Direccion: Callejón Manuel M. Doria No. 12612 Col. Libertad
@@ -36,7 +36,7 @@ export default function ContactoPage() {
                 </p>
                 <p>Tel: +52 (664) 210-1017</p>
                 <p>Tel: +52 (664) 609-4415</p>
-                <p>E-mail: info@iqea.mx</p>
+                <p>E-mail: ventas@iqea.mx</p>
               </div>
             </div>
           </div>
@@ -57,13 +57,15 @@ export default function ContactoPage() {
           <div className=" leftStyle">
             <div className="LocationLeft ">
               <div className="LocationAdress">
+
+                <h4>Oficina Principal</h4>
                 <p>
-                  Direccion: Callejón Manuel M. Doria No. 12612 Col. Libertad
-                  22400. Tijuana, B.C., México.
+                  Plaza Sevilla, Vía Rápida Ote.
+                  Col. Rio Tijuana 3ra Etapa, 22226 Tijuana, B.C., México
                 </p>
                 <p>Tel: +52 (664) 210-1017</p>
                 <p>Tel: +52 (664) 609-4415</p>
-                <p>E-mail: info@iqea.mx</p>
+                <p>E-mail: ventas@iqea.mx</p>
               </div>
             </div>{" "}
           </div>
@@ -85,12 +87,12 @@ export default function ContactoPage() {
             <div className="LocationLeft ">
               <div className="LocationAdress">
                 <p>
-                  Direccion: Callejón Manuel M. Doria No. 12612 Col. Libertad
-                  22400. Tijuana, B.C., México.
+                  G100 Desarrollos<br />
+                  GTO Puerto Interior, Pl. de la Paz 102, 36275 Silao de la Victoria, Gto., México
                 </p>
                 <p>Tel: +52 (664) 210-1017</p>
                 <p>Tel: +52 (664) 609-4415</p>
-                <p>E-mail: info@iqea.mx</p>
+                <p>E-mail: ventas@iqea.mx</p>
               </div>
             </div>{" "}
           </div>

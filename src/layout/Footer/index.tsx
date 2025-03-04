@@ -77,8 +77,8 @@ export default function Footer() {
               target="_blank"
             >
               <div className="contactRow">
-                <p> Callejón Manuel M. Doria No. 12612</p>
-                <p>Col. Libertad 22400. Tijuana, B.C., México.</p>
+                <p> Plaza Sevilla, Vía Rápida Ote.</p>
+                <p>Col. Rio Tijuana 3ra Etapa, 22226 Tijuana, B.C., México</p>
               </div>
             </Link>
           </div>
@@ -97,9 +97,9 @@ export default function Footer() {
           </div>
           <div className="email ">
             <IconMail className="footerIcon" />
-            <Link href={'mailto:info@iqea.mx'}>
+            <Link href={'mailto:ventas@iqea.mx'}>
 
-            <p>info@iqea.mx</p>
+            <p>ventas@iqea.mx</p>
             </Link>
           </div>
         </div>

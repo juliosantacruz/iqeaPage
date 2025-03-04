@@ -22,7 +22,7 @@ export default async function Home() {
       <Servicios />
       <Stats />
       <AboutUs />
-      {/* <Designs /> */}
+      <Designs />
       <Projects projectsData={projectsData} />
       {/* <Subcribe/> */}
       <Products />
